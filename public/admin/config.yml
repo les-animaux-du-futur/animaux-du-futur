@@ -4,7 +4,7 @@ backend:
   name: git-gateway
   branch: main # Branch to update
   #  branch: feature/source-from-netlifycms # Branch to update
-  local_backend: true
+  # local_backend: true
 collections:
   - name: "biomes"
     extension: "json"
