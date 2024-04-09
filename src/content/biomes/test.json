@@ -1,0 +1,6 @@
+{
+  "id": "{{ uuid }}",
+  "slug": "{{slug}}",
+  "name": "test",
+  "color": "#9b0e0e"
+}
