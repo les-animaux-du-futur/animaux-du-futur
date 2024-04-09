@@ -1,11 +1,95 @@
-media_folder: "src/assets/images" # Emplacement où les fichiers seront stockés dans le dépôt
-public_folder: "src/assets/images" # L'attribut src pour les médias téléchargés
+media_folder: "public/assets/content" # Emplacement où les fichiers seront stockés dans le dépôt
+public_folder: "assets/content" # L'attribut src pour les médias téléchargés
 backend:
   name: git-gateway
   branch: main # Branch to update
   #  branch: feature/source-from-netlifycms # Branch to update
-  #local_backend: true
+  local_backend: true
 collections:
+  - name: "biomes"
+    extension: "json"
+    label: "Biomes"
+    label_singular: "Biome"
+    folder: "src/content/biomes"
+    create: true
+    delete: true
+    identifier_field: "name"
+    fields:
+      - { label: "Id", name: "id", widget: "hidden", default: "{{ uuid }}" }
+      - { label: "Slug", name: "slug", widget: "hidden", default: "{{slug}}" }
+      - { name: "name", label: "Nom", widget: "string" }
+      - { name: "color", label: "Color", widget: "color" }
+
+  - name: "species"
+    extension: "json"
+    label: "Espèces"
+    label_singular: "Espèce"
+    folder: "src/content/species"
+    create: true
+    delete: true
+    identifier_field: "name"
+    fields:
+      - { name: "name", widget: "string", label: "Nom" }
+      - {
+          name: "speciesImage",
+          widget: "image",
+          label: "Image de la nouvelle espèce",
+        }
+      - {
+          name: "discoveryDate",
+          widget: "datetime",
+          format: "DD MMM YYYY",
+          date_format: "DD MMM YYYY",
+          time_format: true,
+          label: "Date de la découverte",
+        }
+      - {
+          name: "type",
+          label: "Type",
+          widget: "select",
+          default: "plant",
+          options:
+            [
+              { label: "Plante", value: "plant" },
+              { label: "Animale", value: "animal" },
+            ],
+        }
+      - {
+          name: "biome",
+          label: "Biome",
+          widget: "relation",
+          collection: "biomes",
+          search_fields: ["name"],
+          value_field: "name",
+          display_fields: ["name"],
+        }
+      - {
+          name: "height",
+          widget: "string",
+          value_type: "string",
+          label: "Taille",
+          required: true,
+        }
+      - {
+          name: "weight",
+          widget: "string",
+          value_type: "string",
+          label: "poids",
+          required: false,
+        }
+      - {
+          name: "life",
+          widget: "string",
+          label: "Durée de vie",
+          required: false,
+        }
+      - {
+          name: "EvolutionDescripption",
+          widget: "markdown",
+          label: "Description détaillée de son évolution",
+          required: false,
+        }
+
   - name: "blog" # Utilisé dans les routes, par exemple, /admin/collections/blog
     label: "Blog" # Utilisé dans l'UI
     folder: "src/content/blog" # Chemin d'accès au dossier dans lequel les documents sont stockés
