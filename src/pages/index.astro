@@ -2,7 +2,7 @@
 // Component Imports
 
 import BaseLayout from "../layouts/BaseLayout.astro";
-import data from "../content/home.json";
+import data from "../content/pages/home.json";
 
 const {
   HeroContent,
@@ -11,7 +11,11 @@ const {
   firstSectionContent,
   SecondSectionTitle,
   SecondSectionContent,
+  firstSectionImg,
+  heroBtns
 } = data;
+
+const [mainBtn, secondBtn] = heroBtns
 
 
 
@@ -53,7 +57,7 @@ const {
     </div>
     <div class="img_body">
       <img
-        src="/assets/images/img_atelier.webp"
+        src={firstSectionImg}
         alt="photo prise durant un des atelier"
       />
     </div>

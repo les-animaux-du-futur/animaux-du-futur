@@ -121,6 +121,7 @@ collections:
               label: "Bouttons",
               name: "heroBtns",
               widget: "list",
+              summary: '{{fields.Btn.text}}',
               required: false,
               fields: [{ label: Boutton,
                         name: Btn,
