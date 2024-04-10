@@ -5,6 +5,11 @@ backend:
   branch: main # Branch to update
   #  branch: feature/source-from-netlifycms # Branch to update
   # local_backend: true
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
 collections:
   - name: "biomes"
     extension: "json"
@@ -27,6 +32,7 @@ collections:
     folder: "src/content/species"
     create: true
     delete: true
+    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
     identifier_field: "name"
     fields:
       - { name: "name", widget: "string", label: "Nom" }
