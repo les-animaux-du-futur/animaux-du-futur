@@ -1,0 +1,16 @@
+---
+import { getSpecies } from "../../functions";
+
+export function getStaticPaths() {
+  const { species } = getSpecies();
+  return species.map((_, index) => {
+    return {
+      params: { id: index + 1 },
+    };
+  });
+}
+
+const { id } = Astro.params;
+---
+
+<div>Bon chien, {id} !</div>
