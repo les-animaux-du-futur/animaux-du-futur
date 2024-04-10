@@ -1,0 +1,294 @@
+---
+import TextImgInlineCoulisses from "../components/modules/TextImgInlineCoulisses.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <!-- container de la partie projet et de la partie des modules -->
+  <section class="container">
+    <!-- Première partie "Les coulisses avec le premier texte" -->
+    <h1>LES COULISSES</h1>
+    <div class="container_coulisse">
+      <p>
+        Cet atelier d’éducation aux pratiques artistiques bénéficie de l’aide de
+        partenaires<br />
+        (Région Nouvelle Aquitaine, Département Gironde, Département Landes, DRAC,
+        ALCA, Passeurs d’Images, CCCHL, ACL de Sabres, Cinémagin’Action).<br />
+        Ce projet sous l’angle de la biologie spéculative a pour objectif de sensibiliser
+        à la situation des espèces animales existantes, à leurs problématiques et
+        leur avenir. Une création graphique poétique, confrontant des techniques
+        d’illustrations traditionnelles aux outils algorithmiques.<br />
+        Chaque session est en 3 phases : la recherche, la création, la valorisation,
+        pour partir à la découverte de la biodiversité de demain…
+      </p>
+    </div>
+
+    <TextImgInlineCoulisses
+      title="-LA RECHERCHE-"
+      texts={[
+        `Chaque explorateur se documente et étudie un animal en lien avec son
+      environnement. Il partage ses découvertes en équipe, échange et débat
+      des évolutions possibles de son espèce. Un espace où art, science et
+      imagination s’entremêlent pour enrichir la vision des participants sur
+      notre planète.`,
+      ]}
+      imgUrl="/assets/images/egg.webp"
+    />
+    <TextImgInlineCoulisses
+      reverse
+      title="-LA CREATION-"
+      texts={[
+        `La mise en image des animaux du futur repose sur un principe
+        d’itérations, combinant techniques traditionnelles et outils
+        d’Intelligence Artificielle. Il y a un dialogue entre spontanéité et
+        innovation, questionnant le rapport de l’humain à la machine dans une
+        démarche créative.`,
+      ]}
+      imgUrl="/assets/images/paper.webp"
+    />
+    <TextImgInlineCoulisses
+      title="-LA FINALISATION-"
+      texts={[
+        `Pour mettre en lumière le procédé de création, prenons comme exemple la première espèce du futur recensée dans ce projet :  « la Poulosaure ».`,
+        `Le processus de création de cet animal est hybride et itératif, il a donc été conçu étapes par étapes notamment avec ces croquis comme ébauche.`,
+        `Voici la fusion et la retouche des croquis grâce a l’IA. Les nombreuses itérations amènent à ce résultat. Cette version est actuellement la version finale de la poulosaure. `,
+      ]}
+      imgUrl="/assets/images/drawingChicken.png"
+    />
+
+    <!--partie 4 -->
+    <div class="container_part4">
+      <div class="bloc3">
+        <div>
+          <p>
+            Pour clôturer chaque expédition, nous exposons les créations dans le
+            lieu d’accueil, avant qu’elles ne commencent leurs itinérances dans
+            d’autres lieux propices aux alentours.
+          </p>
+        </div>
+        <div class="img_bloc3">
+          <img src="../../public/assets/images/atelier_photo1.webp" alt="" />
+          <img src="../../public/assets/images/atelier_photo2.webp" alt="" />
+          <img src="../../public/assets/images/atelier_photo3.webp" alt="" />
+        </div>
+      </div>
+      <!-- quatrième partie -->
+      <div class="bloc4">
+        <div>
+          <p>
+            Ces moments de célébration sont des occasions précieuses pour animer
+            des débats autour des illustrations et de notre biodiversité.
+          </p>
+        </div>
+        <div class="img_bloc4">
+          <img src="../../public/assets/images/atelier_photo4.webp" alt="" />
+          <img src="../../public/assets/images/atelier_photo5.webp" alt="" />
+        </div>
+      </div>
+      <!-- cinquième partie -->
+      <div class="bloc5">
+        <div>
+          <p>
+            Les explorateurs repartent avec leur animal sous la forme d’une
+            carte postale, révélant au verso la fiche d’identité de l’espèce
+            qu’ils ont découvert.
+          </p>
+        </div>
+        <div class="img_bloc5">
+          <img src="../../public/assets/images/card1.webp" alt="" />
+          <img src="../../public/assets/images/card2.webp" alt="" />
+        </div>
+      </div>
+      <!-- sixième partie -->
+      <div class="bloc6">
+        <div>
+          <p>
+            Puis, chaque espèce est répertoriée dans le bestiaire digital, qui
+            va grandir au fil des années et des interventions. Cet espace est
+            accessible à travers l’exposition et les cartes postales grâce à un
+            QR code qui restera inchangé pendant toute la vie du projet.<br />
+            Cela permettra aux nouveaux explorateurs comme aux plus anciens de suivre
+            la suite de l’aventure.
+          </p>
+        </div>
+        <div class="button_decouvrir">
+          <a href="#">
+            <button>Découvrir le bestiaire<span>&#10140;</span></button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!--dernière partie "la suite" composé du titre, texte et bouton contact -->
+    <div class="bloc7">
+      <div>
+        <h2>– LA SUITE ? –</h2>
+        <p>
+          En attendant la création d’un roman graphique transmédias physique et
+          digital, mais aussi peut-être des expositions dans des muséums
+          d’histoires naturelles… Ce projet à destination de publics scolaires,
+          périscolaires et post-bac va perdurer dans le temps car il reste
+          encore une multitude d’espèces à découvrir dans les différents biomes.
+        </p>
+      </div>
+      <div class="button_contact">
+        <a href="#">
+          <button>Nous contacter</button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <style lang="scss">
+    //configuration du container
+    .container {
+      h1 {
+        display: flex;
+        justify-content: center;
+      }
+      .container_coulisse {
+        margin: 64px 0;
+      }
+      .container1 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .text_container {
+          p {
+            padding: 18px 0;
+          }
+        }
+        .img_container {
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .container2 {
+        padding: 64px 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .text_container2 {
+          p {
+            padding: 18px 0;
+          }
+        }
+        .img_container2 {
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .container_part4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .bloc1 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .img_bloc1 {
+            img {
+              width: 100%;
+              padding: 16px 0;
+            }
+          }
+        }
+        .bloc2 {
+          padding-top: 48px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .img_bloc2 {
+            img {
+              width: 100%;
+              padding-top: 18px;
+            }
+          }
+        }
+        .bloc3 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .img_bloc3 {
+            display: flex;
+            flex-direction: row;
+            gap: 4px;
+            img {
+              width: 32.5%;
+              padding: 16px 0;
+            }
+          }
+          p {
+            margin: 4rem 0;
+          }
+        }
+        .bloc4 {
+          .img_bloc4 {
+            display: flex;
+            flex-direction: row;
+            gap: 4px;
+            img {
+              width: 49.5%;
+            }
+          }
+        }
+        .bloc5 {
+          .img_bloc5 {
+            display: flex;
+            flex-direction: row;
+            gap: 4px;
+            img {
+              width: 49.5%;
+            }
+          }
+        }
+      }
+      .button_decouvrir {
+        a {
+          button {
+            width: 230px;
+            height: 58px;
+            border: 2.6px solid #e1f6ff;
+            border-radius: 8px;
+            font-weight: 700;
+            color: #e1f6ff;
+            backdrop-filter: blur(10px);
+            background: #131515;
+            span {
+              margin-left: 16px;
+            }
+            transition: 0.2s;
+            &:hover {
+              transition: 0.2s;
+              color: #131515;
+              background: #e1f6ff;
+            }
+          }
+        }
+      }
+      .button_contact {
+        width: 100%;
+        height: 63.8px;
+        a {
+          button {
+            width: 163px;
+            height: 58px;
+            border: 0;
+            border-radius: 8px;
+            font-weight: 700;
+            color: #131515;
+            background: #3ae7ab;
+            transition: 0.2s;
+            &:hover {
+              transition: 0.2s;
+              filter: brightness(50%);
+            }
+          }
+        }
+      }
+    }
+  </style>
+</BaseLayout>
