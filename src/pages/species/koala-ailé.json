@@ -1,5 +1,6 @@
 {
   "id": "003",
+  "color": "#9A7A5C",
   "biome": "Montagnes",
   "height": "60 cm",
   "name": "KOALA AILÉ",
@@ -8,5 +9,5 @@
   "type": "animal",
   "life": "10 ans",
   "discoveryDate": "29 Mar 2024",
-  "speciesImage": "/assets/content/koala.webp"
+  "speciesImage": "/assets/images/koala.webp"
 }

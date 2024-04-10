@@ -1,5 +1,6 @@
 {
   "id": "002",
+  "color": "#75D964",
   "biome": "Forêt",
   "height": "78 cm",
   "name": "HIBOUETTE",
@@ -8,5 +9,5 @@
   "type": "animal",
   "life": "20 ans",
   "discoveryDate": "29 Mar 2024",
-  "speciesImage": "/assets/content/chouette.webp"
+  "speciesImage": "/assets/images/chouette.webp"
 }

@@ -1,0 +1,122 @@
+---
+
+---
+
+<header class="wrapper">
+  <nav>
+    <div class="logo">
+      <a href="/">
+        <img src="/assets/images/logo.svg" alt="" />
+      </a>
+    </div>
+    <ul>
+      <li>
+        <a href="/">
+          <div class="block">
+            <img src="/assets/images/map.png" alt="" />
+            <p>Carte</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/project">
+          <div class="block">
+            <img src="/assets/images/project.svg" alt="" />
+            <p>Projet</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/histoire">
+          <div class="block">
+            <img src="/assets/images/history.svg" alt="" />
+            <p>Histoire</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/contact">
+          <div class="block">
+            <img src="/assets/images/contact.svg" alt="" />
+            <p>Contact</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <div class=""></div>
+  </nav>
+</header>
+
+<script>
+  const header = document.querySelector<HTMLDivElement>("header.wrapper");
+  console.log(header);
+
+  const headerWidth = header.clientWidth;
+  const headerSmallWidth = 80;
+  header.style.width = `${headerSmallWidth}px`;
+  header.style.transition = "width 0.16s linear";
+
+  header.addEventListener("mouseenter", () => {
+    header.style.width = `${headerWidth}px`;
+  });
+  header.addEventListener("mouseleave", () => {
+    header.style.width = `${headerSmallWidth}px`;
+  });
+</script>
+
+<style lang="scss">
+  header {
+    left: 0;
+    overflow: hidden;
+    top: 0;
+    height: 100%;
+    padding: 1rem;
+    background-color: #2d4436;
+    position: fixed;
+    box-sizing: border-box;
+    @media (max-width: 660px) {
+      display: none;
+    }
+    nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      height: 100%;
+
+      .logo {
+        margin: 0 auto;
+        img {
+          width: 2.8rem;
+          max-width: none;
+        }
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        list-style-type: none;
+        gap: 3rem;
+        padding: 0;
+        li {
+          a {
+            color: #e1f6ff;
+          }
+          .block {
+            display: flex;
+            align-items: center;
+            gap: 1.4rem;
+
+            img {
+              width: 3rem;
+            }
+            p {
+              width: fit-content;
+              color: #e1f6ff;
+            }
+          }
+        }
+      }
+    }
+  }
+</style>

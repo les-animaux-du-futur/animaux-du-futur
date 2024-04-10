@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Blinker-Bold";
+  src: url("/fonts/Blinker-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blinker-SemiBold";
+  src: url("/fonts/Blinker-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blinker-Regular";
+  src: url("/fonts/Blinker-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

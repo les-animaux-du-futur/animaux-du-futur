@@ -1,5 +1,6 @@
 {
   "id": "005",
+  "color": "#75D964",
   "biome": "Forêt",
   "height": "1,5 m",
   "name": "TIGRE FEUILLU",
@@ -8,5 +9,5 @@
   "type": "animal",
   "life": "20 ans",
   "discoveryDate": "29 Mar 2024",
-  "speciesImage": "/assets/content/tigre.webp"
+  "speciesImage": "/assets/images/tigre.webp"
 }
