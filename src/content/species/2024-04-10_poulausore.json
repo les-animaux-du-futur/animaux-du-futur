@@ -1,0 +1,11 @@
+{
+  "biome": "Banquise",
+  "height": "70 cm",
+  "name": "POULAUSORE",
+  "EvolutionDescripption": "La poulosaure est une évolution de la poule qui tend à revenir vers ses lointains ancêtres, les dinosaures. Elle vit généralement en groupe et fonctionne en matriarchie.",
+  "weight": "8 kg",
+  "type": "animal",
+  "life": "15 ans",
+  "discoveryDate": "10 Apr 2024Ttrue",
+  "speciesImage": "assets/content/chicken.webp"
+}
