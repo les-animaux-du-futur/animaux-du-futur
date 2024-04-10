@@ -95,32 +95,51 @@ collections:
           label: "Description détaillée de son évolution",
           required: false,
         }
-
-  - name: "HomePage" # Utilisé dans les routes, par exemple, /admin/collections/blog
-    label: "Page d'accueil" # Utilisé dans l'UI
-    file: "src/content/pages" # Chemin d'accès au dossier dans lequel les documents sont stockés
+  - name: "Pages" # Utilisé dans les routes, par exemple, /admin/collections/blog
+    label: "Pages" # Utilisé dans l'UI
     create: true # Permettre aux utilisateurs de créer de nouveaux documents dans cette collection
-    fields: # Les champs de chaque document, généralement en tête de page
-      - {
-          label: "Titre",
-          name: "Titre de la page",
-          widget: "string",
-          default: "Les Animaux du futur",
-          required: true,
-        }
-      - {
-          label: "hero Background",
-          name: "Titre de la page",
-          widget: "image",
-          required: true,
-        }
-      - {
-          label: "Titre de la première section",
-          name: "firstSectionTitle",
-          widget: "string",
-        }
-      - {
-          label: "Content de la première section",
-          name: "firstSectionContent",
-          widget: "markdown",
-        }
+    extension: "json"
+    files:
+      - file: "src/content/pages/home.json"
+        name: "homePage"
+        label: "Page d'accueil"
+        fields:
+          - {
+              label: "title",
+              name: "Titre de la page",
+              widget: "string",
+              default: "Les Animaux du futur",
+              required: true,
+            }
+          - {
+              label: "Contenu du hero",
+              name: "HeroContent",
+              widget: "markdown",
+              required: false,
+            }
+          - {
+              label: "hero Background",
+              name: "background",
+              widget: "image",
+              required: true,
+            }
+          - {
+              label: "Titre de la première section",
+              name: "firstSectionTitle",
+              widget: "string",
+            }
+          - {
+              label: "Contenu de la première section",
+              name: "firstSectionContent",
+              widget: "markdown",
+            }
+          - {
+              label: "Titre de la deuxième section",
+              name: "SecondSectionTitle",
+              widget: "string",
+            }
+          - {
+              label: "Contenu de la deuxième section",
+              name: "SecondSectionContent",
+              widget: "markdown",
+            }
