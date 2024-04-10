@@ -15,8 +15,8 @@
     },
     {
       "Btn": {
-        "text": "/bestiaire",
-        "link": "Découvrir le bestiaire"
+        "text": "Découvrir le bestiaire",
+        "link": "/bestiaire"
       }
     }
   ],
