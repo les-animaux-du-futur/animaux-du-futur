@@ -1,303 +1,305 @@
 ---
 // Component Imports
-import { SITE } from '../config';
-import BaseLayout from '../layouts/BaseLayout.astro';
 
-let { title } = SITE;
-let description = "Imaginer les animaux qui vivront sur notre planète dans plusieurs millions d'années, un projet pédagigique engagé";
-let permalink = 'https://les-animaux-du-futur.netlify.app/';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import data from "../content/pages/home.json";
 
+const {
+  HeroContent,
+  background,
+  firstSectionTitle,
+  firstSectionContent,
+  SecondSectionTitle,
+  SecondSectionContent,
+} = data;
 ---
+
 <BaseLayout>
-	<!--partie header de la page-->
-	<section class="header">
-		<div class="container_header">
-			<div class="container">
-				<div class="text_header">
-					<h1>Les Animaux du futur</h1>
-					<p>Un projet  collaboratif et évolutif sur les espèces animales actuelles et futures.</p>
-				</div>
-				<div class="container_button_header">
-					<!--premier bouton pour découvrir le trailer-->
-					<div class="button_trailer">
-						<a href="/histoire">
-							<button>Découvrir le trailer<span>&#10140;</span></button>
-						</a>
-					</div>
-					<!--deuxième bouton pour découvrir le bestiaire-->
-					<div class="button_decouvrir">
-						<a href="/bestiaire">
-							<button>Découvrir le bestiaire<span>&#10140;</span></button>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--Body de la page -->
-	<section class="body">
-		<div class="text_body">
-			<h2>Réinventer son futur</h2>
-			<p>Plongez dans un avenir où les frontières entre réalité et imagination s'estompent. 
-			   "Les Animaux du Futur" est un projet éducatif collaboratif qui vise à sensibiliser les jeunes aux 
-			   espèces animales actuelles et futures. Nous utilisons un univers transmédia innovant, combinant des 
-			   expériences interactives physiques et numériques, pour engager les élèves de tous niveaux. </p>
-			
-			<p>En travaillant avec des experts en biologie et des éducateurs, nous créons des outils dynamiques et 
-			   des ressources pédagogiques stimulantes. Notre objectif est d'inspirer une nouvelle génération engagée 
-			   dans la préservation de la biodiversité.</p>
-		</div>
-		<div class="img_body">
-			<img src="/assets/images/img_atelier.webp" alt="photo prise durant un des atelier">
-		</div>
-	</section>
-	<section class="footer">
-		<div>
-			
-			<div>
-				<h2>Les modules</h2>
-				<p>Ces trois modules sensibilisent sur le climat et les espèces en danger, adaptés aux niveaux primaire, 
-					collège et secondaire. Chaque module comprend recherche, création et valorisation pour éduquer les enfants 
-					sur le climat de manière imaginative et récréative.</p>
-			</div>
-			<!--premier module -->
-			<div class="modules">
-				<div class="div_module">
-					<a href="/modules/petit_explorateur">
-						<button class="button_petit_explorateur">
-							<img src="/assets/images/img_petit_explorateur.webp" alt="petit explorateur">
-							<div class="text_module">
-								<h2 class="h2_petit">Petit Explorateur</h2>
-								<h3>De 6 a 11ans</h3>
-							</div>
-						</button>
-					</a>
-				</div>
-				<!--deuxième module -->
-				<div class="div_module">
-					<a href="/modules/explorateur">
-						<button>
-							<img src="/assets/images/img_explorateur.webp" alt="explorateur">
-							<div class="text_module">
-								<h2>Explorateur</h2>
-								<h3>De 12 a 15ans</h3>
-							</div>
-						</button>
-					</a>
-				</div>
-				<!--troisième module -->
-				<div class="div_module">
-					<a href="/modules/grand_explorateur">
-						<button>
-							<img src="/assets/images/img_grand_explorateur.webp" alt="grand explorateur">
-							<div class="text_module">
-								<h2>Grand Explorateur</h2>
-								<h3>15 ans et plus</h3>
-							</div>
-						</button>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
-<BaseLayout/>
+  <!--partie header de la page-->
+  <section class="header">
+    <div class="container_header">
+      <div class="container">
+        <div class="text_header">
+          <h1>Les Animaux du futur</h1>
+          <p set:html={HeroContent} />
+        </div>
+        <div class="container_button_header">
+          <!--premier bouton pour découvrir le trailer-->
+          <div class="button_trailer">
+            <a href="/histoire">
+              <button>Découvrir le trailer<span>&#10140;</span></button>
+            </a>
+          </div>
+          <!--deuxième bouton pour découvrir le bestiaire-->
+          <div class="button_decouvrir">
+            <a href="/bestiaire">
+              <button>Découvrir le bestiaire<span>&#10140;</span></button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Body de la page -->
+  <section class="body">
+    <div class="text_body">
+      <h2>{firstSectionTitle}</h2>
+      <p set:html={firstSectionContent} />
+    </div>
+    <div class="img_body">
+      <img
+        src="/assets/images/img_atelier.webp"
+        alt="photo prise durant un des atelier"
+      />
+    </div>
+  </section>
+  <section class="footer">
+    <div>
+      <div>
+        <h2>{SecondSectionTitle}</h2>
+        <p set:html={SecondSectionContent} />
+      </div>
+      <!--premier module -->
+      <div class="modules">
+        <div class="div_module">
+          <a href="/modules/petit_explorateur">
+            <button class="button_petit_explorateur">
+              <img
+                src="/assets/images/img_petit_explorateur.webp"
+                alt="petit explorateur"
+              />
+              <div class="text_module">
+                <h2 class="h2_petit">Petit Explorateur</h2>
+                <h3>De 6 a 11ans</h3>
+              </div>
+            </button>
+          </a>
+        </div>
+        <!--deuxième module -->
+        <div class="div_module">
+          <a href="/modules/explorateur">
+            <button>
+              <img
+                src="/assets/images/img_explorateur.webp"
+                alt="explorateur"
+              />
+              <div class="text_module">
+                <h2>Explorateur</h2>
+                <h3>De 12 a 15ans</h3>
+              </div>
+            </button>
+          </a>
+        </div>
+        <!--troisième module -->
+        <div class="div_module">
+          <a href="/modules/grand_explorateur">
+            <button>
+              <img
+                src="/assets/images/img_grand_explorateur.webp"
+                alt="grand explorateur"
+              />
+              <div class="text_module">
+                <h2>Grand Explorateur</h2>
+                <h3>15 ans et plus</h3>
+              </div>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <BaseLayout />
 
-
-<style lang="scss">
-	html{
-
-		body{
-		
-			.header{
-			height: 656px;
-			background-image: url('/assets/images/fond_home.webp'); /* Chemin vers votre image */
-			background-size: cover; /* Couvrir toute la zone de l'élément */
-			background-position: center; /* Centrer l'image horizontalement et verticalement */
-			background-repeat: no-repeat; /* Empêcher la répétition de l'image */
-			.container{
-		
-    	
-				.text_header{
-					padding-top: 180px;
-					h1{
-						margin: 0px;
-					}
-					p{
-						margin: 4px;
-					}
-				}
-				.container_button_header{
-					margin-top: 28px;
-					.button_trailer{
-						width: 100%;
-						height: 63.8px;
-						padding-bottom: 16px;
-					a{
-						button{
-							width: 210px;
-							height: 58px;
-							border: 0;
-							border-radius: 8px;
-							font-weight: 700;
-							color: #131515;
-							background: #3AE7AB;
-							transition: 0.2s;
-							cursor: pointer;
-							span{
-								margin-left: 16px;
-							}
-							&:hover{
-							transition: 0.2s;
-							filter: brightness(50%);
-							}
-						}
-					}
-					}
-				}
-				.button_decouvrir{
-					a{
-						button{
-							width: 230px;
-							height: 58px;
-							font-weight: 700;
-							color: #E1F6FF;
-							border-radius: 8px;
-							border: 2px solid #E1F6FF;
-							background: rgba(19, 21, 21, 0.30);
-							backdrop-filter: blur(10px);
-							cursor: pointer;
-							span{
-								margin-left: 16px;
-							}
-							transition: 0.2s;
-							&:hover{
-							transition: 0.2s;
-							color: #131515;
-							background: #E1F6FF;
-							}
-						}
-					}
-				}
-			}
-			}
-		}
-		.body{
-			padding: 50px 30px;
-    			max-width: 800px;
-    			margin: 0 auto;
-    		@media (min-width: 1000px) {
-      			max-width: 800px;
-    		}
-    		@media (min-width: 1200px) {
-      			max-width: 1000px;
-    		}
-    		@media (min-width: 1460px) {
- 				max-width: 1200px;
-			}
-			.img_body{
-				padding-top: 32px;
-				img{
-					width: 100%;
-				}
-			}
-		}
-		.footer{
-			padding: 50px 30px;
-    			max-width: 800px;
-    			margin: 0 auto;
-    		@media (min-width: 1000px) {
-      			max-width: 800px;
-    		}
-    		@media (min-width: 1200px) {
-      			max-width: 1000px;
-    		}
-    		@media (min-width: 1460px) {
- 				max-width: 1200px;
-			}
-			.modules{
-				width: 100%;
-				display: flex;
-				flex-direction: row;
-				flex-wrap: wrap;
-				justify-content: center;
-				gap: 20px;
-				.div_module{
-					position: relative;
-					width: 305px;
-					height: 403px;
-					transition: 0.5s;
-					&:hover{
-					transition: 0.5s;
-					zoom: 1.05;
-					}
-					button{
-						border: none;
-						background: transparent;
-						cursor: pointer;
-						width: 100%;
-						height: 100%;
-						display: flex;
-						align-items: flex-end;
-						justify-content: center;
-						img{
-							width: 100%;
-							display: flex;
-							position: absolute;
-							z-index: 1;
-							inset: 0;
-							transition: 0.2s;
-							filter: brightness(50%);
-							&:hover{
-								transition: 0.2s;
-								filter: brightness(100%);
-								zoom: 1.2;
-							}
-						}
-						.text_module{
-							display: flex;
-							flex-direction: column;
-							justify-content: flex-end;
-							width: 100%;
-							height: 100%;
-							transition: 0.2s;
-							margin-bottom: 64px;
-							h2{
-								display: flex;
-								position: relative;
-								z-index: 3;
-								margin: 0;
-							}
-							h3{
-								display: flex;
-								position: relative;
-								z-index: 3;
-								margin: 0;
-								justify-content: flex-end;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	@media screen and (min-width: 768px){
-		html{
-			.body{
-				display: flex;
-				flex-direction: row;
-				gap: 20px;
-				align-items: center;
-				justify-content: center;
-				padding-top: 128px;
-				.text_body{
-					width: 496px;
-				}
-			}
-			.modules{
-				padding-top: 64px ;
-			}
-		}
-	}
-	
-	
-</style>
+  <style lang="scss">
+    html {
+      body {
+        .header {
+          height: 656px;
+          background-image: url("/assets/images/fond_home.webp"); /* Chemin vers votre image */
+          background-size: cover; /* Couvrir toute la zone de l'élément */
+          background-position: center; /* Centrer l'image horizontalement et verticalement */
+          background-repeat: no-repeat; /* Empêcher la répétition de l'image */
+          .container {
+            .text_header {
+              padding-top: 180px;
+              h1 {
+                margin: 0px;
+              }
+              p {
+                margin: 4px;
+              }
+            }
+            .container_button_header {
+              margin-top: 28px;
+              .button_trailer {
+                width: 100%;
+                height: 63.8px;
+                padding-bottom: 16px;
+                a {
+                  button {
+                    width: 210px;
+                    height: 58px;
+                    border: 0;
+                    border-radius: 8px;
+                    font-weight: 700;
+                    color: #131515;
+                    background: #3ae7ab;
+                    transition: 0.2s;
+                    cursor: pointer;
+                    span {
+                      margin-left: 16px;
+                    }
+                    &:hover {
+                      transition: 0.2s;
+                      filter: brightness(50%);
+                    }
+                  }
+                }
+              }
+            }
+            .button_decouvrir {
+              a {
+                button {
+                  width: 230px;
+                  height: 58px;
+                  font-weight: 700;
+                  color: #e1f6ff;
+                  border-radius: 8px;
+                  border: 2px solid #e1f6ff;
+                  background: rgba(19, 21, 21, 0.3);
+                  backdrop-filter: blur(10px);
+                  cursor: pointer;
+                  span {
+                    margin-left: 16px;
+                  }
+                  transition: 0.2s;
+                  &:hover {
+                    transition: 0.2s;
+                    color: #131515;
+                    background: #e1f6ff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .body {
+        padding: 50px 30px;
+        max-width: 800px;
+        margin: 0 auto;
+        @media (min-width: 1000px) {
+          max-width: 800px;
+        }
+        @media (min-width: 1200px) {
+          max-width: 1000px;
+        }
+        @media (min-width: 1460px) {
+          max-width: 1200px;
+        }
+        .img_body {
+          padding-top: 32px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .footer {
+        padding: 50px 30px;
+        max-width: 800px;
+        margin: 0 auto;
+        @media (min-width: 1000px) {
+          max-width: 800px;
+        }
+        @media (min-width: 1200px) {
+          max-width: 1000px;
+        }
+        @media (min-width: 1460px) {
+          max-width: 1200px;
+        }
+        .modules {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 20px;
+          .div_module {
+            position: relative;
+            width: 305px;
+            height: 403px;
+            transition: 0.5s;
+            &:hover {
+              transition: 0.5s;
+              zoom: 1.05;
+            }
+            button {
+              border: none;
+              background: transparent;
+              cursor: pointer;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              align-items: flex-end;
+              justify-content: center;
+              img {
+                width: 100%;
+                display: flex;
+                position: absolute;
+                z-index: 1;
+                inset: 0;
+                transition: 0.2s;
+                filter: brightness(50%);
+                &:hover {
+                  transition: 0.2s;
+                  filter: brightness(100%);
+                  zoom: 1.2;
+                }
+              }
+              .text_module {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                width: 100%;
+                height: 100%;
+                transition: 0.2s;
+                margin-bottom: 64px;
+                h2 {
+                  display: flex;
+                  position: relative;
+                  z-index: 3;
+                  margin: 0;
+                }
+                h3 {
+                  display: flex;
+                  position: relative;
+                  z-index: 3;
+                  margin: 0;
+                  justify-content: flex-end;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 768px) {
+      html {
+        .body {
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+          align-items: center;
+          justify-content: center;
+          padding-top: 128px;
+          .text_body {
+            width: 496px;
+          }
+        }
+        .modules {
+          padding-top: 64px;
+        }
+      }
+    }
+  </style>
+</BaseLayout>

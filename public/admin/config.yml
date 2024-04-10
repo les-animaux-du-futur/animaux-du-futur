@@ -105,8 +105,8 @@ collections:
         label: "Page d'accueil"
         fields:
           - {
-              label: "title",
-              name: "Titre de la page",
+              label: "Titre de la page",
+              name: "title",
               widget: "string",
               default: "Les Animaux du futur",
               required: true,
