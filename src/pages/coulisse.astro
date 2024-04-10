@@ -35,7 +35,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                     </p>
                 </div>
                 <div class="img_container">
-                    <img src="../../public/assets/blog/egg.webp" alt="image d'un oeuf imaginaire">
+                    <img src="../../public/assets/images/egg.webp" alt="image d'un oeuf imaginaire">
                 </div>
             </div>
 
@@ -48,7 +48,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                         questionnant le rapport de l’humain à la machine dans une démarche créative. </p>
                     </div>
                     <div class="img_container2">
-                        <img src="../../public/assets/blog/paper.webp" alt="brouillon de dessin disposé sur une table avec un crayon">
+                        <img src="../../public/assets/images/paper.webp" alt="brouillon de dessin disposé sur une table avec un crayon">
                     </div>
             </div>
 
@@ -61,9 +61,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                             C’était un processus hybride qui a été conçu étapes par étapes notamment avec ces croquis comme ébauche.</p>
                     </div>
                     <div class="img_bloc1">
-                        <img src="../../public/assets/blog/dessin_poule1.webp" alt=" dessin de poule en noir et blanc">
-                        <img src="../../public/assets/blog/dessin_poule2.webp" alt=" dessin d'une deuxième poule en noir et blanc">
-                        <img src="../../public/assets/blog/dessin_poulosaure.webp" alt=" dessin d'une poule mélanger à un dinosaure">
+                        <img src="../../public/assets/images/dessin_poule1.webp" alt=" dessin de poule en noir et blanc">
+                        <img src="../../public/assets/images/dessin_poule2.webp" alt=" dessin d'une deuxième poule en noir et blanc">
+                        <img src="../../public/assets/images/dessin_poulosaure.webp" alt=" dessin d'une poule mélanger à un dinosaure">
                     </div>
                 </div>
                 <!--deuxième partie -->
@@ -72,7 +72,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                         <p>Et puis ensuite en fusionant et en retouchant les croquis grâce a l’IA voila la poulosaure finale.</p>
                     </div>
                     <div class="img_bloc2">
-                        <img src="../../public/assets/blog/poulosaure.webp" alt="">
+                        <img src="../../public/assets/images/poulosaure.webp" alt="">
                     </div>
                 </div>
                 <!--troisième partie -->
@@ -82,9 +82,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                         avant qu’elles ne commencent leurs itinérances dans d’autres lieux propices aux alentours.</p>
                     </div>
                     <div class="img_bloc3">
-                        <img src="../../public/assets/blog/atelier_photo1.webp" alt="">
-                        <img src="../../public/assets/blog/atelier_photo2.webp" alt="">
-                        <img src="../../public/assets/blog/atelier_photo3.webp" alt="">
+                        <img src="../../public/assets/images/atelier_photo1.webp" alt="">
+                        <img src="../../public/assets/images/atelier_photo2.webp" alt="">
+                        <img src="../../public/assets/images/atelier_photo3.webp" alt="">
                     </div>
                 </div>
                 <!-- quatrième partie -->
@@ -94,8 +94,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                         autour des illustrations et de notre biodiversité.</p>
                     </div>
                     <div class="img_bloc4">
-                        <img src="../../public/assets/blog/atelier_photo4.webp" alt="">
-                        <img  src="../../public/assets/blog/atelier_photo5.webp" alt="">
+                        <img src="../../public/assets/images/atelier_photo4.webp" alt="">
+                        <img  src="../../public/assets/images/atelier_photo5.webp" alt="">
                     </div>
                 </div>
                 <!-- cinquième partie -->
@@ -105,8 +105,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                         la fiche d’identité de l’espèce qu’ils ont découvert. </p>
                     </div>
                     <div class="img_bloc5">
-                        <img src="../../public/assets/blog/card1.webp" alt="">
-                        <img src="../../public/assets/blog/card2.webp" alt="">
+                        <img src="../../public/assets/images/card1.webp" alt="">
+                        <img src="../../public/assets/images/card2.webp" alt="">
                     </div>
                 </div>
                 <!-- sixième partie -->
@@ -265,10 +265,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                     span{
                         margin-left: 16px;
                     }
+                    transition: 0.2s;
+                    &:hover{
+                      transition: 0.2s;
+                      color: #131515;
+                      background: #E1F6FF;
+                    }
                 }
             }
         }
         .button_contact{
+          width: 100%;
+          height: 63.8px;
             a{
                 button{
                     width: 163px;
@@ -278,6 +286,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                     font-weight: 700;
                     color: #131515;
                     background: #3AE7AB;
+                    transition: 0.2s;
+                    &:hover{
+                      transition: 0.2s;
+                      filter: brightness(50%);
+                    }
                 }
             }
         }
