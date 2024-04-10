@@ -118,6 +118,16 @@ collections:
               required: false,
             }
           - {
+              label: "Bouttons",
+              name: "heroBtns",
+              widget: "list",
+              required: false,
+              fields: [{ label: Boutton,
+                        name: Btn,
+                        widget: object,
+                        fields:  [{label: Text, name: text, widget: string},{label: Lien, name: link, widget: string}]}]
+            }
+          - {
               label: "hero Background",
               name: "background",
               widget: "image",
@@ -132,6 +142,12 @@ collections:
               label: "Contenu de la première section",
               name: "firstSectionContent",
               widget: "markdown",
+            }
+          - {
+              label: "Image de la première section",
+              name: "firstSectionImg",
+              widget: "image",
+              required: true,
             }
           - {
               label: "Titre de la deuxième section",

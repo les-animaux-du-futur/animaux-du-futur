@@ -2,7 +2,7 @@
 // Component Imports
 
 import BaseLayout from "../layouts/BaseLayout.astro";
-import data from "../content/pages/home.json";
+import data from "../content/home.json";
 
 const {
   HeroContent,
@@ -12,11 +12,16 @@ const {
   SecondSectionTitle,
   SecondSectionContent,
 } = data;
+
+
+
 ---
 
 <BaseLayout>
   <!--partie header de la page-->
   <section class="header">
+    <div class="imgContainer"><img src={background} alt="" /></div>
+
     <div class="container_header">
       <div class="container">
         <div class="text_header">
@@ -110,18 +115,34 @@ const {
   </section>
   <BaseLayout />
 
-  <style lang="scss">
+  <style lang="scss" define:vars={{ background }}>
     html {
       body {
         .header {
+          position: relative;
+          .imgContainer {
+            position: absolute;
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+            img {
+              object-fit: cover;
+              width: 100%;
+              height: 100%;
+            }
+          }
           height: 656px;
-          background-image: url("/assets/images/fond_home.webp"); /* Chemin vers votre image */
+          background-image: url(var(
+            --background
+          )); /* Chemin vers votre image */
           background-size: cover; /* Couvrir toute la zone de l'élément */
           background-position: center; /* Centrer l'image horizontalement et verticalement */
           background-repeat: no-repeat; /* Empêcher la répétition de l'image */
           .container {
             .text_header {
               padding-top: 180px;
+              max-width: 24rem;
+              text-transform: uppercase;
               h1 {
                 margin: 0px;
               }
