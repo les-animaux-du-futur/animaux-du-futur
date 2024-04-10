@@ -96,14 +96,31 @@ collections:
           required: false,
         }
 
-  - name: "blog" # Utilisé dans les routes, par exemple, /admin/collections/blog
-    label: "Blog" # Utilisé dans l'UI
-    folder: "src/content/blog" # Chemin d'accès au dossier dans lequel les documents sont stockés
+  - name: "HomePage" # Utilisé dans les routes, par exemple, /admin/collections/blog
+    label: "Page d'accueil" # Utilisé dans l'UI
+    file: "src/content/pages" # Chemin d'accès au dossier dans lequel les documents sont stockés
     create: true # Permettre aux utilisateurs de créer de nouveaux documents dans cette collection
     fields: # Les champs de chaque document, généralement en tête de page
-      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Titre",
+          name: "Titre de la page",
+          widget: "string",
+          default: "Les Animaux du futur",
+          required: true,
+        }
+      - {
+          label: "hero Background",
+          name: "Titre de la page",
+          widget: "image",
+          required: true,
+        }
+      - {
+          label: "Titre de la première section",
+          name: "firstSectionTitle",
+          widget: "string",
+        }
+      - {
+          label: "Content de la première section",
+          name: "firstSectionContent",
+          widget: "markdown",
+        }
