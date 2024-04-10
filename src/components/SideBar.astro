@@ -49,16 +49,17 @@
 
 <script>
   const header = document.querySelector<HTMLDivElement>("header.wrapper");
-  console.log(header);
-
-  const headerWidth = header.clientWidth;
-  const headerSmallWidth = 80;
-  header.style.width = `${headerSmallWidth}px`;
-  header.style.transition = "width 0.16s linear";
-
-  header.addEventListener("mouseenter", () => {
-    header.style.width = `${headerWidth}px`;
-  });
+    
+    const headerWidth = header.clientWidth;
+    const headerSmallWidth = 80;
+    header.style.width = `${headerSmallWidth}px`;
+    header.style.transition = "width 0.16s linear";
+    
+    header.addEventListener("mouseenter", () => {
+      console.log('enter');
+      header.style.width = `${headerWidth}px`;
+    });
+    console.log(header, headerWidth);
   header.addEventListener("mouseleave", () => {
     header.style.width = `${headerSmallWidth}px`;
   });
