@@ -3,19 +3,10 @@
 
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-import { SITE } from "../config";
-
 import { getBiomes, getSpecies } from "../functions";
-
-let { title } = SITE;
-let description =
-  "Imaginer les animaux qui vivront sur notre planète dans plusieurs millions d'années, un projet pédagigique engagé";
-let permalink = "https://les-animaux-du-futur.netlify.app/";
 
 const { species } = getSpecies();
 const { biomes } = getBiomes();
-
-console.log(biomes);
 ---
 
 <BaseLayout>
@@ -219,7 +210,6 @@ console.log(biomes);
     });
 
     let sortedSpecies = filteredSpecies.slice();
-    console.log(sortedSpecies, filteredSpecies);
 
     if (sortBy === "id" || sortBy === "") {
       sortedSpecies.sort((a, b) =>
@@ -232,7 +222,6 @@ console.log(biomes);
           : b.biome.localeCompare(a.biome)
       );
     }
-    console.log("salit", sortedSpecies);
     dataContainer.innerHTML = sortedSpecies
       .map((specie) => {
         const biome = biomes.find(
@@ -298,7 +287,7 @@ console.log(biomes);
         height: 2.5rem;
         border-radius: 2rem;
         padding: 1rem;
-        border: none;
+        border: 2px solid #3AE7AB;
       }
       svg {
         position: absolute;

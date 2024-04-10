@@ -1,0 +1,178 @@
+---
+// Component Imports
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import { getBiomes, getSpecies } from "../functions";
+
+const { species } = getSpecies();
+const { biomes } = getBiomes();
+console.log(species);
+---
+
+<BaseLayout>
+  <section class="container">
+    <ul class="data-container"></ul>
+    <div class="title">
+        <h1>KOALA AILE</h1>
+    </div>
+    <div class="content">
+        <div class="left-content">
+            <h2 class="id">N°006</h2>
+            <img src="/assets/content/koala.webp" alt="">
+            <div class="infos">
+                <h4 class="expedition">Expedition: #1</h4>
+                <h4 class="explorateur">Exploratrice: Angela</h4>
+            </div>
+        </div>
+        <div class="right-content">
+            <h4>Description :</h4>
+            <p class="description">Voici l’évolution du Koala suite aux nombreuses catastrophes naturelles dû au réchauffement climatique et aux prédateurs afin de lui permettre de s’échapper plus facilement grâce à ses ailes. Suite aux feux de forêts causés par l’Homme, le Koala a migré dans les montagnes.</p>
+            <div class="caracteristiques">
+                <div class="left-side">
+                    <div class="block-infos biome">
+                        <div class="img">
+                            <img src="/assets/images/Icon-animal-biome.svg" alt="">
+                        </div>
+                        <div class="title-infos">
+                            <h4>Biome:</h4>
+                            <h4>Montagne</h4>
+                        </div>
+                    </div>
+                    <div class="block-infos poids">
+                        <div class="img">
+                            <img src="/assets/images/Icon-animal-poids.svg" alt="">
+                        </div>
+                        <div class="title-infos">
+                            <h4>Poids:</h4>
+                            <h4>4,5 kg</h4>
+                        </div>
+                    </div>
+                    <div class="block-infos taille">
+                        <div class="img">
+                            <img src="/assets/images/Icon-animal-taille.svg" alt="">
+                        </div>
+                        <div class="title-infos">
+                            <h4>Taille:</h4>
+                            <h4>1,2 m</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div class="block-infos régime">
+                        <div class="img">
+                            <img src="/assets/images/Icon-animal-regime.svg" alt="">
+                        </div>
+                        <div class="title-infos">
+                            <h4>Régime:</h4>
+                            <h4>Herbivore</h4>
+                        </div>
+                    </div>
+                    <div class="block-infos longévité">
+                        <div class="img">
+                            <img src="/assets/images/Icon-animal-longevite.svg" alt="">
+                        </div>
+                        <div class="title-infos">
+                            <h4>Longévité:</h4>
+                            <h4>40 ans</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script is:inline define:vars={{ species }}>
+    document.addEventListener("DOMContentLoaded", function() {
+    const dataContainer = document.querySelector(".data-container");
+    const speciesList = Object.values(species);
+    dataContainer.innerHTML = speciesList
+        .map((specie) => {
+        return `
+            <li>
+            ${specie.name}
+            </li>
+        `;
+        })
+        .join("");
+    });
+</script>
+
+<style lang="scss">
+    * {
+        margin: 0;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .data-container {
+            display: none;
+        }
+        .content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 8rem;
+            margin-top: 4rem;
+            @media screen and (max-width: 768px) {
+            grid-template-columns: repeat(1, 1fr);
+            }
+            .left-content {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                img {
+                    width: 100%;
+                }
+                .infos {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                }
+            }
+            .right-content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                .caracteristiques {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-column-gap: 2rem;
+                    align-items: center;
+                    margin-top: 1rem;
+                    .left-side {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.5rem;
+                        .block-infos {
+                            display: flex;
+                            align-items: center;
+                            
+                            gap: 0.5rem;
+                        }
+                        img {
+                            width: 4rem;
+                            height: 4rem;
+                        }
+                    }
+                    .right-side {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.5rem;
+                        .block-infos {
+                            display: flex;
+                            align-items: center;
+                            gap: 0.5rem;
+                        }
+                        img {
+                            width: 4rem;
+                            height: 4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+</style>
