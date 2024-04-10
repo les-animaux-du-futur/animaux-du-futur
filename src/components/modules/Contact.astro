@@ -1,31 +1,53 @@
 ---
-import Button from "../atoms/Button.astro";
+import ButtonOutLine from "../atoms/ButtonOutLine.astro";
+import ButtonFilled from "../atoms/ButtonFilled.astro";
 
 
 const pdfUrl = ''
 ---
     <div class="contact">
-      <h3>Intéressé par le projet ?</h3>
+      <div class="text">
+        <h2>Intéressé par le projet ?</h2>
+        <p>Vous êtes intéressé par le projet, et vous souhaitez l’utiliser dans un contexte pédagogique. 
+          N’hésitez pas à télécharger le document PDF en cliquant sur le bouton. Tout l’atelier est expliqué dans le document.</p>
+      </div>
       <div class="content">
-
-        <Button href={pdfUrl}>Téléchargez le pdf</Button>
+        <ButtonOutLine href={pdfUrl}>Téléchargez le pdf </ButtonOutLine>
         <p>Pour commencer l'aventure !</p>
       </div>
     </div>
     <div class="contact">
-      <h3>Une question ?</h3>
-      <Button href="/contact">Contactez-nous</Button>
+      <div class="text">
+        <h2>Une question ?</h2>
+        <p>Vous avez une question à nous poser ? Vous avez besoin de précisions sur certains modules ? Ou bien d’autres 
+          choses à nous faire remonter, n’hésitez pas à nous contacter directement avec le bouton. C’est facile et rapide !</p>
+      </div>
+      <div class="content">
+        <ButtonFilled href="/contact">Contactez-nous</ButtonFilled>
+      </div>
     </div>
 
 
 
 <style lang="scss">
-  .content {
+  .contact{
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    .text{
+      max-width: 500px;
+    }
+  }
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 1rem;
     p {
       margin: 0;
+      width: fit-content;
+      white-space: nowrap;
     }
   }
 
