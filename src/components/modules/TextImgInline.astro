@@ -1,17 +1,19 @@
 ---
 
 interface Props {
+  title: string;
   texts: string[];
   imgUrl: string
   reverse?: boolean
 }
 
-const {texts, imgUrl, reverse} = Astro.props
+const {title, texts, imgUrl, reverse} = Astro.props
 ---
 
 
 <div class={`inlineContainer ${reverse ? 'reverse' : ''}`}>
   <div class="texts">
+    <h3>{title}</h3>
     {texts.map((text: string) => <p>{text}</p>)}
   </div>
   <div class="img">
@@ -43,6 +45,9 @@ const {texts, imgUrl, reverse} = Astro.props
   .texts {
     p {
       margin: 1.6rem 0;
+    }
+    h3{
+      font-weight: bold;
     }
   }
   .img {
