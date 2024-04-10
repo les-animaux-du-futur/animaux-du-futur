@@ -1,0 +1,38 @@
+---
+const {href} = Astro.props
+---
+
+
+  <a class="button" href={href}>
+      <slot/>
+  </a>
+
+
+
+<style lang="scss">
+
+.button{
+    width: fit-content;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 16px 32px;
+    font-weight: 700;
+	color: #E1F6FF;
+	border-radius: 8px;
+	border: 2px solid #E1F6FF;
+	background: rgba(19, 21, 21, 0.30);
+	backdrop-filter: blur(10px);
+	cursor: pointer;
+	transition: 0.2s;
+	&:hover{
+	    transition: 0.2s;
+	    color: #131515;
+	    background: #E1F6FF;
+	} 
+}
+
+
+</style>
