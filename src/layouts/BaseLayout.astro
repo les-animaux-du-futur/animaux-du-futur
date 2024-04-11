@@ -20,8 +20,13 @@ import "../styles/app.css";
     <slot />
   </body>
   <footer>
-    <a class="mention" href="/MentionsLegales"
-      >Mentions légales © <span id="date"></span></a>
+    <div class="container_footer">
+    <a class="mention" href="/MentionsLegales">Mentions légales © <span id="date"></span></a>
+    <img src="/assets/images/icon_footer1.svg" alt="icone 1">
+    <img src="/assets/images/icon_footer2.svg" alt="icone 2">
+    <img src="/assets/images/icon_footer3.svg" alt="icone 3">
+    <img src="/assets/images/icon_footer4.svg" alt="icone 4">
+  </div>
   </footer>
 
   <script>
@@ -49,14 +54,26 @@ import "../styles/app.css";
 
     footer {
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: flex-end;
-      padding: 2.5rem 0;
+      padding: 2.5rem 0.5rem;
       a {
         font-size: 14px;
         font-weight: 700;
         color: #e1f6ff;
         text-decoration: none;
+        margin-right: 4px;
+      }
+      .container_footer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        img{
+          width: 18px;
+          height: 18px;
+          gap: 4px;
+        }
       }
     }
   }
@@ -137,6 +154,7 @@ import "../styles/app.css";
     font-weight: 700;
     color: #e1f6ff;
   }
+ 
   @media screen and (min-width: 768px) {
     h1 {
       font-size: 56px;
