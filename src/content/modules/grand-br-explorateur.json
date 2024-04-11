@@ -1,0 +1,32 @@
+{
+  "slug": "grand-explorateur",
+  "title": "Grand <br> Explorateur",
+  "previewTitle": "Grand <br> Explorateur",
+  "previewSubTitle": "15 ans et plus",
+  "previewImage": "assets/content/img_grand_explorateur.webp",
+  "HeroContent": "Notre troisieme module d'exploration pour les grands aventuriers  !",
+  "background": "assets/content/herograndexplorateur.webp",
+  "sections": [
+    {
+      "section": {
+        "title": "Que l’aventure <br> commence !",
+        "content": "Bienvenue dans notre premier module d'exploration pour jeunes aventuriers en herbe. Guidés par nos enseignants, les enfants exploreront le monde des Animaux du Futur, enrichissant ainsi leur compréhension de la biodiversité et de l'écosystème.\n\n<br><br>\n\nAu cours de cette aventure interactive, les enfants développeront leurs sens et leur imagination. Ils auront à comprendre d'abord l'environnement actuel, puis à ajouter des animaux sur une carte du monde futuriste.  Ils auront à se baser sur leurs observations et leur créativité.",
+        "image": "assets/content/grand_explorateur1.webp"
+      }
+    },
+    {
+      "section": {
+        "title": "UN PROJET <br> IMPACTANT",
+        "content": "Le but est aussi de faire comprendre aux élèves les dangers des humains sur les espèces animales et leurs impacts au cours du temps. \n\nCe module sensibilise donc sur les dangers d’extinction des espèces actuelles et leurs conséquences (en se basant sur les recherches scientifiques publiées) au cours du temps. \n\nIl sera également possible pour les explorateurs de réfléchir aux nouvelles habitudes alimentaires des espèces futures, en se basant sur la \n\ndescription de celles-ci.",
+        "image": "assets/content/grand_explorateur2.webp"
+      }
+    },
+    {
+      "section": {
+        "title": "ET L’AVENTURE  <br>S’ENRICHIT",
+        "content": "Vous êtes intéressé par le projet, et vous souhaitez l’utiliser dans un contexte pédagogique. N’hésitez pas à télécharger le document PDF en cliquant sur le bouton. Tout l’atelier est expliqué dans le document.",
+        "image": "assets/content/grand_explorateur3.webp"
+      }
+    }
+  ]
+}

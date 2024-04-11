@@ -3,9 +3,9 @@ const {href, withArrow} = Astro.props
 ---
 
 
-  <a class="button" href={href}>
+  <a class="button" href={href} title="Cliquez">
       <slot/>
-	  {withArrow && <img class="img_btn" src="/assets/images/Arrow3.svg" alt=""/>}
+	  {withArrow && <img class="img_btn" src="/assets/images/Arrow3.svg" alt="flèche"/>}
   </a>
 
 
