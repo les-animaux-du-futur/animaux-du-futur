@@ -20,12 +20,10 @@ import ButtonOutLine from "../components/atoms/ButtonOutLine.astro";
         </p>
         <div class="button">
             <ButtonFilled href="mailto:ladf.lesanimauxdufutur@gmail.com">Nous contacter</ButtonFilled>
-          <div class="btn_outline">
             <ButtonOutLine href="https://calendly.com/les-pollinisateurs/15min?back=1&month=2024-04" >Prendre rendez-vous</ButtonOutLine>
-          </div>
         </div>
       </div>
-      <img src="/assets/images/chicken.webp" alt="Image d'une pouleosaure" />
+      <img class="image" src="/assets/images/chicken.webp" alt="Image d'une poulausore" />
     </div>
   </section>
 </BaseLayout>
@@ -78,14 +76,11 @@ import ButtonOutLine from "../components/atoms/ButtonOutLine.astro";
     }
     .button {
       display: flex;
-      justify-content: center;
-    }
-    .btn_outline{
-      margin-left: 24px;
+        justify-content: flex-start;
+      gap: 24px;
     }
     @media screen and (min-width: 768px) {
       .button {
-        justify-content: flex-start;
       }
       .bloc_tittle {
         align-items: center;
@@ -99,8 +94,21 @@ import ButtonOutLine from "../components/atoms/ButtonOutLine.astro";
       padding-right: 33px;
     }
     @media screen and (max-width: 943px) {
-      .line {
-        display: none;
+    }
+    @media screen and (max-width: 768px) {
+      .bloc_contact {
+        flex-direction: column;
+        .line {
+          display: none;
+        }
+        .image {
+          display: none;
+        }
+      }
+    }
+    @media screen and (max-width: 420px) {
+      .button {
+        flex-direction: column;
       }
     }
   }

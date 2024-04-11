@@ -1,0 +1,33 @@
+{
+  "previewSubTitle": "De 12 a 15ans",
+  "slug": "explorateur",
+  "background": "assets/content/heroexplorateur.webp",
+  "sections": [
+    {
+      "section": {
+        "title": "Que l’aventure <br> commence !",
+        "content": "Bienvenue dans notre deuxième module d'exploration, axé sur la création et la recherche, où chaque aventurier est invité à plonger au cœur de la découverte.\n\n<br><br>\n\nIci, chaque explorateur se voit confier la mission passionnante de se documenter et d'étudier un animal en symbiose avec son environnement. En partageant leurs découvertes au sein d'équipes dynamiques, les participants sont encouragés à échanger et à débattre des éventuelles évolutions de ces espèces fascinantes.",
+        "image": "assets/content/explorateur1.webp"
+      }
+    },
+    {
+      "section": {
+        "title": "UN MONDE <br> FUTURISTE",
+        "content": "Guidés par leurs enseignants, les enfants enrichiront ainsi le bestiaire des animaux découverts lors des explorations précédentes, tout en se familiarisant avec les modèles de vie animale actuels pour mieux comprendre les évolutions futures.\n\n<br><br>\n\nAu cours de cette aventure interactive, les explorateurs seront encouragés à utiliser leurs sens et leur imagination. \n\n<br><br>\n\nIls apprendront à imaginer l’évolution d’une espèce animale dans le futur. De plus, ils seront invités par la suite à dessiner les croquis de leur évolution en se basant sur la façon dont ils ont imaginé l’animal en question dans le futur. Puis il sera ensuite généré par IA pour y voir le rendu final.",
+        "image": "assets/content/explorateur2.webp"
+      }
+    },
+    {
+      "section": {
+        "title": "ET L’AVENTURE NE <br> S’ARRETE PAS LA",
+        "content": "En guise de conclusion, les fiches détaillant les animaux conçus la routine quotidienne des animaux sont présentées, accompagnées d'une immersion sonore dans leur environnement climatique, pour une expérience d'apprentissage immersive et mémorable.`\n\n<br><br>\n\n\n\nPour prolonger cette aventure stimulante, un espace dédié à l'exposition des découvertes et des fiches sera accessible via un QR code permanent, assurant ainsi aux nouveaux et anciens explorateurs un accès continu à cette saga fascinante.",
+        "image": "assets/content/explorateur3.webp"
+      }
+    }
+  ],
+  "previewTitle": "Explorateur",
+  "previewImage": "assets/content/img_explorateur.webp",
+  "title": "Explorateur",
+  "discoveryDate": "11 Apr 2024T17:56",
+  "HeroContent": "Notre deuxième module d'exploration pour les aventuriers  !"
+}
