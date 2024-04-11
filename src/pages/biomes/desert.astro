@@ -16,19 +16,18 @@ const { biomes } = getBiomes();
 const { id } = Astro.params;
 const biome = biomes[id];
 
-const name = biome.name;
-const image = biome.biomesImage;
-const heroDescription = biome.heroDescription;
-const description = biome.description;
-const climat = biome.climat;
-const temperatureMin = biome.temperatureMin;
-const temperatureMax = biome.temperatureMax;
-const speciesNumber = biome.speciesNumber;
-const color = biome.color;
+// const name = biome.name;
+// const image = biome.biomesImage;
+// const heroDescription = biome.heroDescription;
+// const description = biome.description;
+// const climat = biome.climat;
+// const temperatureMin = biome.temperatureMin;
+// const temperatureMax = biome.temperatureMax;
+// const speciesNumber = biome.speciesNumber;
 ---
 
-<BaseLayout>
-    <Hero title="DÉSERT" imgUrl="/assets/images/Desert.webp" text={heroDescription}/>
+<!-- <BaseLayout>
+    <Hero title={name} imgUrl={image} text={heroDescription}/>
     <section class="container">
         <div class="container-infos">
             <div class="container-description">
@@ -80,6 +79,65 @@ const color = biome.color;
             </a>
         </div>
     </section>
+</BaseLayout> -->
+
+<BaseLayout>
+    <Hero title="DÉSERT" imgUrl="/assets/images/Desert.webp" text="Son environnement est inhospitalier et caractérisé par des conditions extrêmes de chaleur et de sécheresse."/>
+    <section class="container">
+        <div class="container-infos">
+            <div class="container-description">
+                <h2>Description</h2>
+                <p class="description">Voici le désert, où nous pouvons y retrouver des animaux robustes s’étant adaptés aux conditions climatiques difficiles et aux fortes chaleurs. Très peu de végétation y subsiste pour cause de manque de pluie régulière.</p>
+            </div>
+            <div class="container-caracteristiques">
+                <h2 class="caracteristiques">Caractéristiques</h2>
+                <div class="content-caracteristiques">
+                    <div class="img-text">
+                        <img src="/assets/images/Temperature.svg" alt="">
+                        <div class="infos">
+                            <p>Climat:</p>
+                            <p class="climat">Aride</p>
+                        </div>
+                    </div>
+                    <div class="img-text">
+                        <img src="/assets/images/Thermometer.svg" alt="">
+                        <div class="infos">
+                            <p>Température:</p>
+                            <div class="temperatures">
+                                <div class="content-temp">
+                                    <p class="temp-min">15°C</p>
+                                    <span>min</span>
+                                </div>
+                                <div class="content-temp">
+                                    <p class="temp-max">46°C</p>
+                                    <span>max</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-text">
+                        <img src="/assets/images/Bear.svg" alt="">
+                        <div class="infos">
+                            <p>Présence animale:</p>
+                            <p class="animaux">Faible</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-species">
+            <h2>Espèces présentes</h2>
+            <div class="grid-species">
+                <img src="/public/assets/content/chouette.webp" alt="">
+                <img src="/public/assets/content/chouette.webp" alt="">
+                <img src="/public/assets/content/chouette.webp" alt="">
+            </div>
+            <a class="button" href="/">
+                Découvrir le bestiaire
+                <img class="img_btn" src="/assets/images/Arrow3.svg" alt=""/>
+            </a>
+        </div>
+    </section>
 </BaseLayout>
   
 <style lang="scss">
@@ -88,6 +146,10 @@ const color = biome.color;
         flex-direction: column;
         margin-top: 6rem;
         gap: 6rem;
+        @media screen and (max-width: 768px) {
+        margin-top: 2.5rem;
+        gap: 2.5rem;
+        }
         h2, h4, p {
             margin: 0;
         }
@@ -95,6 +157,10 @@ const color = biome.color;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-column-gap: 6rem;
+            @media screen and (max-width: 768px) {
+                grid-template-columns: 1fr;
+                grid-row-gap: 2.5rem;
+            }
             .container-description {
                 display: flex;
                 flex-direction: column;
@@ -107,7 +173,17 @@ const color = biome.color;
                 .content-caracteristiques {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
+                    grid-row-gap: 1rem;
                     .img-text {
+                        display: flex;
+                        gap: 2rem;
+                        p {
+                            white-space: nowrap;
+                        }
+                        img {
+                            width: 2.5rem;
+                            height: 2.5rem;
+                        }
                         .temperatures {
                             display: flex;
                             gap: 0.5rem;
@@ -152,6 +228,10 @@ const color = biome.color;
                     transition: 0.2s;
                     color: #131515;
                     background: #E1F6FF;
+                    transition: 0.2s;
+                    .img_btn{
+                        filter: invert(1);
+                    }
                 } 
                 .img_btn{
                     width: 25px;
