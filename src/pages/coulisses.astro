@@ -9,24 +9,26 @@ import ButtonFilled from "../components/atoms/ButtonFilled.astro";
 <BaseLayout>
   <Hero title="LEs coulisses" imgUrl="/assets/images/coulisseHero.webp" text="Découvrez comment la magie opère lors des ateliers !"/>
   <!-- container de la partie projet et de la partie des modules -->
-  <section class="container">
+  <section >
     <!-- Première partie "Les coulisses avec le premier texte" -->
-    <h1>LES COULISSES</h1>
-    <div class="container_coulisse">
-      <p>
-        Cet atelier d’éducation aux pratiques artistiques bénéficie de l’aide de
-        partenaires<br />
-        (Région Nouvelle Aquitaine, Département Gironde, Département Landes, DRAC,
-        ALCA, Passeurs d’Images, CCCHL, ACL de Sabres, Cinémagin’Action).<br />
-        Ce projet sous l’angle de la biologie spéculative a pour objectif de sensibiliser
-        à la situation des espèces animales existantes, à leurs problématiques et
-        leur avenir. Une création graphique poétique, confrontant des techniques
-        d’illustrations traditionnelles aux outils algorithmiques.<br />
-        Chaque session est en 3 phases : la recherche, la création, la valorisation,
-        pour partir à la découverte de la biodiversité de demain…
-      </p>
+    <div class="container">
+      <h1>LES COULISSES</h1>
+      <div class="container_coulisse">
+        <p>
+          Cet atelier d’éducation aux pratiques artistiques bénéficie de l’aide de
+          partenaires<br />
+          (Région Nouvelle Aquitaine, Département Gironde, Département Landes, DRAC,
+          ALCA, Passeurs d’Images, CCCHL, ACL de Sabres, Cinémagin’Action).<br />
+          Ce projet sous l’angle de la biologie spéculative a pour objectif de sensibiliser
+          à la situation des espèces animales existantes, à leurs problématiques et
+          leur avenir. Une création graphique poétique, confrontant des techniques
+          d’illustrations traditionnelles aux outils algorithmiques.<br />
+          Chaque session est en 3 phases : la recherche, la création, la valorisation,
+          pour partir à la découverte de la biodiversité de demain…
+        </p>
+      </div>
     </div>
-
+    
     <TextImgInline
       title="LA RECHERCHE"
       texts={[
@@ -107,7 +109,7 @@ import ButtonFilled from "../components/atoms/ButtonFilled.astro";
     <div class="container_part4">
       
     <!--dernière partie "la suite" composé du titre, texte et bouton contact -->
-    <div class="s">
+    <div class="container">
       <div>
         <h2>LA SUITE ?</h2>
         <p class="text_contact">
@@ -119,6 +121,7 @@ import ButtonFilled from "../components/atoms/ButtonFilled.astro";
         </p>
       </div>
     </div>
+    <div class="container">
       <div class="bloc6">
         <div class="text_contact">
           <p>
@@ -135,6 +138,7 @@ import ButtonFilled from "../components/atoms/ButtonFilled.astro";
         <ButtonFilled href="/contact">Nous contacter</ButtonFilled>
         </div>
       </div>
+    </div>
   </section>
 
   <style lang="scss">
