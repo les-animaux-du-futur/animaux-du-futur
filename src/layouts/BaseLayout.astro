@@ -1,4 +1,5 @@
 ---
+import Hero from "../components/Hero.astro";
 import MobileHeader from "../components/MobileHeader.astro";
 import SideBar from "../components/SideBar.astro";
 import { SITE } from "../config";
@@ -15,7 +16,7 @@ import "../styles/app.css";
   <body>
     <SideBar />
     <MobileHeader />
-
+    
     <slot />
   </body>
   <footer>
