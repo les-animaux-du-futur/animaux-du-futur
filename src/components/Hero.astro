@@ -1,0 +1,144 @@
+---
+import ButtonFilled from "./atoms/ButtonFilled.astro";
+import ButtonOutLine from "./atoms/ButtonOutLine.astro";
+
+interface Props {
+  text: string;
+  imgUrl: string;
+  title: string;
+  btns?: { Btn: {text: string, link: string}}[]
+}
+
+const { text, title, imgUrl, btns} = Astro.props;
+
+
+const [mainBtn, secondBtn] = btns ?? []
+---
+
+  <!--partie header de la page-->
+  <section class="header">
+    <div class="imgContainer">
+        <img src={imgUrl} alt="" />
+    </div>
+    <div class="container">
+        <div class="text_header">
+            <h1 set:html={title}/>
+            <p>{text}</p>
+        </div>
+        {btns && (
+          <div class="btn_hero">
+            <div class="content">
+                <ButtonFilled href={mainBtn.Btn.link}>{mainBtn.Btn.text} <img class="img_btn" src="/assets/images/Arrow.svg" alt=""></ButtonFilled>
+            </div>
+            <div class="content">
+                <ButtonOutLine href={secondBtn.Btn.link}>{secondBtn.Btn.text} <img class="img_btn" src="/assets/images/Arrow3.svg" alt=""></ButtonOutLine>
+            </div>
+          </div>
+        )}
+    </div>
+
+        <div class="img_arrow">
+            <img src="/assets/images/arrow2.svg" alt="">
+        </div>
+
+  </section>
+
+
+<style lang="scss">
+    .header {
+        height: 90vh;
+        @media (min-width: 1460px) {
+          height: 100vh;
+        }
+        @media (max-width: 599px) {
+          height: 40vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          padding-bottom: 1rem
+        }
+
+
+        position: relative;
+        .imgContainer {
+          position: absolute;
+          z-index: -1;
+          height: 100%;
+          width: 100%;
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
+          }
+          background-image: url(var(
+            --background
+          )); /* Chemin vers votre image */
+          background-size: cover; /* Couvrir toute la zone de l'élément */
+          background-position: center; /* Centrer l'image horizontalement et verticalement */
+          background-repeat: no-repeat; /* Empêcher la répétition de l'image */
+          .container {
+
+            .text_header {
+              padding-top: 40%;
+              max-width: 24rem;
+              text-transform: uppercase;
+              h1 {
+                margin: 0px;
+              }
+              p {
+                margin: 4px;
+              }
+            }
+            .btn_hero{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 2rem;
+                margin-top: 26px;
+            }
+            .img_btn1{
+                width: 25px;
+                height: 20px;
+            }
+            .container_img_btn{
+                position: relative;
+                width: 25px;
+                height: 20px;
+                width: 25px;
+                height: 20px;
+                margin-left: 8px;
+            }
+            .img_btn{
+                width: 25px;
+                height: 20px;
+                margin-left: 8px;
+            }
+            }
+            position: relative;
+            .img_arrow{
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+              bottom: 1.2rem;
+              @media (max-width: 599px) {
+                display: none;
+              }
+
+              width: 50px;
+              height: 50px;
+              background-color: #2D4436;
+              opacity: 0.6;
+              backdrop-filter: blur(1px);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 50%;
+              img{
+                  width: 23px;
+                  height: 24px;
+                  background-color:#2D4436;
+                }
+            }
+
+        }

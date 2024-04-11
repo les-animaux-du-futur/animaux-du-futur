@@ -2,55 +2,37 @@
 // Component Imports
 
 import BaseLayout from "../layouts/BaseLayout.astro";
+
 import data from "../content/pages/home.json";
 import TextImgInline from "../components/modules/TextImgInline.astro";
 
 
+
+import Hero from "../components/Hero.astro";
+
+
 const {
-  HeroContent,
   background,
   firstSectionTitle,
   firstSectionContent,
   SecondSectionTitle,
   SecondSectionContent,
   firstSectionImg,
-  heroBtns
+  heroBtns,
+  HeroContent
 } = data;
-
-const [mainBtn, secondBtn] = heroBtns
 
 
 
 ---
 
 <BaseLayout>
-  <!--partie header de la page-->
-  <section class="header">
-    <div class="imgContainer"><img src={background} alt="" /></div>
-
-    <div class="container_header">
-      <div class="container">
-        <div class="text_header">
-          <h1>Les Animaux du futur</h1>
-          <p set:html={HeroContent} />
-        </div>
-        <div class="container_button_header">
-          <!--premier bouton pour découvrir le trailer-->
-          <div class="button_trailer">
-            <a href={mainBtn.Btn.link}>
-              <button>{mainBtn.Btn.text}<span>&#10140;</span></button>
-            </a>
-          </div>
-          <!--deuxième bouton pour découvrir le bestiaire-->
-          <div class="button_decouvrir">
-            <a href={secondBtn.Btn.link}>
-              <button>{secondBtn.Btn.text}<span>&#10140;</span></button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Hero
+  title= "Les Animaux du futur"
+  text={HeroContent}
+  imgUrl="/assets/images/egg.webp"
+  btns={heroBtns}
+  />
   <!--Body de la page -->
   <TextImgInline texts={[firstSectionContent]} title={firstSectionTitle} imgUrl={firstSectionImg}/>
 
@@ -237,10 +219,7 @@ const [mainBtn, secondBtn] = heroBtns
             width: 305px;
             height: 403px;
             transition: 0.5s;
-            &:hover {
-              transition: 0.5s;
-              zoom: 1.05;
-            }
+
             button {
               border: none;
               background: transparent;
@@ -261,7 +240,7 @@ const [mainBtn, secondBtn] = heroBtns
                 &:hover {
                   transition: 0.2s;
                   filter: brightness(100%);
-                  zoom: 1.2;
+
                 }
               }
               .text_module {
