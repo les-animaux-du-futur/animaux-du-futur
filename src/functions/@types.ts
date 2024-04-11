@@ -1,4 +1,5 @@
 export interface Specie {
+  id: string;
   biome: string;
   height: string;
   name: string;

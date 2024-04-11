@@ -35,6 +35,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
     identifier_field: "name"
     fields:
+      - { name: "id", widget: "string", label: "Id" }
       - { name: "name", widget: "string", label: "Nom" }
       - {
           name: "speciesImage",
@@ -57,7 +58,7 @@ collections:
           options:
             [
               { label: "Plante", value: "plant" },
-              { label: "Animale", value: "animal" },
+              { label: "Animal", value: "animal" },
             ],
         }
       - {
