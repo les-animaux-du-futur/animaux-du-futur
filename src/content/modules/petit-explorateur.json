@@ -1,5 +1,7 @@
 {
-  "title": "Petit explorateur",
+  "previewSubTitle": "De 6 à 11ans",
+  "slug": "petit-explorateur",
+  "background": "assets/content/heromoduleun.webp",
   "sections": [
     {
       "section": {
@@ -23,10 +25,9 @@
       }
     }
   ],
-  "background": "assets/content/heromoduleun.webp",
-  "HeroContent": "Notre premier module d'exploration pour jeunes aventuriers en herbe !",
-  "slug": "petit-explorateur",
   "previewTitle": "Petit <br> Explorateur",
-  "previewSubTitle": "De 6 à 11ans",
-  "previewImage": "assets/content/img_petit_explorateur.webp"
+  "previewImage": "assets/content/img_petit_explorateur.webp",
+  "title": "Petit explorateur",
+  "discoveryDate": "11 Apr 2024T17:55",
+  "HeroContent": "Notre premier module d'exploration pour jeunes aventuriers en herbe !"
 }
