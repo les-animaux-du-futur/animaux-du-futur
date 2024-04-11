@@ -4,13 +4,16 @@ import MobileHeader from "../components/MobileHeader.astro";
 import SideBar from "../components/SideBar.astro";
 import { SITE } from "../config";
 import "../styles/app.css";
+
+const {title, description} = Astro.props
 ---
 
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{SITE.title}</title>
+    <meta name="description" content={description}/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{title}</title>
   </head>
 
   <body>
