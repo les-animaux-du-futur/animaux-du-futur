@@ -1,11 +1,14 @@
 {
-  "id": "6",
   "biome": "Désert",
+  "expedition": "2",
   "height": "1,2 m",
+  "explorator": "Manon",
   "name": "TORTUE CINGLANTE",
+  "diet": "carnivore",
   "EvolutionDescripption": "La tortue cinglante possède des dents pointues, et des griffes acérées pour se défendre et chasser. Sa carapace est venimeuse. Elle se sert également de sa longue queue comme d’un fouet pour repousser ses assaillants.",
   "weight": "230 kg",
   "type": "animal",
+  "id": "6",
   "life": "190 ans",
   "discoveryDate": "29 Mar 2024",
   "speciesImage": "/assets/content/tortue.webp"
