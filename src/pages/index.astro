@@ -2,10 +2,10 @@
 // Component Imports
 
 import BaseLayout from "../layouts/BaseLayout.astro";
-import data from "../content/pages/home.json";
+import data from "../content/pages/home.json"
+import Hero from "../components/Hero.astro";
 
 const {
-  HeroContent,
   background,
   firstSectionTitle,
   firstSectionContent,
@@ -21,34 +21,18 @@ const [mainBtn, secondBtn] = heroBtns
 
 ---
 
-<BaseLayout>
-  <!--partie header de la page-->
-  <section class="header">
-    <div class="imgContainer"><img src={background} alt="" /></div>
-
-    <div class="container_header">
-      <div class="container">
-        <div class="text_header">
-          <h1>Les Animaux du futur</h1>
-          <p set:html={HeroContent} />
-        </div>
-        <div class="container_button_header">
-          <!--premier bouton pour découvrir le trailer-->
-          <div class="button_trailer">
-            <a href={mainBtn.Btn.link}>
-              <button>{mainBtn.Btn.text}<span>&#10140;</span></button>
-            </a>
-          </div>
-          <!--deuxième bouton pour découvrir le bestiaire-->
-          <div class="button_decouvrir">
-            <a href={mainBtn.Btn.link}>
-              <button>{mainBtn.Btn.text}<span>&#10140;</span></button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<BaseLayout>  
+  <Hero
+  title= "Les Animaux du futur"
+  texts={[
+    `Chaque explorateur se documente et étudie un animal en lien avec son
+  environnement. Il partage ses découvertes en équipe, échange et débat
+  des évolutions possibles de son espèce. Un espace où art, science et
+  imagination s’entremêlent pour enrichir la vision des participants sur
+  notre planète.`,
+  ]}
+  imgUrl="/assets/images/egg.webp"
+  />
   <!--Body de la page -->
   <section class="body">
     <div class="text_body">
