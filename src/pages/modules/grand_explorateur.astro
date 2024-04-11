@@ -4,6 +4,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import TextImgInline from "../../components/modules/TextImgInline.astro";
 
 import Contact from "../../components/modules/Contact.astro";
+import Hero from "../../components/Hero.astro";
 
 const data = [
   {
@@ -34,6 +35,10 @@ const data = [
 ---
 
 <BaseLayout>
+  <Hero
+    title= "grand <br> explorateur"
+    text="Notre troisieme module d'exploration pour les grands aventuriers  !"
+    imgUrl="/assets/images/heroGrandExplorateur.webp"/>
   <main>
     <Title title="N°3 Grand Explorateur " sideText="15ans et plus" />
 
