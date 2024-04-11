@@ -1,11 +1,14 @@
 {
-  "id": "4",
   "biome": "Forêt",
+  "expedition": "1",
   "height": "12 cm",
+  "explorator": "Maël",
   "name": "ABEILLE BLEUE",
+  "diet": "herbivore",
   "EvolutionDescripption": "A développé des membranes/poils sur son abdomen afin de filtrer l’air plus efficacement. Elle dispose aussi de plus de langues pour mieux se nourrir et arbore une robe bleue pour une meilleure discrétion en vol de haute altitude..",
   "weight": "90 mg",
   "type": "animal",
+  "id": "7",
   "life": "4 mois",
   "discoveryDate": "29 Mar 2024",
   "speciesImage": "/assets/content/abeille.webp"
