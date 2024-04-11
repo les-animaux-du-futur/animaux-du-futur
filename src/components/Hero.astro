@@ -45,13 +45,15 @@ const [mainBtn, secondBtn] = btns ?? []
 
 
 <style lang="scss">
+  @keyframes bounce {
+  50% {
+      transform: translateY(-15px);
+    }
+  }
     .header {
-        height: 90vh;
-        @media (min-width: 1460px) {
-          height: 100vh;
-        }
+        height: 100vh;
         @media (max-width: 599px) {
-          height: 40vh;
+          height: 50vh;
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
@@ -94,7 +96,7 @@ const [mainBtn, secondBtn] = btns ?? []
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                gap: 2rem;
+                gap: 1rem;
                 margin-top: 26px;
             }
             .img_btn1{
@@ -124,12 +126,13 @@ const [mainBtn, secondBtn] = btns ?? []
               @media (max-width: 599px) {
                 display: none;
               }
-
+              animation: bounce 1600ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+              transform: translateY(0px);
               width: 50px;
               height: 50px;
-              background-color: #2D4436;
-              opacity: 0.6;
-              backdrop-filter: blur(1px);
+              background-color: transparent;
+
+              border: 1px solid white;
               display: flex;
               justify-content: center;
               align-items: center;
@@ -137,7 +140,7 @@ const [mainBtn, secondBtn] = btns ?? []
               img{
                   width: 23px;
                   height: 24px;
-                  background-color:#2D4436;
+
                 }
             }
 

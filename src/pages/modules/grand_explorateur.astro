@@ -1,5 +1,5 @@
 ---
-import Title from "../../components/modules/Title.astro";
+
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import TextImgInline from "../../components/modules/TextImgInline.astro";
 
@@ -40,7 +40,6 @@ const data = [
     text="Notre troisieme module d'exploration pour les grands aventuriers  !"
     imgUrl="/assets/images/heroGrandExplorateur.webp"/>
   <main>
-    <Title title="N°3 Grand Explorateur " sideText="15ans et plus" />
 
     {
       data.map(({title, imgUrl, texts }, index) => (<TextImgInline title={title} imgUrl={imgUrl} texts={texts} reverse={index % 2 === 1 ? true : false}/>))

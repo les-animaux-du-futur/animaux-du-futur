@@ -21,3 +21,18 @@
   font-style: normal;
   font-display: swap;
 }
+
+h2 {
+  font-size: 2.2rem;
+  @media (min-width: 600px) {
+    font-size: 3rem;
+
+  }
+}
+h1 {
+  font-size: 2.5rem;
+  @media (min-width: 600px) {
+    font-size: 4.3rem;
+
+  }
+}
