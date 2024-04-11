@@ -1,0 +1,15 @@
+{
+  "biome": "Désert",
+  "expedition": "2",
+  "height": "1,2 m",
+  "explorator": "Léo",
+  "name": "VAUTOUR CARCASSE",
+  "diet": "carnivore",
+  "EvolutionDescripption": "Ce charognard devenu prédateur se fait passer pour un cadavre parmi les carcasses et attaque par surprise les prédateurs imprudents à la recherche d’un repas facile.",
+  "weight": "4,5 kg",
+  "type": "animal",
+  "id": "12",
+  "life": "40 ans",
+  "discoveryDate": "11 Apr 2024Ttrue",
+  "speciesImage": "assets/content/vautour.webp"
+}
