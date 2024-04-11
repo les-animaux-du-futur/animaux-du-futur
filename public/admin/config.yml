@@ -91,9 +91,32 @@ collections:
           required: false,
         }
       - {
+          name: "diet",
+          label: "Régime alimentaire",
+          widget: "select",
+          default: "Carnivore",
+          options:
+            [
+              { label: "Carnivore", value: "carnivore" },
+              { label: "Herbivore", value: "herbivore" },
+            ],
+        }
+      - {
           name: "EvolutionDescripption",
           widget: "markdown",
           label: "Description détaillée de son évolution",
+          required: false,
+        }
+      - {
+          name: "expedition",
+          widget: "string",
+          label: "Numéro d'exploration",
+          required: false,
+        }
+      - {
+          name: "explorator",
+          widget: "string",
+          label: "EXplorateur",
           required: false,
         }
   - name: "modules"
