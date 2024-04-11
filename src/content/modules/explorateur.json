@@ -1,10 +1,6 @@
 {
-  "slug": "explorateur",
-  "title": "Explorateur",
-  "previewTitle": "Explorateur",
   "previewSubTitle": "De 12 a 15ans",
-  "HeroContent": "Notre deuxième module d'exploration pour les aventuriers  !",
-  "previewImage": "assets/content/img_explorateur.webp",
+  "slug": "explorateur",
   "background": "assets/content/heroexplorateur.webp",
   "sections": [
     {
@@ -28,5 +24,10 @@
         "image": "assets/content/explorateur3.webp"
       }
     }
-  ]
+  ],
+  "previewTitle": "Explorateur",
+  "previewImage": "assets/content/img_explorateur.webp",
+  "title": "Explorateur",
+  "discoveryDate": "11 Apr 2024T17:56",
+  "HeroContent": "Notre deuxième module d'exploration pour les aventuriers  !"
 }
