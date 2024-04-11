@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ButtonFilled from "../components/atoms/ButtonFilled.astro";
+import ButtonOutLine from "../components/atoms/ButtonOutLine.astro";
 ---
 
 <BaseLayout>
@@ -14,13 +16,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         />
         <h3>Laissez-nous un petit mot !</h3>
         <p>
-          Vous êtes intéressé par notre projet ? Vous avez des questions ?
-          n'hésitez pas, contactez nous !
+          liquez sur les boutons ci-dessous afin de convenir un rendez-vous pour d’échanger, de poser vos questions et ou de nous conseiller dans la mise en place de votre projet
         </p>
         <div class="button">
-          <a class="a_button" href="mailto:ladf.lesanimauxdufutur@gmail.com">
-            <button>Nous contacter</button>
-          </a>
+            <ButtonFilled href="mailto:ladf.lesanimauxdufutur@gmail.com">Nous contacter</ButtonFilled>
+          <div class="btn_outline">
+            <ButtonOutLine href="#" >Prendre rendez-vous</ButtonOutLine>
+          </div>
         </div>
       </div>
       <img src="/assets/images/chicken.webp" alt="Image d'une pouleosaure" />
@@ -74,26 +76,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         height: 50px;
       }
     }
-    button {
-      width: 150px;
-      height: 53px;
-      border-radius: 8px;
-      background: #3ae7ab;
-      border: none;
-      font-weight: 700;
-      transition: 0.2s;
-      transition: transform 0.3s ease;
-      &:hover {
-        transition: 0.2s;
-        background: #124835;
-        color: #e1f6ff;
-        filter: brightness(100%);
-        transform: scale(1.05);
-      }
-    }
     .button {
       display: flex;
       justify-content: center;
+    }
+    .btn_outline{
+      margin-left: 24px;
     }
     @media screen and (min-width: 768px) {
       .button {
