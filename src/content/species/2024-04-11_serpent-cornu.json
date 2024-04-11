@@ -5,7 +5,7 @@
   "explorator": "Antoine",
   "name": "SERPENT CORNU",
   "diet": "carnivore",
-  "EvolutionDescripption": "Le serpent cornu est un reptile venimeux capable de se déplacer sous le sable. Une fois enfoui, il détecte les vibrations du sol grâce à ses cornes, ce qui en fait un prédateur redoutable et lui permet d’éviter ses propres prédateurs.",
+  "EvolutionDescription": "Le serpent cornu est un reptile venimeux capable de se déplacer sous le sable. Une fois enfoui, il détecte les vibrations du sol grâce à ses cornes, ce qui en fait un prédateur redoutable et lui permet d’éviter ses propres prédateurs.",
   "weight": "10 kg",
   "type": "animal",
   "id": "11",

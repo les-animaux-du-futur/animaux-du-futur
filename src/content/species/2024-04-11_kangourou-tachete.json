@@ -5,7 +5,7 @@
   "explorator": "Ava",
   "name": "KANGOUROU TÂCHETÉ",
   "diet": "carnivore",
-  "EvolutionDescripption": "Descendant du kangourou, il possède une fourrure qui se solidifie en cas de morsure ou d’impact. Son pelage est tacheté afin de ressembler à ses prédateurs pour les dissuader.",
+  "EvolutionDescription": "Descendant du kangourou, il possède une fourrure qui se solidifie en cas de morsure ou d’impact. Son pelage est tacheté afin de ressembler à ses prédateurs pour les dissuader.",
   "weight": "65 kg",
   "type": "animal",
   "id": "8",
