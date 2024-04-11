@@ -23,7 +23,11 @@ export function getSpecies() {
     }
     species.push(jsData);
   });
-  species.sort((a, b) => parseInt(a.id) - parseInt(b.id));
+  species.sort((a, b) => {
+    const idA = parseInt(a.id);
+    const idB = parseInt(b.id);
+    return idA - idB;
+  });
   return { speciesByBiomes, species };
 }
 

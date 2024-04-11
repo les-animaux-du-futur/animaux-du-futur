@@ -212,16 +212,17 @@ const { biomes } = getBiomes();
     let sortedSpecies = filteredSpecies.slice();
 
     if (sortBy === "" || sortBy === "id") {
-      sortedSpecies.sort((a, b) =>
-        sortDesc ? a.id.localeCompare(b.id) : b.id.localeCompare(a.id)
-      );
+      sortedSpecies.sort((a, b) => {
+        const comparison = sortDesc ? -1 : 1;
+        return comparison * (parseInt(b.id) - parseInt(a.id));
+      });
     } else if (sortBy === "biome") {
-      sortedSpecies.sort((a, b) =>
-        sortDesc
-          ? a.biome.localeCompare(b.biome)
-          : b.biome.localeCompare(a.biome)
-      );
+      sortedSpecies.sort((a, b) => {
+        const comparison = sortDesc ? -1 : 1;
+        return comparison * a.biome.localeCompare(b.biome);
+      });
     }
+
     dataContainer.innerHTML = sortedSpecies
       .map((specie, i) => {
         const biome = biomes.find(
@@ -229,6 +230,15 @@ const { biomes } = getBiomes();
         );
         const biomeColor = biome ? biome.color : "black";
         const biomeName = biome ? biome.name : "";
+        function formatSpeciesId(id) {
+          if (id.length === 1) {
+            return `00${id}`;
+          } else if (id.length === 2) {
+            return `0${id}`;
+          } else {
+            return id;
+          }
+        }
         return `
 			<a href="/species/${parseInt(i)}" class="animal">
 				<img src=${specie.speciesImage} alt=""/>
@@ -237,7 +247,7 @@ const { biomes } = getBiomes();
 						${specie.name}
 					</h4>
 					<p>
-						#00${parseInt(specie.id)}
+						#${formatSpeciesId(specie.id)}
 					</p>
 				</div>
 				<div class="biome" style="background-color: ${biomeColor};">
