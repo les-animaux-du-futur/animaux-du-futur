@@ -18,7 +18,7 @@ const [mainBtn, secondBtn] = btns ?? []
   <!--partie header de la page-->
   <section class="header">
     <div class="imgContainer">
-        <img src={imgUrl} alt="" />
+        <img src={imgUrl} alt="image" />
     </div>
     <div class="container">
         <div class="text_header">
@@ -28,17 +28,17 @@ const [mainBtn, secondBtn] = btns ?? []
         {btns && (
           <div class="btn_hero">
             <div class="content">
-                <ButtonFilled href={mainBtn.Btn.link}>{mainBtn.Btn.text} <img class="img_btn" src="/assets/images/Arrow.svg" alt=""></ButtonFilled>
+                <ButtonFilled href={mainBtn.Btn.link}>{mainBtn.Btn.text} <img class="img_btn" src="/assets/images/Arrow.svg" alt="flèche"></ButtonFilled>
             </div>
             <div class="content">
-                <ButtonOutLine href={secondBtn.Btn.link}>{secondBtn.Btn.text} <img class="img_btn" src="/assets/images/Arrow3.svg" alt=""></ButtonOutLine>
+                <ButtonOutLine href={secondBtn.Btn.link}>{secondBtn.Btn.text} <img class="img_btn" src="/assets/images/Arrow3.svg" alt="flèche"></ButtonOutLine>
             </div>
           </div>
         )}
     </div>
 
         <div class="img_arrow">
-            <img src="/assets/images/arrow2.svg" alt="">
+            <img src="/assets/images/arrow2.svg" alt="flèche">
         </div>
 
   </section>
