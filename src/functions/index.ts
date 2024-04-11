@@ -46,3 +46,19 @@ export function getBiomes() {
   });
   return { biomes };
 }
+
+export function getModules() {
+  const modules = {};
+
+  const modulesFolder = readdirSync("src/content/modules");
+
+  modulesFolder.map((fileName) => {
+    const data = readFileSync(`src/content/modules/${fileName}`, {
+      encoding: "utf-8",
+    });
+    const jsData = JSON.parse(data);
+
+    modules[jsData.slug] = jsData
+  });
+  return { modules };
+}
