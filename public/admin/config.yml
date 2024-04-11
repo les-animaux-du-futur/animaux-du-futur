@@ -20,9 +20,15 @@ collections:
     delete: true
     identifier_field: "name"
     fields:
-      - { label: "Id", name: "id", widget: "hidden", default: "{{ uuid }}" }
-      - { label: "Slug", name: "slug", widget: "hidden", default: "{{ slug }}" }
+      # - { label: "Id", name: "id", widget: "hidden", default: "{{ uuid }}" }
+      # - { label: "Slug", name: "slug", widget: "hidden", default: "{{ slug }}" }
       - { name: "name", label: "Nom", widget: "string" }
+      - { name: "heroDescription", label: "Description du hero", widget: "string" }
+      - { name: "description", label: "Description complète", widget: "string" }
+      - { name: "climat", label: "Climat", widget: "string" }
+      - { name: "temperatureMin", label: "Température minimale", widget: "string" }
+      - { name: "temperatureMax", label: "Température maximale", widget: "string" }
+      - { name: "speciesNumber", label: "Présence animale", widget: "string" }
       - { name: "color", label: "Color", widget: "color" }
 
   - name: "species"
