@@ -9,6 +9,7 @@ import TextImgInline from "../components/modules/TextImgInline.astro";
 
 
 import Hero from "../components/Hero.astro";
+import { getModules } from "../functions";
 
 
 const {
@@ -21,6 +22,8 @@ const {
   heroBtns,
   HeroContent
 } = data;
+
+const {modules} = getModules()
 
 
 
@@ -44,50 +47,25 @@ const {
       </div>
       <!--premier module -->
       <div class="modules">
-        <div class="div_module">
-          <a href="/modules/petit_explorateur" title="Cliquez">
-            <button class="button_petit_explorateur">
-              <img
-                src="/assets/images/img_petit_explorateur.webp"
-                alt="petit explorateur"
-              />
-              <div class="text_module">
-                <h2 class="h2_petit">Petit Explorateur</h2>
-                <h3>De 6 a 11ans</h3>
-              </div>
-            </button>
-          </a>
-        </div>
-        <!--deuxième module -->
-        <div class="div_module">
-          <a href="/modules/explorateur" title="Cliquez">
-            <button>
-              <img
-                src="/assets/images/img_explorateur.webp"
-                alt="explorateur"
-              />
-              <div class="text_module">
-                <h2>Explorateur</h2>
-                <h3>De 12 a 15ans</h3>
-              </div>
-            </button>
-          </a>
-        </div>
+
         <!--troisième module -->
-        <div class="div_module">
-          <a href="/modules/grand_explorateur">
-            <button>
-              <img
-                src="/assets/images/img_grand_explorateur.webp"
-                alt="grand explorateur"
-              />
-              <div class="text_module">
-                <h2>Grand Explorateur</h2>
-                <h3>15 ans et plus</h3>
-              </div>
-            </button>
-          </a>
-        </div>
+        {Object.values(modules).map((module) => (
+
+          <div class="div_module">
+            <a href={`/modules/${module.slug}`}>
+              <button>
+                <img
+                  src={`/${module.previewImage}`}
+                  alt="grand explorateur"
+                />
+                <div class="text_module">
+                  <h2 set:html={module.previewTitle}/>
+                  <h3 set:html={module.previewSubTitle}/>
+                </div>
+              </button>
+            </a>
+          </div>
+        ))}
       </div>
     </div>
   </section>

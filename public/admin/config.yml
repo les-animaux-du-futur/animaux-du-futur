@@ -134,6 +134,14 @@ collections:
     delete: true
     identifier_field: "name"
     fields:
+      - {
+          name: "discoveryDate",
+          widget: "datetime",
+          format: "DD MMM YYYY",
+          date_format: "DD MMM YYYY",
+          time_format: "HH:mm",
+          label: "Date de la découverte",
+        }
       - label: "url"
         name: "slug"
         widget: "string"
