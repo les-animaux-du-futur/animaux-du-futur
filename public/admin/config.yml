@@ -23,6 +23,11 @@ collections:
       # - { label: "Id", name: "id", widget: "hidden", default: "{{ uuid }}" }
       # - { label: "Slug", name: "slug", widget: "hidden", default: "{{ slug }}" }
       - { name: "name", label: "Nom", widget: "string" }
+      - {
+          name: "biomesImage",
+          widget: "image",
+          label: "Image du biome",
+        }
       - { name: "heroDescription", label: "Description du hero", widget: "string" }
       - { name: "description", label: "Description complète", widget: "string" }
       - { name: "climat", label: "Climat", widget: "string" }

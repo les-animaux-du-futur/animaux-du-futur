@@ -1,0 +1,164 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Hero from "../../components/Hero.astro";
+import { getBiomes } from "../../functions";
+
+export function getStaticPaths() {
+  const { biomes } = getBiomes();
+  return biomes.map((_, index) => {
+    return {
+      params: { id: index },
+    };
+  });
+}
+
+const { biomes } = getBiomes();
+const { id } = Astro.params;
+const biome = biomes[id];
+
+const name = biome.name;
+const image = biome.biomesImage;
+const heroDescription = biome.heroDescription;
+const description = biome.description;
+const climat = biome.climat;
+const temperatureMin = biome.temperatureMin;
+const temperatureMax = biome.temperatureMax;
+const speciesNumber = biome.speciesNumber;
+const color = biome.color;
+---
+
+<BaseLayout>
+    <Hero title="DÉSERT" imgUrl="/assets/images/Desert.webp" text={heroDescription}/>
+    <section class="container">
+        <div class="container-infos">
+            <div class="container-description">
+                <h2>Description :</h2>
+                <p class="description">{description}</p>
+            </div>
+            <div class="container-caracteristiques">
+                <h2 class="caracteristiques">Caractéristiques</h2>
+                <div class="content-caracteristiques">
+                    <div class="img-text">
+                        <img src="" alt="">
+                        <div class="infos">
+                            <p>Climat:</p>
+                            <p class="climat">{climat}</p>
+                        </div>
+                    </div>
+                    <div class="img-text">
+                        <img src="" alt="">
+                        <p>Température:</p>
+                        <div class="temperatures">
+                            <div class="content-temp">
+                                <p class="temp-min">{temperatureMin}</p>
+                                <span>min</span>
+                            </div>
+                            <div class="content-temp">
+                                <p class="temp-max">{temperatureMax}</p>
+                                <span>max</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-text">
+                        <img src="" alt="">
+                        <p>Présence animale:</p>
+                        <p class="animaux">{speciesNumber}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-species">
+            <h2>Espèces présentes</h2>
+            <div class="grid-species">
+                <img src="/public/assets/content/chouette.webp" alt="">
+                <img src="/public/assets/content/chouette.webp" alt="">
+                <img src="/public/assets/content/chouette.webp" alt="">
+            </div>
+            <a class="button" href="/">
+                Découvrir le bestiaire
+                <img class="img_btn" src="/assets/images/Arrow3.svg" alt=""/>
+            </a>
+        </div>
+    </section>
+</BaseLayout>
+  
+<style lang="scss">
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 6rem;
+        gap: 6rem;
+        h2, h4, p {
+            margin: 0;
+        }
+        .container-infos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 6rem;
+            .container-description {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .container-caracteristiques {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                .content-caracteristiques {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    .img-text {
+                        .temperatures {
+                            display: flex;
+                            gap: 0.5rem;
+                            .content-temp {
+                                display: flex;
+                                align-items: flex-end;
+                                gap: 0.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .container-species {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            .grid-species {
+                display: flex;
+                gap: 1.25rem;
+                img {
+                    width: 6rem;
+                }
+            }
+            .button{
+                width: fit-content;
+                white-space: nowrap;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                padding: 16px 32px;
+                font-weight: 700;
+                color: #E1F6FF;
+                border-radius: 8px;
+                border: 2px solid #E1F6FF;
+                background: rgba(19, 21, 21, 0.30);
+                backdrop-filter: blur(10px);
+                cursor: pointer;
+                transition: 0.2s;
+                &:hover{
+                    transition: 0.2s;
+                    color: #131515;
+                    background: #E1F6FF;
+                } 
+                .img_btn{
+                    width: 25px;
+                    height: 20px;
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+</style>

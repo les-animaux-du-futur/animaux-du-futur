@@ -23,7 +23,7 @@ const {
   HeroContent
 } = data;
 
-const {modules} = getModules()
+const {sortedModules} = getModules()
 
 
 
@@ -49,7 +49,7 @@ const {modules} = getModules()
       <div class="modules">
 
         <!--troisième module -->
-        {Object.values(modules).map((module) => (
+        {sortedModules.map((module) => (
 
           <div class="div_module">
             <a href={`/modules/${module.slug}`}>

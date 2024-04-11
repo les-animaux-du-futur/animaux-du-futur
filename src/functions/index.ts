@@ -50,6 +50,7 @@ export function getBiomes() {
 export function getModules() {
   const modules = {};
 
+
   const modulesFolder = readdirSync("src/content/modules");
 
   modulesFolder.map((fileName) => {
@@ -60,5 +61,30 @@ export function getModules() {
 
     modules[jsData.slug] = jsData
   });
-  return { modules };
+
+
+
+  const sortedModules = Object.values(modules)
+
+
+  // Sorting the array by date
+  sortedModules.sort((a, b) => {
+    console.log(a);
+
+    let dateA = parseDate(a.discoveryDate);
+    let dateB = parseDate(b.discoveryDate);
+    return dateA - dateB;
+  });
+
+
+
+
+    return { modules, sortedModules };
+}
+
+
+function parseDate(dateString) {
+  let parts = dateString.split(/[-T:]/);
+  // Month is 0-indexed, so subtract 1
+  return new Date(parts[0], parts[1] - 1, parts[2], parts[3], parts[4]);
 }
