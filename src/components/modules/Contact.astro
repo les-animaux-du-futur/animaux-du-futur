@@ -5,7 +5,7 @@ import ButtonFilled from "../atoms/ButtonFilled.astro";
 
 const pdfUrl = ''
 ---
-    <div class="contact">
+    <div class="container contact">
       <div class="text">
         <h2>Intéressé par le projet ?</h2>
         <p>Vous êtes intéressé par le projet, et vous souhaitez l’utiliser dans un contexte pédagogique. 
@@ -16,7 +16,7 @@ const pdfUrl = ''
         <p>Pour commencer l'aventure !</p>
       </div>
     </div>
-    <div class="contact">
+    <div class="container contact">
       <div class="text">
         <h2>Une question ?</h2>
         <p>Vous avez une question à nous poser ? Vous avez besoin de précisions sur certains modules ? Ou bien d’autres 
@@ -30,6 +30,20 @@ const pdfUrl = ''
 
 
 <style lang="scss">
+  .container {
+    padding: 50px 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    @media (min-width: 1000px) {
+      max-width: 800px;
+    }
+    @media (min-width: 1200px) {
+      max-width: 1000px;
+    }
+    @media (min-width: 1460px) {
+      max-width: 1200px;
+    }
+  }
   .contact{
     display: flex;
     flex-direction: row;
