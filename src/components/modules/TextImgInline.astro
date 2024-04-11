@@ -1,13 +1,16 @@
 ---
+import ButtonOutLine from '../atoms/ButtonOutLine.astro';
+
 
 interface Props {
+  btn?: {text: string, link: string, withArrow?:boolean};
   title: string;
   texts: string[];
   imgUrl: string
   reverse?: boolean
 }
 
-const {title, texts, imgUrl, reverse} = Astro.props
+const {title, texts, imgUrl, reverse, btn} = Astro.props
 ---
 
 
@@ -15,6 +18,7 @@ const {title, texts, imgUrl, reverse} = Astro.props
   <div class="texts">
     <h2>{title}</h2>
     {texts.map((text: string) => <p set:html={text}/>)}
+    {btn && <ButtonOutLine href={btn.link} withArrow={btn.withArrow}>{btn.text}</ButtonOutLine>}
   </div>
   <div class="img">
     <img src={imgUrl} alt="">

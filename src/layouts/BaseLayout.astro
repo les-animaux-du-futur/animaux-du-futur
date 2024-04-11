@@ -20,6 +20,11 @@ import "../styles/app.css";
     <slot />
   </body>
   <footer>
+    <div class="container_return">
+      <button class="return">
+        <img src="/assets/images/arrow4.svg" alt="icone flèche">
+      </button>
+    </div>
     <div class="container_footer">
     <a class="mention" href="/MentionsLegales">Mentions légales © <span id="date"></span> This work is licensed under </a>
     <img src="/assets/images/icon_footer1.svg" alt="icone 1">
@@ -54,6 +59,7 @@ import "../styles/app.css";
 
     footer {
       display: flex;
+      flex-direction: column;
       justify-content: flex-end;
       align-items: flex-end;
       padding: 2.5rem 0.5rem;
@@ -64,11 +70,36 @@ import "../styles/app.css";
         text-decoration: none;
         margin-right: 12px;
       }
+      .container_return{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .return{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          background: #3AE7AB;
+          margin-right: 30px;
+          margin-bottom: 70px;
+          border: 0;
+          cursor: pointer;
+          transition: 0.2s;
+          &:hover{
+            transition: 0.2s;
+            filter: brightness(50%);
+          }
+        }
+      }
       .container_footer{
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        margin-right: 92px;
         img{
           width: 18px;
           height: 18px;

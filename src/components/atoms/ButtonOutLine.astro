@@ -1,10 +1,11 @@
 ---
-const {href} = Astro.props
+const {href, withArrow} = Astro.props
 ---
 
 
   <a class="button" href={href}>
       <slot/>
+	  {withArrow && <img class="img_btn" src="/assets/images/Arrow3.svg" alt=""/>}
   </a>
 
 
@@ -32,6 +33,11 @@ const {href} = Astro.props
 	    color: #131515;
 	    background: #E1F6FF;
 	} 
+	.img_btn{
+		width: 25px;
+    	height: 20px;
+    	margin-left: 8px;
+	}
 }
 
 

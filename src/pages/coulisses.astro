@@ -1,6 +1,8 @@
 ---
 import TextImgInline from "../components/modules/TextImgInline.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ButtonOutLine from "../components/atoms/ButtonOutLine.astro";
+import ButtonFilled from "../components/atoms/ButtonFilled.astro";
 ---
 
 <BaseLayout>
@@ -24,7 +26,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
 
     <TextImgInline
-      title="-LA RECHERCHE-"
+      title="LA RECHERCHE"
       texts={[
         `Chaque explorateur se documente et étudie un animal en lien avec son
       environnement. Il partage ses découvertes en équipe, échange et débat
@@ -36,7 +38,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     />
     <TextImgInline
       reverse
-      title="-LA CREATION-"
+      title="LA CREATION"
       texts={[
         `La mise en image des animaux du futur repose sur un principe
         d’itérations, combinant techniques traditionnelles et outils
@@ -47,7 +49,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       imgUrl="/assets/images/paper.webp"
     />
     <TextImgInline
-      title="-LA FINALISATION-"
+      title="LA FINALISATION"
       texts={[
         `Pour mettre en lumière le procédé de création, prenons comme exemple la première espèce du futur recensée dans ce projet :  « la Poulosaure ».`,
         `Le processus de création de cet animal est hybride et itératif, il a donc été conçu étapes par étapes notamment avec ces croquis comme ébauche.`,
@@ -55,51 +57,66 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       ]}
       imgUrl="/assets/images/drawingChicken.png"
     />
-
+    <TextImgInline
+      reverse
+      title="L'EXPOSITION"
+      texts={[
+        'Pour clôturer chaque expédition, nous exposons les créations dans le lieu d’accueil, avant qu’elles ne commencent leurs itinérance dans d’autres lieux propices aux alentours.'
+        ]}
+      imgUrl="/assets/images/atelier_photo1.webp"
+      />
+      <img src="/assets/images/atelier_photo2.webp" alt="photo 2 de l'atelier" />
+    <TextImgInline
+      title="UN MOMENT CONVIVIAL"
+      texts={[
+        'C’est une occasion pour les jeunes comme les plus âgés de présenter leurs créations afin de partager les savoirs, et surtout de passer un moment convival.' 
+      ]}
+      imgUrl="/assets/images/atelier_photo3.webp"
+    />
+    <TextImgInline
+      reverse
+      title="LE DÉBAT"
+      texts={[
+        'Ces moments de célébration sont aussi des occasions précieuses pour animer des débats autour des illustrations et de notre biodiversité.'
+      ]}
+      imgUrl="/assets/images/atelier_photo4.webp"
+    />
+    <TextImgInline
+      title="LA CARTE POSTALE"
+      texts={[
+        'Ensuite, les explorateurs repartent avec leur animal sous la forme d’une carte postale, révélant au verso la fiche d’identité de l’espèce qu’ils ont découvert.'
+      ]}
+      imgUrl="/assets/images/atelier_photo6.png"
+    /> 
+      <TextImgInline
+        reverse
+        title="OÙ RETROUVER LES ESPÈCES ?"
+        texts={[
+          'Enfin, chaque espèce est répertoriée dans le bestiaire digital, qui va grandir au fil des années et des interventions. Cet espace est accessible à travers l’exposition et les cartes postales grâce à un QR code qui restera inchangé pendant toute la vie du projet. Cela permettra aux nouveaux explorateurs comme aux plus anciens de suivre la suite de l’aventure.'
+        ]}
+        imgUrl="/assets/images/atelier_photo7.png"
+        btn={{
+          text: 'Découvrir le bestiaire', 
+          withArrow: true,
+          link: '/bestiaire'
+        }}
+        />
     <!--partie 4 -->
     <div class="container_part4">
-      <div class="bloc3">
-        <div>
-          <p>
-            Pour clôturer chaque expédition, nous exposons les créations dans le
-            lieu d’accueil, avant qu’elles ne commencent leurs itinérances dans
-            d’autres lieux propices aux alentours.
-          </p>
-        </div>
-        <div class="img_bloc3">
-          <img src="/assets/images/atelier_photo1.webp" alt="photo 1 de l'atelier" />
-          <img src="/assets/images/atelier_photo2.webp" alt="photo 2 de l'atelier" />
-          <img src="/assets/images/atelier_photo3.webp" alt="photo 3 de atelier" />
-        </div>
+      
+    <!--dernière partie "la suite" composé du titre, texte et bouton contact -->
+    <div class="bloc7">
+      <div>
+        <h2>LA SUITE ?</h2>
+        <p>
+          En attendant la création d’un roman graphique transmédias physique et
+          digital, mais aussi peut-être des expositions dans des muséums
+          d’histoires naturelles… Ce projet à destination de publics scolaires,
+          périscolaires et post-bac va perdurer dans le temps car il reste
+          encore une multitude d’espèces à découvrir dans les différents biomes.
+        </p>
       </div>
-      <!-- quatrième partie -->
-      <div class="bloc4">
-        <div>
-          <p>
-            Ces moments de célébration sont des occasions précieuses pour animer
-            des débats autour des illustrations et de notre biodiversité.
-          </p>
-        </div>
-        <div class="img_bloc4">
-          <img src="/assets/images/atelier_photo4.webp" alt="photo 4 de l'atelier" />
-          <img src="/assets/images/atelier_photo5.webp" alt="photo 5 de l'atelier" />
-        </div>
-      </div>
-      <!-- cinquième partie -->
-      <div class="bloc5">
-        <div>
-          <p>
-            Les explorateurs repartent avec leur animal sous la forme d’une
-            carte postale, révélant au verso la fiche d’identité de l’espèce
-            qu’ils ont découvert.
-          </p>
-        </div>
-        <div class="img_bloc5">
-          <img src="/assets/images/card1.webp" alt="carte n°1" />
-          <img src="/assets/images/card2.webp" alt="carte n°2" />
-        </div>
-      </div>
-      <!-- sixième partie -->
+    </div>
       <div class="bloc6">
         <div>
           <p>
@@ -111,32 +128,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             la suite de l’aventure.
           </p>
         </div>
-        <div class="button_decouvrir">
-          <a href="/bestiaire">
-            <button>Découvrir le bestiaire<span>&#10140;</span></button>
-          </a>
+        <div>
+        <ButtonFilled href="/contact">Nous contacter</ButtonFilled>
         </div>
       </div>
-    </div>
-
-    <!--dernière partie "la suite" composé du titre, texte et bouton contact -->
-    <div class="bloc7">
-      <div>
-        <h2>– LA SUITE ? –</h2>
-        <p>
-          En attendant la création d’un roman graphique transmédias physique et
-          digital, mais aussi peut-être des expositions dans des muséums
-          d’histoires naturelles… Ce projet à destination de publics scolaires,
-          périscolaires et post-bac va perdurer dans le temps car il reste
-          encore une multitude d’espèces à découvrir dans les différents biomes.
-        </p>
-      </div>
-      <div class="button_contact">
-        <a href="/contact">
-          <button>Nous contacter</button>
-        </a>
-      </div>
-    </div>
   </section>
 
   <style lang="scss">
@@ -165,6 +160,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           }
         }
       }
+    }
       .container2 {
         padding: 64px 0;
         display: flex;
@@ -181,116 +177,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           }
         }
       }
-      .container_part4 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        .bloc1 {
+      .bloc6{
           display: flex;
-          flex-direction: column;
-          justify-content: center;
-          .img_bloc1 {
-            img {
-              width: 100%;
-              padding: 16px 0;
-            }
-          }
-        }
-        .bloc2 {
-          padding-top: 48px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          .img_bloc2 {
-            img {
-              width: 100%;
-              padding-top: 18px;
-            }
-          }
-        }
-        .bloc3 {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          .img_bloc3 {
-            display: flex;
-            flex-direction: row;
-            gap: 4px;
-            img {
-              width: 32.5%;
-              padding: 16px 0;
-            }
-          }
-          p {
-            margin: 4rem 0;
-          }
-        }
-        .bloc4 {
-          .img_bloc4 {
-            display: flex;
-            flex-direction: row;
-            gap: 4px;
-            img {
-              width: 49.5%;
-            }
-          }
-        }
-        .bloc5 {
-          .img_bloc5 {
-            display: flex;
-            flex-direction: row;
-            gap: 4px;
-            img {
-              width: 49.5%;
-            }
-          }
-        }
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
       }
-      .button_decouvrir {
-        a {
-          button {
-            width: 230px;
-            height: 58px;
-            border: 2.6px solid #e1f6ff;
-            border-radius: 8px;
-            font-weight: 700;
-            color: #e1f6ff;
-            backdrop-filter: blur(10px);
-            background: #131515;
-				    cursor: pointer;
-            span {
-              margin-left: 16px;
-            }
-            transition: 0.2s;
-            &:hover {
-              transition: 0.2s;
-              color: #131515;
-              background: #e1f6ff;
-            }
-          }
-        }
-      }
-      .button_contact {
-        width: 100%;
-        height: 63.8px;
-        a {
-          button {
-            width: 163px;
-            height: 58px;
-            border: 0;
-            border-radius: 8px;
-            font-weight: 700;
-            color: #131515;
-            background: #3ae7ab;
-            transition: 0.2s;
-            cursor: pointer;
-            &:hover {
-              transition: 0.2s;
-              filter: brightness(50%);
-            }
-          }
-        }
-      }
-    }
+
   </style>
 </BaseLayout>
