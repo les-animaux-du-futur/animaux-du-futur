@@ -1,4 +1,5 @@
 ---
+import type { GetStaticPaths } from "astro";
 import ButtonOutLine from '../atoms/ButtonOutLine.astro';
 
 
@@ -6,7 +7,7 @@ interface Props {
   btn?: {text: string, link: string, withArrow?:boolean};
   title: string;
   texts: string[];
-  imgUrl: string
+  imgUrl: string | string[];
   reverse?: boolean
 }
 
@@ -20,15 +21,35 @@ const {title, texts, imgUrl, reverse, btn} = Astro.props
     {texts.map((text: string) => <p set:html={text}/>)}
     {btn && <ButtonOutLine href={btn.link} withArrow={btn.withArrow}>{btn.text}</ButtonOutLine>}
   </div>
-  <div class="img">
-    <img src={imgUrl} alt="">
-  </div>
+  { typeof imgUrl === 'string' ? (
+    <div class="img">
+      <img src={imgUrl} alt="">
+    </div>) : (
+      <div class="images">
+        {imgUrl.map((img) => (
+          <div class="img">
+            <img src={img} alt="">
+          </div>))}
+        </div>
+    )}
 </div>
 
 
 
 
 <style lang="scss">
+  .images {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    max-width: 60vw;
+    min-width: 50%;
+    @media (max-width: 600px){
+      min-width: 100%;
+      max-width: 100vw;
+    }
+
+  }
 
 
   .inlineContainer {
@@ -70,9 +91,9 @@ const {title, texts, imgUrl, reverse, btn} = Astro.props
     min-width: 40%;
     overflow: hidden;
 
-    // @media (min-width: 600px){
-    //   min-width: 24%;
-    // }
+    @media (max-width: 600px){
+      min-width: 100%;
+    }
 
     // @media (min-width: 1300px){
     //   min-width: 29%;
