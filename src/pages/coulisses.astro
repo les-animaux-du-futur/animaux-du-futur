@@ -26,8 +26,6 @@ import ButtonFilled from "../components/atoms/ButtonFilled.astro";
         pour partir à la découverte de la biodiversité de demain…
       </p>
     </div>
-    </section>
-
 
     <TextImgInline
       title="LA RECHERCHE"
@@ -73,7 +71,7 @@ import ButtonFilled from "../components/atoms/ButtonFilled.astro";
     <TextImgInline
       title="UN MOMENT CONVIVIAL"
       texts={[
-        'C’est une occasion pour les jeunes comme les plus âgés de présenter leurs créations afin de partager les savoirs, et surtout de passer un moment convival.'
+        'C’est une occasion pour les jeunes comme les plus âgés de présenter leurs créations afin de partager les savoirs, et surtout de passer un moment convival.' 
       ]}
       imgUrl="/assets/images/atelier_photo3.webp"
     />
@@ -91,7 +89,7 @@ import ButtonFilled from "../components/atoms/ButtonFilled.astro";
         'Ensuite, les explorateurs repartent avec leur animal sous la forme d’une carte postale, révélant au verso la fiche d’identité de l’espèce qu’ils ont découvert.'
       ]}
       imgUrl="/assets/images/atelier_photo6.png"
-    />
+    /> 
       <TextImgInline
         reverse
         title="OÙ RETROUVER LES ESPÈCES ?"
@@ -100,19 +98,19 @@ import ButtonFilled from "../components/atoms/ButtonFilled.astro";
         ]}
         imgUrl="/assets/images/atelier_photo7.png"
         btn={{
-          text: 'Découvrir le bestiaire',
+          text: 'Découvrir le bestiaire', 
           withArrow: true,
           link: '/bestiaire'
         }}
         />
     <!--partie 4 -->
     <div class="container_part4">
-
+      
     <!--dernière partie "la suite" composé du titre, texte et bouton contact -->
-    <div class="bloc7">
+    <div class="s">
       <div>
         <h2>LA SUITE ?</h2>
-        <p>
+        <p class="text_contact">
           En attendant la création d’un roman graphique transmédias physique et
           digital, mais aussi peut-être des expositions dans des muséums
           d’histoires naturelles… Ce projet à destination de publics scolaires,
@@ -122,8 +120,9 @@ import ButtonFilled from "../components/atoms/ButtonFilled.astro";
       </div>
     </div>
       <div class="bloc6">
-        <div>
+        <div class="text_contact">
           <p>
+            <h2>Une question ? </h2>
             Puis, chaque espèce est répertoriée dans le bestiaire digital, qui
             va grandir au fil des années et des interventions. Cet espace est
             accessible à travers l’exposition et les cartes postales grâce à un
@@ -132,11 +131,11 @@ import ButtonFilled from "../components/atoms/ButtonFilled.astro";
             la suite de l’aventure.
           </p>
         </div>
-        <div>
+        <div class="btn_contact">
         <ButtonFilled href="/contact">Nous contacter</ButtonFilled>
         </div>
       </div>
-
+  </section>
 
   <style lang="scss">
     //configuration du container
@@ -181,11 +180,22 @@ import ButtonFilled from "../components/atoms/ButtonFilled.astro";
           }
         }
       }
+      .text_contact{
+            max-width: 645px;
+        }
+      .bloc7{
+        margin-top: 64px;
+      }
       .bloc6{
           display: flex;
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
+          flex-wrap: wrap;
+          margin-top: 64px;
+          .btn_contact{
+            margin-left: 16px;
+          }
       }
 
   </style>

@@ -21,7 +21,7 @@ import "../styles/app.css";
   </body>
   <footer>
     <div class="container_return">
-      <button class="return">
+      <button id="return-to-top" class="return">
         <img src="/assets/images/arrow4.svg" alt="icone flèche">
       </button>
     </div>
@@ -38,6 +38,20 @@ import "../styles/app.css";
     document.getElementById("date").textContent = String(
       new Date().getFullYear()
     );
+    </script>
+  <script>
+    
+    const btn = document.getElementById("return-to-top");
+
+    btn.addEventListener('click', () => {
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth' // Pour un défilement fluide
+      });
+
+    })
+
+
   </script>
 </html>
 
