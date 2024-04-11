@@ -1,5 +1,5 @@
 ---
-import Hero from "../components/Hero.astro";
+
 import MobileHeader from "../components/MobileHeader.astro";
 import SideBar from "../components/SideBar.astro";
 import { SITE } from "../config";
@@ -84,7 +84,7 @@ import "../styles/app.css";
     }
   }
   :root {
-    --containerSideSpace: 3rem;
+    --containerSideSpace: 1.8rem;
     @media (min-width: 600px) {
       --containerSideSpace: 6rem;
     }
@@ -124,13 +124,12 @@ import "../styles/app.css";
   }
 
   h1 {
-    font-size: 48px;
+    line-height: 90%;
     font-weight: 500;
     color: #e1f6ff;
     font-family: Blinker-Bold;
   }
   h2 {
-    font-size: 35px;
     font-weight: 500;
     color: #e1f6ff;
   }
@@ -154,14 +153,8 @@ import "../styles/app.css";
     font-weight: 700;
     color: #e1f6ff;
   }
- 
+
   @media screen and (min-width: 768px) {
-    h1 {
-      font-size: 56px;
-    }
-    h2 {
-      font-size: 48px;
-    }
     h3 {
       font-size: 28px;
     }

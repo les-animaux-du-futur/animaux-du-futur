@@ -25,17 +25,22 @@ const {title, texts, imgUrl, reverse} = Astro.props
 
 
 <style lang="scss">
+
+
   .inlineContainer {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 4rem;
     margin: 4rem 0 4rem 0;
     flex-direction: column;
     @media (min-width: 700px){
       flex-direction: row;
     }
+    @media (max-width: 600px){
+      padding: 0;
+    }
     &.reverse {
-      flex-direction: column-reverse;
+      flex-direction: column;
       margin: 4rem 0 4rem 0;
       @media (min-width: 700px){
         flex-direction: row-reverse;
@@ -44,12 +49,17 @@ const {title, texts, imgUrl, reverse} = Astro.props
   }
 
   .texts {
+    @media (max-width: 600px){
+      padding: 0 var(--containerSideSpace);
+    }
+
     p {
       margin: 1.6rem 0;
     }
     h2{
       text-transform: uppercase;
       font-weight: bold;
+      margin-top: 2rem;
     }
   }
   .img {
