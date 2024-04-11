@@ -1,10 +1,14 @@
 {
   "biome": "Forêt",
+  "expedition": "1",
   "height": "40 cm",
+  "explorator": "Daria",
   "name": "RENARD MIROIR",
-  "EvolutionDescripption": "Renard qui possède la capacité de refléter son environnement sur son pelage afin de se camoufler quelque soit le paysage ou la lumière environnante. Sa couleur naturelle est inconnue…",
+  "diet": "carnivore",
+  "EvolutionDescription": "Renard qui possède la capacité de refléter son environnement sur son pelage afin de se camoufler quelque soit le paysage ou la lumière environnante. Sa couleur naturelle est inconnue…",
   "weight": "7 kg",
   "type": "animal",
+  "id": "4",
   "life": "15 ans",
   "discoveryDate": "10 Apr 2024Ttrue",
   "speciesImage": "assets/content/renard.webp"

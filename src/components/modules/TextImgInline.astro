@@ -11,7 +11,7 @@ const {title, texts, imgUrl, reverse} = Astro.props
 ---
 
 
-<div class={`inlineContainer ${reverse ? 'reverse' : ''}`}>
+<div class={`inlineContainer ${reverse ? 'reverse contaierSpaceRight' : 'contaierSpaceLeft'}`}>
   <div class="texts">
     <h3>{title}</h3>
     {texts.map((text: string) => <p>{text}</p>)}
@@ -29,13 +29,14 @@ const {title, texts, imgUrl, reverse} = Astro.props
     display: flex;
     align-items: center;
     gap: 4rem;
-    margin-top: 2rem;
+    margin: 4rem 0 4rem 0;
     flex-direction: column;
     @media (min-width: 700px){
       flex-direction: row;
     }
     &.reverse {
       flex-direction: column-reverse;
+      margin: 4rem 0 4rem 0;
       @media (min-width: 700px){
         flex-direction: row-reverse;
       }
@@ -51,7 +52,7 @@ const {title, texts, imgUrl, reverse} = Astro.props
     }
   }
   .img {
-    min-width: 50%;
+    min-width: 40%;
     overflow: hidden;
 
     // @media (min-width: 600px){

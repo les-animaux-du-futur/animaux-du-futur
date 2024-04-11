@@ -211,7 +211,7 @@ const { biomes } = getBiomes();
 
     let sortedSpecies = filteredSpecies.slice();
 
-    if (sortBy === "id" || sortBy === "") {
+    if (sortBy === "" || sortBy === "id") {
       sortedSpecies.sort((a, b) =>
         sortDesc ? a.id.localeCompare(b.id) : b.id.localeCompare(a.id)
       );
@@ -223,29 +223,29 @@ const { biomes } = getBiomes();
       );
     }
     dataContainer.innerHTML = sortedSpecies
-      .map((specie) => {
+      .map((specie, i) => {
         const biome = biomes.find(
           (biome) => biome.name.toLowerCase() === specie.biome.toLowerCase()
         );
         const biomeColor = biome ? biome.color : "black";
         const biomeName = biome ? biome.name : "";
         return `
-			<div class="animal">
+			<a href="/species/${parseInt(i)}" class="animal">
 				<img src=${specie.speciesImage} alt=""/>
 				<div class="title">
 					<h4>
-						#${specie.id}
-					</h4>
-					<h4>
 						${specie.name}
 					</h4>
+					<p>
+						#00${parseInt(specie.id)}
+					</p>
 				</div>
 				<div class="biome" style="background-color: ${biomeColor};">
 					<p>
 						${biomeName}
 					</p>
 				</div>
-			</div>
+			</a>
 			`;
       })
       .join("");
@@ -351,22 +351,31 @@ const { biomes } = getBiomes();
       .animal {
         display: flex;
         flex-direction: column;
-        gap: 0.75rem;
+        text-decoration: none;
         img {
           width: 100%;
+          aspect-ratio: 4 / 5;
         }
         .title {
+          display: flex;
+          justify-content: space-between;
           color: #e1f6ff;
+          margin-bottom: 0.75rem;
+          p {
+            margin: 0;
+          }
         }
         .biome {
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 9rem;
-          height: 1.875rem;
+          width: fit-content;
+          padding: 0.3rem 0.8rem;
           border-radius: 1.125rem;
           p {
             color: black;
+            font-size: 0.875rem;
+            margin: 0;
           }
         }
         h4 {

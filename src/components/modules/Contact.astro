@@ -5,10 +5,10 @@ import ButtonFilled from "../atoms/ButtonFilled.astro";
 
 const pdfUrl = ''
 ---
-    <div class="contact">
+    <div class="container contact">
       <div class="text">
         <h2>Intéressé par le projet ?</h2>
-        <p>Vous êtes intéressé par le projet, et vous souhaitez l’utiliser dans un contexte pédagogique. 
+        <p>Vous êtes intéressé par le projet, et vous souhaitez l’utiliser dans un contexte pédagogique.
           N’hésitez pas à télécharger le document PDF en cliquant sur le bouton. Tout l’atelier est expliqué dans le document.</p>
       </div>
       <div class="content">
@@ -16,10 +16,10 @@ const pdfUrl = ''
         <p>Pour commencer l'aventure !</p>
       </div>
     </div>
-    <div class="contact">
+    <div class="container contact">
       <div class="text">
         <h2>Une question ?</h2>
-        <p>Vous avez une question à nous poser ? Vous avez besoin de précisions sur certains modules ? Ou bien d’autres 
+        <p>Vous avez une question à nous poser ? Vous avez besoin de précisions sur certains modules ? Ou bien d’autres
           choses à nous faire remonter, n’hésitez pas à nous contacter directement avec le bouton. C’est facile et rapide !</p>
       </div>
       <div class="content">
@@ -30,16 +30,18 @@ const pdfUrl = ''
 
 
 <style lang="scss">
+
   .contact{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     .text{
       max-width: 500px;
     }
   }
   .content {
-    width: 100%;
+    width: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;

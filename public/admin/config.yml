@@ -35,6 +35,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
     identifier_field: "name"
     fields:
+      - { name: "id", widget: "string", label: "Id" }
       - { name: "name", widget: "string", label: "Nom" }
       - {
           name: "speciesImage",
@@ -57,7 +58,7 @@ collections:
           options:
             [
               { label: "Plante", value: "plant" },
-              { label: "Animale", value: "animal" },
+              { label: "Animal", value: "animal" },
             ],
         }
       - {
@@ -90,11 +91,77 @@ collections:
           required: false,
         }
       - {
-          name: "EvolutionDescripption",
+          name: "diet",
+          label: "Régime alimentaire",
+          widget: "select",
+          default: "Carnivore",
+          options:
+            [
+              { label: "Carnivore", value: "carnivore" },
+              { label: "Herbivore", value: "herbivore" },
+            ],
+        }
+      - {
+          name: "EvolutionDescription",
           widget: "markdown",
           label: "Description détaillée de son évolution",
           required: false,
         }
+      - {
+          name: "expedition",
+          widget: "string",
+          label: "Numéro d'exploration",
+          required: false,
+        }
+      - {
+          name: "explorator",
+          widget: "string",
+          label: "Explorateur",
+          required: false,
+        }
+  - name: "modules"
+    extension: "json"
+    label: "Modules"
+    label_singular: "Module"
+    folder: "src/content/modules"
+    create: true
+    delete: true
+    identifier_field: "name"
+    fields:
+      - label: "Slug"
+        name: "slug"
+        widget: "string"
+        default: "{{slug}}"
+        required: true
+
+      - label: "Titre de la page"
+        name: "title"
+        widget: "string"
+        default: "Les Animaux du futur"
+        required: true
+
+      - label: "Contenu du hero"
+        name: "HeroContent"
+        widget: "markdown"
+        required: false
+
+      -
+        label: "hero Background"
+        name: "background"
+        widget: "image"
+        required: true
+
+      - label: "Sections"
+        name: "sections"
+        widget: "list"
+        summary: '{{fields.Section.title}}'
+        required: false
+        fields: [{ label: Section,
+                  name: section,
+                  widget: object,
+                  fields:  [{label: Titre, name: title, widget: string},{label: Content, name: content, widget: markdown}, {label: "Image", name: "image", widget: "image", required: false,}]}]
+
+
   - name: "Pages" # Utilisé dans les routes, par exemple, /admin/collections/blog
     label: "Pages" # Utilisé dans l'UI
     create: true # Permettre aux utilisateurs de créer de nouveaux documents dans cette collection

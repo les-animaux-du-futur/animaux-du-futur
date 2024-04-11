@@ -1,0 +1,15 @@
+{
+  "biome": "Désert",
+  "expedition": "2",
+  "height": "58 cm",
+  "explorator": "Kewan",
+  "name": "SURICATE GUETTEUR",
+  "diet": "carnivore",
+  "EvolutionDescription": "Grâce à ses longues pattes avant, il se tient désormais debout constamment. Cela lui permet d’être encore plus vigilant face à ses nombreux prédateurs. Il semble également plus robuste.",
+  "weight": "10 kg",
+  "type": "animal",
+  "id": "10",
+  "life": "14 ans",
+  "discoveryDate": "11 Apr 2024Ttrue",
+  "speciesImage": "assets/content/suricate.webp"
+}
