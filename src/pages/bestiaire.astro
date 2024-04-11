@@ -81,7 +81,7 @@ const { biomes } = getBiomes();
       });
     } else if (sortBy === "biome") {
       sortedSpecies.sort((a, b) => {
-        const comparison = sortDesc ? -1 : 1;
+        const comparison = sortDesc ? 1 : -1;
         return comparison * a.biome.localeCompare(b.biome);
       });
     }
