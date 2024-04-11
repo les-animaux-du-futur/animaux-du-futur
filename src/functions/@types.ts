@@ -18,5 +18,11 @@ export type SpeciesByBiomes = Record<string, Specie[]>;
 
 export interface Biome {
   name: string;
+  heroDescription: string;
+  description: string;
+  climat: string;
+  temperatureMin: number;
+  temperatureMax: string;
+  speciesNumber: string;
   color: string;
 }
