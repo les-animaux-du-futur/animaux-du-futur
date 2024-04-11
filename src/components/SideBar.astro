@@ -3,62 +3,69 @@ import NavList from "./NavList.astro";
 ---
 
 <header class="wrapper">
+  <div class="logo">
+    <a href="/">
+      <img src="/assets/images/logo.svg" alt="" />
+    </a>
+  </div>
   <nav>
-    <div class="logo">
-      <a href="/">
-        <img src="/assets/images/logo.svg" alt="" />
-      </a>
-    </div>
     <NavList />
-    <div class=""></div>
   </nav>
+    <div class=""></div>
 </header>
 
 <script>
-  const header = document.querySelector<HTMLDivElement>("header.wrapper");
+  const header = document.querySelector<HTMLDivElement>("header nav");
 
   const headerWidth = header.clientWidth;
-  const headerSmallWidth = 80;
-  header.style.width = `${headerSmallWidth}px`;
+  const headerSmallWidth = 5.4;
+  header.style.width = `${headerSmallWidth}rem`;
   header.style.transition = "width 0.16s linear";
 
   header.addEventListener("mouseenter", () => {
     header.style.width = `${headerWidth}px`;
   });
   header.addEventListener("mouseleave", () => {
-    header.style.width = `${headerSmallWidth}px`;
+    header.style.width = `${headerSmallWidth}rem`;
   });
 </script>
 
 <style lang="scss">
   header {
     left: 0;
-    overflow: hidden;
     top: 0;
     height: 100%;
-    padding: 1rem;
-    background-color: #2d4436;
+
+    z-index: 20;
+    background-color: transparent;
     position: fixed;
     box-sizing: border-box;
     z-index: 1;
     @media (max-width: 660px) {
       display: none;
     }
-    nav {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-start;
-      height: 100%;
 
-      .logo {
-        margin: 0 auto;
-        img {
-          width: 2.8rem;
-          max-width: none;
-        }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    nav {
+      border-radius: 16px;
+      overflow: hidden;
+
+      backdrop-filter: blur(20px);
+      background-color: rgba(19, 21, 21, 0.30);
+    }
+
+    .logo {
+      margin: 1rem 2rem;
+      img {
+        width: 6rem;
+        max-width: none;
       }
-      ul {
+    }
+    ul {
+        margin: 0 2rem;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -75,7 +82,7 @@ import NavList from "./NavList.astro";
             gap: 1.4rem;
 
             img {
-              width: 3rem;
+              width: 1.3rem;
             }
             p {
               width: fit-content;
@@ -85,5 +92,5 @@ import NavList from "./NavList.astro";
         }
       }
     }
-  }
+
 </style>
