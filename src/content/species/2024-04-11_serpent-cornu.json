@@ -1,0 +1,15 @@
+{
+  "biome": "Désert",
+  "expedition": "2",
+  "height": "3 m",
+  "explorator": "Antoine",
+  "name": "SERPENT CORNU",
+  "diet": "carnivore",
+  "EvolutionDescription": "Le serpent cornu est un reptile venimeux capable de se déplacer sous le sable. Une fois enfoui, il détecte les vibrations du sol grâce à ses cornes, ce qui en fait un prédateur redoutable et lui permet d’éviter ses propres prédateurs.",
+  "weight": "10 kg",
+  "type": "animal",
+  "id": "11",
+  "life": "64 ans",
+  "discoveryDate": "11 Apr 2024Ttrue",
+  "speciesImage": "assets/content/serpent.png"
+}

@@ -5,10 +5,10 @@
   "explorator": "Kéwan",
   "name": "TIGRE FEUILLU",
   "diet": "carnivore",
-  "EvolutionDescripption": "Évolution du tigre actuel, plus musclée. Sa peau est devenue plus dure, sa fourrure a tourné au vert, ses dents ont poussé et rappellent celles de son ancêtre lointain, le Smilodon. Elles sont emplies d’un venin mortel.",
+  "EvolutionDescription": "Évolution du tigre actuel, plus musclée. Sa peau est devenue plus dure, sa fourrure a tourné au vert, ses dents ont poussé et rappellent celles de son ancêtre lointain, le Smilodon. Elles sont emplies d’un venin mortel.",
   "weight": " 500 kg",
   "type": "animal",
-  "id": "5",
+  "id": "3",
   "life": "20 ans",
   "discoveryDate": "29 Mar 2024",
   "speciesImage": "/assets/content/tigre.webp"

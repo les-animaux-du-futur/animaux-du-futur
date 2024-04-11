@@ -16,12 +16,15 @@ const { id } = Astro.params;
 const specie = species[id];
 
 const name = specie.name;
-const description = specie.EvolutionDescripption;
+const description = specie.EvolutionDescription;
 const biome = specie.biome;
 const height = specie.height;
 const life = specie.life;
 const weight = specie.weight;
 const image = specie.speciesImage;
+const diet = specie.diet;
+const expedition = specie.expedition;
+const explorator = specie.explorator;
 ---
 
 <BaseLayout>
@@ -35,8 +38,8 @@ const image = specie.speciesImage;
               <h2 class="id">#00{parseInt(specie.id)}</h2>
               <img src={image} alt="">
               <div class="infos">
-                  <h4 class="expedition">Expedition: #1</h4>
-                  <h4 class="explorateur">Exploratrice: Angela</h4>
+                  <h4 class="expedition">Expedition: #{expedition}</h4>
+                  <h4 class="explorateur">Exploratrice: {explorator}</h4>
               </div>
           </div>
           <div class="right-content">
@@ -79,7 +82,7 @@ const image = specie.speciesImage;
                           </div>
                           <div class="title-infos">
                               <h4>Régime:</h4>
-                              <h4>{weight}</h4>
+                              <h4>{diet}</h4>
                           </div>
                       </div>
                       <div class="block-infos longévité">

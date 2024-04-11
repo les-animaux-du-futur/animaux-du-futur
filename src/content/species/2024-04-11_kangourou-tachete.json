@@ -1,0 +1,15 @@
+{
+  "biome": "Désert",
+  "expedition": "2",
+  "height": "1,4m",
+  "explorator": "Ava",
+  "name": "KANGOUROU TÂCHETÉ",
+  "diet": "carnivore",
+  "EvolutionDescription": "Descendant du kangourou, il possède une fourrure qui se solidifie en cas de morsure ou d’impact. Son pelage est tacheté afin de ressembler à ses prédateurs pour les dissuader.",
+  "weight": "65 kg",
+  "type": "animal",
+  "id": "8",
+  "life": "25 ans",
+  "discoveryDate": "11 Apr 2024Ttrue",
+  "speciesImage": "assets/content/kangourou.webp"
+}

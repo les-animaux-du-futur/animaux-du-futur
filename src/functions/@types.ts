@@ -3,7 +3,7 @@ export interface Specie {
   biome: string;
   height: string;
   name: string;
-  EvolutionDescripption: string;
+  EvolutionDescription: string;
   weight: string;
   type: string;
   life: string;
