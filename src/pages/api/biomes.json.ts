@@ -1,6 +1,6 @@
 import { getBiomes } from "../../functions";
 
-export async function GET({ params, request }) {
+export async function GET() {
   const { biomes } = getBiomes();
   return new Response(
     JSON.stringify({
