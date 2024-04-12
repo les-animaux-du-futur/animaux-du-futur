@@ -2,112 +2,42 @@
 import Hero from "../components/Hero.astro";
 import TextImgInline from "../components/modules/TextImgInline.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ButtonOutLine from "../components/atoms/ButtonOutLine.astro";
 import ButtonFilled from "../components/atoms/ButtonFilled.astro";
+
+import data from '../content/pages/coulisses.json'
+
+const {url, title, background, firstSectionTitle, firstSectionContent, sections, HeroContent} = data
 ---
 
 <BaseLayout title="Les Animaux du Futur | Coulisses" description="Découvrez comment la magie opère lors des ateliers !">
-  <Hero title="LEs coulisses" imgUrl="/assets/images/coulisseHero.webp" text="Découvrez comment la magie opère lors des ateliers !"/>
+  <Hero title={title} imgUrl={`/${background}`} text={HeroContent ?? ""}/>
   <!-- container de la partie projet et de la partie des modules -->
   <section >
     <!-- Première partie "Les coulisses avec le premier texte" -->
     <div class="container">
-      <h1>LES COULISSES</h1>
+      <h1 set:html={firstSectionTitle}/>
       <div class="container_coulisse">
-        <p>
-          Cet atelier d’éducation aux pratiques artistiques bénéficie de l’aide de
-          partenaires<br />
-          (Région Nouvelle Aquitaine, Département Gironde, Département Landes, DRAC,
-          ALCA, Passeurs d’Images, CCCHL, ACL de Sabres, Cinémagin’Action).<br />
-          Ce projet sous l’angle de la biologie spéculative a pour objectif de sensibiliser
-          à la situation des espèces animales existantes, à leurs problématiques et
-          leur avenir. Une création graphique poétique, confrontant des techniques
-          d’illustrations traditionnelles aux outils algorithmiques.<br />
-          Chaque session est en 3 phases : la recherche, la création, la valorisation,
-          pour partir à la découverte de la biodiversité de demain…
-        </p>
+        <p set:html={firstSectionContent}/>
       </div>
     </div>
+    {sections.map(({section}, index) => (
 
-    <TextImgInline
-      title="LA RECHERCHE"
-      texts={[
-        `Chaque explorateur se documente et étudie un animal en lien avec son
-      environnement. Il partage ses découvertes en équipe, échange et débat
-      des évolutions possibles de son espèce. Un espace où art, science et
-      imagination s’entremêlent pour enrichir la vision des participants sur
-      notre planète.`,
-      ]}
-      imgUrl="/assets/images/egg.webp"
-    />
-    <TextImgInline
-      reverse
-      title="LA CREATION"
-      texts={[
-        `La mise en image des animaux du futur repose sur un principe
-        d’itérations, combinant techniques traditionnelles et outils
-        d’Intelligence Artificielle. Il y a un dialogue entre spontanéité et
-        innovation, questionnant le rapport de l’humain à la machine dans une
-        démarche créative.`,
-      ]}
-      imgUrl="/assets/images/paper.webp"
-    />
-    <TextImgInline
-      title="LA FINALISATION"
-      texts={[
-        `Pour mettre en lumière le procédé de création, prenons comme exemple la première espèce du futur recensée dans ce projet :  « la Poulosaure ».`,
-        `Le processus de création de cet animal est hybride et itératif, il a donc été conçu étapes par étapes notamment avec ces croquis comme ébauche.`,
-        `Voici la fusion et la retouche des croquis grâce a l’IA. Les nombreuses itérations amènent à ce résultat. Cette version est actuellement la version finale de la poulosaure. `,
-      ]}
-      imgUrl="/assets/images/drawingChicken.png"
-    />
-    <TextImgInline
-      reverse
-      title="L'EXPOSITION"
-      texts={[
-        'Pour clôturer chaque expédition, nous exposons les créations dans le lieu d’accueil, avant qu’elles ne commencent leurs itinérance dans d’autres lieux propices aux alentours.'
-        ]}
-      imgUrl={["/assets/images/atelier_photo1.webp", "/assets/images/atelier_photo2.webp"]}
-      />
-
-    <TextImgInline
-      title="UN MOMENT CONVIVIAL"
-      texts={[
-        'C’est une occasion pour les jeunes comme les plus âgés de présenter leurs créations afin de partager les savoirs, et surtout de passer un moment convival.' 
-      ]}
-      imgUrl="/assets/images/atelier_photo3.webp"
-    />
-    <TextImgInline
-      reverse
-      title="LE DÉBAT"
-      texts={[
-        'Ces moments de célébration sont aussi des occasions précieuses pour animer des débats autour des illustrations et de notre biodiversité.'
-      ]}
-      imgUrl="/assets/images/atelier_photo4.webp"
-    />
-    <TextImgInline
-      title="LA CARTE POSTALE"
-      texts={[
-        'Ensuite, les explorateurs repartent avec leur animal sous la forme d’une carte postale, révélant au verso la fiche d’identité de l’espèce qu’ils ont découvert.'
-      ]}
-      imgUrl="/assets/images/atelier_photo6.png"
-    /> 
       <TextImgInline
-        reverse
-        title="OÙ RETROUVER LES ESPÈCES ?"
-        texts={[
-          'Enfin, chaque espèce est répertoriée dans le bestiaire digital, qui va grandir au fil des années et des interventions. Cet espace est accessible à travers l’exposition et les cartes postales grâce à un QR code qui restera inchangé pendant toute la vie du projet. Cela permettra aux nouveaux explorateurs comme aux plus anciens de suivre la suite de l’aventure.'
-        ]}
-        imgUrl="/assets/images/atelier_photo7.png"
-        btn={{
-          text: 'Découvrir le bestiaire', 
+        title={section.title}
+        texts={[section.content]}
+        imgUrl={`/${section.image}`}
+        reverse={index % 2 === 1 ? true : false}
+        btn={section.btnText ? {
+          text: section.btnText,
           withArrow: true,
-          link: '/bestiaire'
-        }}
-        />
+          link: section.btnLink
+        }: undefined}
+      />
+    ))}
+
     <!--partie 4 -->
     <div class="container_part4">
-      
+
     <!--dernière partie "la suite" composé du titre, texte et bouton contact -->
     <div class="container">
       <div>
@@ -143,11 +73,11 @@ import ButtonFilled from "../components/atoms/ButtonFilled.astro";
 
   <style lang="scss">
     //configuration du container
+    h1 {
+      text-align: left;
+    }
     .container {
-      h1 {
-        display: flex;
-        justify-content: center;
-      }
+
       .container_coulisse {
         margin: 64px 0;
       }
