@@ -3,7 +3,7 @@
   "heroDescription": "Son environnement est vaste et dynamique, caractérisé par une étendue infinie d'eau salée et des forces naturelles puissantes.",
   "color": "#7CB2E4",
   "speciesNumber": "Elevée",
-  "biomesImage": "assets/content/heroocean.jpg",
+  "biomesImage": "assets/content/heroocean.webp",
   "name": "Océan",
   "url": "ocean",
   "temperatureMax": "25",

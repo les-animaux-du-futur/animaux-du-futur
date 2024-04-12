@@ -3,7 +3,7 @@
   "heroDescription": "Son environnement est majestueux et impitoyable, caractérisé par des sommets imposants et des conditions climatiques changeantes.",
   "color": "#9A7A5C",
   "speciesNumber": "Moyenne",
-  "biomesImage": "assets/content/heromontain.jpg",
+  "biomesImage": "assets/content/heromontain.webp",
   "name": "Montagnes",
   "url": "mountain",
   "temperatureMax": "23",
