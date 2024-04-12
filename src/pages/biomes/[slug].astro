@@ -1,33 +1,56 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Hero from "../../components/Hero.astro";
-import { getBiomes } from "../../functions";
+import { getBiomes, getSpecies } from "../../functions";
 
 export function getStaticPaths() {
   const { biomes } = getBiomes();
-  return biomes.map((_, index) => {
+  return biomes.map(({url}, index) => {
+    if (!url) {
+      return { params: {
+        slug: 's'
+      }}
+    }
     return {
-      params: { id: index },
+      params: { slug: url },
     };
   });
 }
 
-const { biomes } = getBiomes();
-const { id } = Astro.params;
-const biome = biomes[id];
+const { biomesBySlug } = getBiomes();
+const { species } = getSpecies();
 
-// const name = biome.name;
-// const image = biome.biomesImage;
-// const heroDescription = biome.heroDescription;
-// const description = biome.description;
-// const climat = biome.climat;
-// const temperatureMin = biome.temperatureMin;
-// const temperatureMax = biome.temperatureMax;
-// const speciesNumber = biome.speciesNumber;
+
+
+const { slug } = Astro.params;
+
+
+
+const biome = biomesBySlug[slug];
+
+
+const {
+  name,
+  biomesImage,
+  heroDescription,
+  description,
+  climat,
+  temperatureMin,
+  temperatureMax,
+  speciesNumber,
+} = biome ?? {}
+
+let presentSpecies;
+if (name) {
+  presentSpecies = species.filter((specie) => specie.biome === name)
+
+}
+
+
 ---
 
-<!-- <BaseLayout>
-    <Hero title={name} imgUrl={image} text={heroDescription}/>
+{name && <BaseLayout>
+    <Hero title={name} imgUrl={`/${biomesImage}`} text={heroDescription}/>
     <section class="container">
         <div class="container-infos">
             <div class="container-description">
@@ -38,14 +61,14 @@ const biome = biomes[id];
                 <h2 class="caracteristiques">Caractéristiques</h2>
                 <div class="content-caracteristiques">
                     <div class="img-text">
-                        <img src="" alt="image">
+                        <img src="/assets/images/Temperature.svg" alt="image">
                         <div class="infos">
                             <p>Climat:</p>
                             <p class="climat">{climat}</p>
                         </div>
                     </div>
                     <div class="img-text">
-                        <img src="" alt="image">
+                        <img src="/assets/images/Thermometer.svg" alt="image">
                         <p>Température:</p>
                         <div class="temperatures">
                             <div class="content-temp">
@@ -59,7 +82,7 @@ const biome = biomes[id];
                         </div>
                     </div>
                     <div class="img-text">
-                        <img src="" alt="image">
+                        <img src="/assets/images/Bear.svg" alt="image">
                         <p>Présence animale:</p>
                         <p class="animaux">{speciesNumber}</p>
                     </div>
@@ -69,9 +92,13 @@ const biome = biomes[id];
         <div class="container-species">
             <h2>Espèces présentes</h2>
             <div class="grid-species">
-                <img src="/public/assets/content/chouette.webp" alt="image chouette">
-                <img src="/public/assets/content/chouette.webp" alt="image chouette">
-                <img src="/public/assets/content/chouette.webp" alt="image chouette">
+              {presentSpecies?.map((specie) => (
+                <a href={`/species/${Number(specie.id) -1}`}>
+                  <img src={`/${specie.speciesImage}`} alt="image chouette">
+                </a>
+              ))
+              }
+
             </div>
             <a class="button" href="/">
                 Découvrir le bestiaire
@@ -79,66 +106,9 @@ const biome = biomes[id];
             </a>
         </div>
     </section>
-</BaseLayout> -->
+</BaseLayout>}
 
-<BaseLayout>
-    <Hero title="DÉSERT" imgUrl="/assets/images/Desert.webp" text="Son environnement est inhospitalier et caractérisé par des conditions extrêmes de chaleur et de sécheresse."/>
-    <section class="container">
-        <div class="container-infos">
-            <div class="container-description">
-                <h2>Description</h2>
-                <p class="description">Voici le désert, où nous pouvons y retrouver des animaux robustes s’étant adaptés aux conditions climatiques difficiles et aux fortes chaleurs. Très peu de végétation y subsiste pour cause de manque de pluie régulière.</p>
-            </div>
-            <div class="container-caracteristiques">
-                <h2 class="caracteristiques">Caractéristiques</h2>
-                <div class="content-caracteristiques">
-                    <div class="img-text">
-                        <img src="/assets/images/Temperature.svg" alt="image température">
-                        <div class="infos">
-                            <p>Climat:</p>
-                            <p class="climat">Aride</p>
-                        </div>
-                    </div>
-                    <div class="img-text">
-                        <img src="/assets/images/Thermometer.svg" alt="image thermometer">
-                        <div class="infos">
-                            <p>Température:</p>
-                            <div class="temperatures">
-                                <div class="content-temp">
-                                    <p class="temp-min">15°C</p>
-                                    <span>min</span>
-                                </div>
-                                <div class="content-temp">
-                                    <p class="temp-max">46°C</p>
-                                    <span>max</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="img-text">
-                        <img src="/assets/images/Bear.svg" alt="image bear">
-                        <div class="infos">
-                            <p>Présence animale:</p>
-                            <p class="animaux">Faible</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-species">
-            <h2>Espèces présentes</h2>
-            <div class="grid-species">
-                <img src="/public/assets/content/chouette.webp" alt="image chouette">
-                <img src="/public/assets/content/chouette.webp" alt="image chouette">
-                <img src="/public/assets/content/chouette.webp" alt="image chouette">
-            </div>
-            <a class="button" href="/">
-                Découvrir le bestiaire
-                <img class="img_btn" src="/assets/images/Arrow3.svg" alt="icone arrow"/>
-            </a>
-        </div>
-    </section>
-</BaseLayout>
+
 
 <style lang="scss">
     .container {

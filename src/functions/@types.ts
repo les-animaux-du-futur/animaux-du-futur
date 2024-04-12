@@ -22,8 +22,9 @@ export interface Biome {
   heroDescription: string;
   description: string;
   climat: string;
-  temperatureMin: number;
+  temperatureMin: string;
   temperatureMax: string;
   speciesNumber: string;
   color: string;
+  url: string
 }

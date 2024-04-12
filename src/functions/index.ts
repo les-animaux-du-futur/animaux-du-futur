@@ -33,6 +33,7 @@ export function getSpecies() {
 
 export function getBiomes() {
   const biomes: Biome[] = [];
+  const biomesBySlug = []
 
   const biomesFolder = readdirSync("src/content/biomes");
 
@@ -43,8 +44,9 @@ export function getBiomes() {
     const jsData = JSON.parse(data) as Biome;
 
     biomes.push(jsData);
+    biomesBySlug[jsData.url] = jsData
   });
-  return { biomes };
+  return { biomes, biomesBySlug };
 }
 
 export function getModules() {
