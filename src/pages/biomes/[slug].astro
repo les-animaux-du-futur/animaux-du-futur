@@ -23,6 +23,9 @@ const { species } = getSpecies();
 
 
 const { slug } = Astro.params;
+
+
+
 const biome = biomesBySlug[slug];
 
 
@@ -35,14 +38,18 @@ const {
   temperatureMin,
   temperatureMax,
   speciesNumber,
-} = biome
+} = biome ?? {}
 
-const presentSepcies = species.filter((specie) => specie.biome === name)
-console.log(presentSepcies);
+let presentSpecies;
+if (name) {
+  presentSpecies = species.filter((specie) => specie.biome === name)
+
+}
+
 
 ---
 
-<BaseLayout>
+{name && <BaseLayout>
     <Hero title={name} imgUrl={`/${biomesImage}`} text={heroDescription}/>
     <section class="container">
         <div class="container-infos">
@@ -85,7 +92,7 @@ console.log(presentSepcies);
         <div class="container-species">
             <h2>Espèces présentes</h2>
             <div class="grid-species">
-              {presentSepcies.map((specie) => (
+              {presentSpecies?.map((specie) => (
                 <a href={`/species/${Number(specie.id) -1}`}>
                   <img src={`/${specie.speciesImage}`} alt="image chouette">
                 </a>
@@ -99,7 +106,7 @@ console.log(presentSepcies);
             </a>
         </div>
     </section>
-</BaseLayout>
+</BaseLayout>}
 
 
 

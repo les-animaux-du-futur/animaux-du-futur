@@ -20,20 +20,29 @@ const {
   SecondSectionContent,
   firstSectionImg,
   heroBtns,
+  title,
   HeroContent
 } = data;
 
 const {sortedModules} = getModules()
 
+console.log(sortedModules);
+
+interface Module {
+  slug: string
+  previewImage: string
+  previewTitle: string
+  previewSubTitle: string
+}
 
 
 ---
 
 <BaseLayout title="Les Animaux du Futur" description="Découvrez un projet collaboratif et évolutif sur les espèces animales actuelles et futures.">
   <Hero
-  title= "Les Animaux du futur"
+  title={title}
   text={HeroContent}
-  imgUrl="/assets/images/egg.webp"
+  imgUrl={`/${background}`}
   btns={heroBtns}
   />
   <!--Body de la page -->
@@ -49,7 +58,7 @@ const {sortedModules} = getModules()
       <div class="modules">
 
         <!--troisième module -->
-        {sortedModules.map((module) => (
+        {sortedModules.map((module: Module) => (
 
           <div class="div_module">
             <a href={`/modules/${module.slug}`}>
