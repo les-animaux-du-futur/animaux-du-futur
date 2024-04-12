@@ -1,4 +1,12 @@
 {
+  "climat": "Imprévisible",
+  "heroDescription": "Son environnement est majestueux et impitoyable, caractérisé par des sommets imposants et des conditions climatiques changeantes.",
+  "color": "#9A7A5C",
+  "speciesNumber": "Moyenne",
+  "biomesImage": "assets/content/heromontain.jpg",
   "name": "Montagnes",
-  "color": "#9A7A5C"
+  "url": "mountain",
+  "temperatureMax": "23",
+  "description": "Les montagnes s'élèvent majestueusement vers le ciel, défiant les cieux avec leur grandeur imposante. Leur environnement est rude, marqué par des altitudes extrêmes, des pentes escarpées et des conditions météorologiques capricieuses. Entre les pics vertigineux et les vallées profondes, règne une beauté sauvage et indomptable.",
+  "temperatureMin": "-20"
 }

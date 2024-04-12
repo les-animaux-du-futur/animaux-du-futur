@@ -1,4 +1,12 @@
 {
+  "climat": "Océanique",
+  "heroDescription": "Son environnement est vaste et dynamique, caractérisé par une étendue infinie d'eau salée et des forces naturelles puissantes.",
+  "color": "#7CB2E4",
+  "speciesNumber": "Elevée",
+  "biomesImage": "assets/content/heroocean.jpg",
   "name": "Océan",
-  "color": "#7CB2E4"
+  "url": "ocean",
+  "temperatureMax": "25",
+  "description": "Sous la surface scintillante, un monde inconnu de beauté et de danger s'étend à perte de vue. L'océan, à la fois berceau de la vie et force implacable, inspire à la fois la fascination et le respect. Pour ceux qui naviguent sur ses flots, il offre à la fois l'aventure sans fin et la tranquillité infinie",
+  "temperatureMin": "3.7"
 }

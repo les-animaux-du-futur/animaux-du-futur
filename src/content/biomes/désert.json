@@ -1,4 +1,12 @@
 {
+  "climat": "Aride ",
+  "heroDescription": "Son environnement est inhospitalier et caractérisé par des conditions extrêmes de chaleur et de sécheresse.",
+  "color": "#F7DE5B",
+  "speciesNumber": "Faible",
+  "biomesImage": "assets/content/desert.webp",
   "name": "Désert",
-  "color": "#F7DE5B"
+  "url": "desert",
+  "temperatureMax": "46",
+  "description": "Voici le désert, où nous pouvons y retrouver des animaux robustes s’étant adaptés aux conditions climatiques difficiles et aux fortes chaleurs. Très peu de végétation y subsiste pour cause de manque de pluie régulière.",
+  "temperatureMin": "15"
 }
