@@ -16,7 +16,7 @@ const {title, texts, imgUrl, reverse, btn} = Astro.props
 
 <div class={`inlineContainer ${reverse ? 'reverse contaierSpaceRight' : 'contaierSpaceLeft'}`}>
   <div class="texts">
-    <h2>{title}</h2>
+    <h2 set:html={title}/>
     {texts.map((text: string) => <p set:html={text}/>)}
     {btn && <ButtonOutLine href={btn.link} withArrow={btn.withArrow}>{btn.text}</ButtonOutLine>}
   </div>

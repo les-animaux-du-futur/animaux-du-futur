@@ -67,14 +67,13 @@ export function getModules() {
   const sortedModules = Object.values(modules)
 
 
-  // Sorting the array by date
-  sortedModules.sort((a, b) => {
-    console.log(a);
-
-    let dateA = parseDate(a.discoveryDate);
-    let dateB = parseDate(b.discoveryDate);
-    return dateA - dateB;
-  });
+  // // Sorting the array by date
+  // sortedModules.sort((a, b) => {
+  //   let dateA = parseDate(a.discoveryDate);
+  //   let dateB = parseDate(b.discoveryDate);
+  //   console.log(dateA, dateB);
+  //   return dateA - dateB;
+  // });
 
 
 
