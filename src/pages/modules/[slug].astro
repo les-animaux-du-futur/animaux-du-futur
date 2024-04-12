@@ -19,8 +19,9 @@ const { modules } = getModules();
 const { slug } = Astro.params;
 const module = modules[slug];
 
-const {title, sections, background, HeroContent, previewTitle, previewSubTitle, previewImage} = module
+const {title, sections, background, HeroContent, previewTitle, previewSubTitle, previewImage, pdf} = module
 
+console.log(module);
 
 ---
 
@@ -36,7 +37,7 @@ const {title, sections, background, HeroContent, previewTitle, previewSubTitle, 
 
     {sections.map(({section}, index) => <TextImgInline title={section.title} imgUrl={`/${section.image}`} texts={[section.content]} reverse={index % 2 === 1 ? true : false}/>)}
 
-    <Contact/>
+    <Contact pdfUrl={`/${pdf}`}/>
   </main>
 
 </BaseLayout>
