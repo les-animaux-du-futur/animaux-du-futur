@@ -3,7 +3,7 @@
   "heroDescription": "Son environnement est luxuriant et mystérieux, caractérisé par une abondance de verdure et une diversité biologique étonnante.",
   "color": "#75D964",
   "speciesNumber": "Moyenne",
-  "biomesImage": "assets/content/heroforest.jpg",
+  "biomesImage": "assets/content/heroforest.webp",
   "name": "Forêt",
   "url": "forest",
   "temperatureMax": "35",
