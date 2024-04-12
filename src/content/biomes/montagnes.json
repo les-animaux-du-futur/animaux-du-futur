@@ -5,6 +5,7 @@
   "speciesNumber": "Moyenne",
   "biomesImage": "assets/content/heromontain.jpg",
   "name": "Montagnes",
+  "url": "mountain",
   "temperatureMax": "23",
   "description": "Les montagnes s'élèvent majestueusement vers le ciel, défiant les cieux avec leur grandeur imposante. Leur environnement est rude, marqué par des altitudes extrêmes, des pentes escarpées et des conditions météorologiques capricieuses. Entre les pics vertigineux et les vallées profondes, règne une beauté sauvage et indomptable.",
   "temperatureMin": "-20"
