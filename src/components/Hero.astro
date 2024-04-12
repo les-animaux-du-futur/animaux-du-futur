@@ -37,9 +37,9 @@ const [mainBtn, secondBtn] = btns ?? []
         )}
     </div>
 
-        <div class="img_arrow">
-            <img src="/assets/images/arrow2.svg" alt="flèche">
-        </div>
+    <div class="img_arrow">
+      <img src="/assets/images/arrow2.svg" alt="flèche">
+    </div>
 
   </section>
 
@@ -79,6 +79,10 @@ const [mainBtn, secondBtn] = btns ?? []
           background-size: cover; /* Couvrir toute la zone de l'élément */
           background-position: center; /* Centrer l'image horizontalement et verticalement */
           background-repeat: no-repeat; /* Empêcher la répétition de l'image */
+          background: linear-gradient(to left, transparent, black);
+          @media (max-width: 599px) {
+            background: linear-gradient(to top, transparent, black);
+          }
           .container {
 
             .text_header {
