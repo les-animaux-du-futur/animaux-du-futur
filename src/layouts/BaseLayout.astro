@@ -68,6 +68,9 @@ const {title, description} = Astro.props
     margin: 0;
     padding: 0;
     background: #131515;
+    background-image: url(/assets/images/background.svg);
+    background-size: cover;
+    background-position: center;
     color: #fff;
     font-family: Blinker-Regular;
 
@@ -105,6 +108,7 @@ const {title, description} = Astro.props
           border: 1px solid #fff;
           cursor: pointer;
           transition: 0.2s;
+          z-index: 5;
           &:hover{
             transition: 0.2s;
             filter: brightness(50%);
@@ -117,6 +121,9 @@ const {title, description} = Astro.props
         align-items: center;
         justify-content: center;
         margin-right: 92px;
+        @media (max-width:600px){
+          margin-right: 0;
+        }
         img{
           width: 18px;
           height: 18px;
