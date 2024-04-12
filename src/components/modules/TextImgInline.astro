@@ -23,7 +23,7 @@ const {title, texts, imgUrl, reverse, btn} = Astro.props
   </div>
   { typeof imgUrl === 'string' ? (
     <div class="img">
-      <img src={imgUrl} alt="">
+      <img src={imgUrl} alt="image">
     </div>) : (
       <div class="images">
         {imgUrl.map((img) => (
