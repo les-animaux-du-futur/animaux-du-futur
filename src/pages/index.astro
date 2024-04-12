@@ -168,15 +168,18 @@ const {
                   border: 2px solid #fff;
                   background: rgba(19, 21, 21, 0.3);
                   backdrop-filter: blur(10px);
-                  cursor: pointer;
+                  transition: 0.2s;
                   span {
                     margin-left: 16px;
                   }
-                  transition: 0.2s;
                   &:hover {
                     transition: 0.2s;
                     color: #131515;
                     background: #e1f6ff;
+                    transition: 0.2s;
+                    .img_btn{
+                        filter: invert(1);
+                    }
                   }
                 }
               }
