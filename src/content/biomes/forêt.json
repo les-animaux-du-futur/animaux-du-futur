@@ -5,6 +5,7 @@
   "speciesNumber": "Moyenne",
   "biomesImage": "assets/content/heroforest.jpg",
   "name": "Forêt",
+  "url": "forest",
   "temperatureMax": "35",
   "description": "Dans la forêt, règne un environnement majestueux son territoire est dense, sauvage, imprévisible. Entre les arbres centenaires et les sous-bois mystérieux, l'atmosphère est chargée d'une énergie primitive. Elle possède un sérieux équilibre écologique.",
   "temperatureMin": "-10"
