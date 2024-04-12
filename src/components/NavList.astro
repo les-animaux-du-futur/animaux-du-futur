@@ -7,7 +7,10 @@
     <a href="/" title="Cliquez">
       <div class="block">
         <img src="/assets/images/Icon-accueil.svg" alt="icone accueil" />
-        <p>Accueil</p>
+        <div class="container-title">
+          <p>Accueil</p>
+          <div class="border"></div>
+        </div>
       </div>
     </a>
   </li>
@@ -15,7 +18,10 @@
     <a href="/histoire" title="Cliquez">
       <div class="block">
         <img src="/assets/images/Icon-histoire.svg" alt="icone histoire" />
-        <p>Histoire</p>
+        <div class="container-title">
+          <p>Histoire</p>
+          <div class="border"></div>
+        </div>
       </div>
     </a>
   </li>
@@ -23,23 +29,21 @@
     <a href="/bestiaire" title="Cliquez">
       <div class="block">
         <img src="/assets/images/Icon-bestiaire.svg" alt="icone bestiaire" />
-        <p>Bestiaire</p>
+        <div class="container-title">
+          <p>Bestiaire</p>
+          <div class="border"></div>
+        </div>
       </div>
     </a>
   </li>
-  <!-- <li>
-    <a href="/modules">
-      <div class="block">
-        <img src="/assets/images/Icon-modules.svg" alt="icone bestiaire" />
-        <p>Modules</p>
-      </div>
-    </a>
-  </li> -->
   <li>
     <a href="/coulisses" title="Cliquez">
       <div class="block">
         <img src="/assets/images/Icon-coulisses.svg" alt="icone coulisses" />
-        <p>Coulisses</p>
+        <div class="container-title">
+          <p>Coulisses</p>
+          <div class="border"></div>
+        </div>
       </div>
     </a>
   </li>
@@ -47,7 +51,10 @@
     <a href="/contact" title="Cliquez">
       <div class="block">
         <img src="/assets/images/Icon-contact.svg" alt="icon contact" />
-        <p>Contact</p>
+        <div class="container-title">
+          <p>Contact</p>
+          <div class="border"></div>
+        </div>
       </div>
     </a>
   </li>
@@ -75,9 +82,37 @@
           width: 1.4rem;
           height: 1.4rem;
         }
-        p {
-          width: fit-content;
-          color: #fff;
+        .container-title {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          p {
+            width: fit-content;
+            color: #fff;
+            &:hover {
+              // padding-bottom: -1px;
+              // border-bottom: 1px solid #3AE7AB;
+              // &::after {
+              //   content: "";
+              //   display: block;
+              //   width: 100%;
+              //   height: 2px;
+              //   background-color: #3AE7AB;
+              // }
+            }
+          }
+
+          &:hover {
+            .border {
+              position: absolute;
+              bottom: 1rem;
+              width: 80%;
+              height: 2px;
+              background-color: #3AE7AB;
+              transition: width 0.3s;
+            }
+          }
         }
       }
     }
