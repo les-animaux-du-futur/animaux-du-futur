@@ -89,7 +89,7 @@ const { biomes } = getBiomes();
     dataContainer.innerHTML = sortedSpecies
       .map((specie, i) => {
         const biome = biomes.find(
-          (biome) => biome.name.toLowerCase() === specie.biome.toLowerCase()
+          (biome) => biome.name.toLowerCase() === specie.biome.toLowerCase(),
         );
         const biomeColor = biome ? biome.color : "black";
         const biomeName = biome ? biome.name : "";
@@ -103,22 +103,24 @@ const { biomes } = getBiomes();
           }
         }
         return `
-			<a href="/species/${parseInt(i)}" class="animal">
-				<img src="/${specie.speciesImage}" alt="image species"/>
-				<div class="title">
-					<h4>
-						${specie.name}
-					</h4>
-					<p>
-						#${formatSpeciesId(specie.id)}
-					</p>
-				</div>
-				<div class="biome" style="background-color: ${biomeColor};">
-					<p>
-						${biomeName}
-					</p>
-				</div>
-			</a>
+        <div>
+          <a href="/species/${parseInt(i)}" class="animal">
+            <img src="/${specie.speciesImage}" alt="image species"/>
+            <div class="title">
+              <h4>
+                ${specie.name}
+              </h4>
+              <p>
+                #${formatSpeciesId(specie.id)}
+              </p>
+            </div>
+            <div class="biome" style="background-color: ${biomeColor};">
+              <a href="/biomes/${parseInt(i)}">
+                ${biomeName}
+              </a>
+            </div>
+          </a>
+        </div>
 			`;
       })
       .join("");
@@ -262,7 +264,7 @@ const { biomes } = getBiomes();
           width: fit-content;
           padding: 0.3rem 0.8rem;
           border-radius: 1.125rem;
-          p {
+          a {
             color: black;
             font-size: 0.875rem;
             margin: 0;

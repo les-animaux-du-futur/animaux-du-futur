@@ -54,7 +54,7 @@ if (name) {
     <section class="container">
         <div class="container-infos">
             <div class="container-description">
-                <h2>Description :</h2>
+                <h2>Description</h2>
                 <p class="description">{description}</p>
             </div>
             <div class="container-caracteristiques">
@@ -69,22 +69,26 @@ if (name) {
                     </div>
                     <div class="img-text">
                         <img src="/assets/images/Thermometer.svg" alt="image">
-                        <p>Température:</p>
-                        <div class="temperatures">
-                            <div class="content-temp">
-                                <p class="temp-min">{temperatureMin}</p>
-                                <span>min</span>
-                            </div>
-                            <div class="content-temp">
-                                <p class="temp-max">{temperatureMax}</p>
-                                <span>max</span>
+                        <div>
+                            <p>Température:</p>
+                            <div class="temperatures">
+                                <div class="content-temp">
+                                    <p class="temp-min">{temperatureMin}</p>
+                                    <span>min</span>
+                                </div>
+                                <div class="content-temp">
+                                    <p class="temp-max">{temperatureMax}</p>
+                                    <span>max</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="img-text">
                         <img src="/assets/images/Bear.svg" alt="image">
-                        <p>Présence animale:</p>
-                        <p class="animaux">{speciesNumber}</p>
+                            <div>
+                                <p>Présence animale:</p>
+                                <p class="animaux">{speciesNumber}</p>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -94,7 +98,7 @@ if (name) {
             <div class="grid-species">
               {presentSpecies?.map((specie) => (
                 <a href={`/species/${Number(specie.id) -1}`}>
-                  <img src={`/${specie.speciesImage}`} alt="image chouette">
+                  <img src={`/${specie.speciesImage}`} alt="Image animal">
                 </a>
               ))
               }
@@ -144,6 +148,9 @@ if (name) {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     grid-row-gap: 1rem;
+                    @media screen and (max-width: 400px) {
+                        grid-template-columns: 1fr;
+                    }
                     .img-text {
                         display: flex;
                         gap: 2rem;
@@ -174,8 +181,15 @@ if (name) {
             .grid-species {
                 display: flex;
                 gap: 1.25rem;
-                img {
-                    width: 6rem;
+                overflow-x: scroll;
+                padding-bottom: 0.25rem;
+                a {
+                    height: auto;
+                    img {
+                        width: 6rem;
+                        height: 100%;
+                        object-fit: cover;
+                    }
                 }
             }
             .button{

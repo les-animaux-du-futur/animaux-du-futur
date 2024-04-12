@@ -108,6 +108,7 @@ collections:
           options:
             [
               { label: "Carnivore", value: "carnivore" },
+              { label: "Omnivore", value: "omnivore" },
               { label: "Herbivore", value: "herbivore" },
             ],
         }
