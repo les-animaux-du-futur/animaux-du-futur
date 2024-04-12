@@ -20,9 +20,8 @@ collections:
     delete: true
     identifier_field: "name"
     fields:
-      # - { label: "Id", name: "id", widget: "hidden", default: "{{ uuid }}" }
-      - { label: "Url", name: "slug", widget: "hidden" }
       - { name: "name", label: "Nom", widget: "string" }
+      - { label: "Url", name: "url", widget: "string" }
       - {
           name: "biomesImage",
           widget: "image",
