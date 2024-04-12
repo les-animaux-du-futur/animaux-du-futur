@@ -4,13 +4,16 @@ import MobileHeader from "../components/MobileHeader.astro";
 import SideBar from "../components/SideBar.astro";
 import { SITE } from "../config";
 import "../styles/app.css";
+
+const {title, description} = Astro.props
 ---
 
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{SITE.title}</title>
+    <meta name="description" content={description}/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{title}</title>
   </head>
 
   <body>
@@ -27,7 +30,7 @@ import "../styles/app.css";
     </div>
     <div class="container_footer">
     <a class="mention" href="/MentionsLegales">Mentions légales © <span id="date"></span> This work is licensed under </a>
-    <a class="cc_link" href="#" title="Cliquez"><img src="/assets/images/icon_footer1.svg" alt="icone 1"></a>
+    <a class="cc_link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" title="Cliquez"><img src="/assets/images/icon_footer1.svg" alt="icone 1"></a>
     <img src="/assets/images/icon_footer2.svg" alt="icone 2">
     <img src="/assets/images/icon_footer3.svg" alt="icone 3">
     <img src="/assets/images/icon_footer4.svg" alt="icone 4">
@@ -68,7 +71,7 @@ import "../styles/app.css";
     margin: 0;
     padding: 0;
     background: #131515;
-    color: #e1f6ff;
+    color: #fff;
     font-family: Blinker-Regular;
 
     footer {
@@ -80,7 +83,7 @@ import "../styles/app.css";
       a {
         font-size: 14px;
         font-weight: 700;
-        color: #e1f6ff;
+        color: #fff;
         text-decoration: none;
         margin-right: 12px;
       }
@@ -178,32 +181,32 @@ import "../styles/app.css";
   h1 {
     line-height: 90%;
     font-weight: 500;
-    color: #e1f6ff;
+    color: #fff;
     font-family: Blinker-Bold;
   }
   h2 {
     font-weight: 500;
-    color: #e1f6ff;
+    color: #fff;
   }
   h3 {
     font-size: 25px;
     font-weight: 500;
-    color: #e1f6ff;
+    color: #fff;
   }
   h4 {
     font-size: 20px;
     font-weight: 500;
-    color: #e1f6ff;
+    color: #fff;
   }
   p {
     font-size: 14px;
     font-weight: 400;
-    color: #e1f6ff;
+    color: #fff;
   }
   a {
     font-size: 14px;
     font-weight: 700;
-    color: #e1f6ff;
+    color: #fff;
   }
 
   @media screen and (min-width: 768px) {

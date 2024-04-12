@@ -29,7 +29,7 @@ const {sortedModules} = getModules()
 
 ---
 
-<BaseLayout>
+<BaseLayout title="Les Animaux du Futur" description="Découvrez un projet collaboratif et évolutif sur les espèces animales actuelles et futures.">
   <Hero
   title= "Les Animaux du futur"
   text={HeroContent}
@@ -141,20 +141,23 @@ const {sortedModules} = getModules()
                   width: 230px;
                   height: 58px;
                   font-weight: 700;
-                  color: #e1f6ff;
+                  color: #fff;
                   border-radius: 8px;
-                  border: 2px solid #e1f6ff;
+                  border: 2px solid #fff;
                   background: rgba(19, 21, 21, 0.3);
                   backdrop-filter: blur(10px);
-                  cursor: pointer;
+                  transition: 0.2s;
                   span {
                     margin-left: 16px;
                   }
-                  transition: 0.2s;
                   &:hover {
                     transition: 0.2s;
                     color: #131515;
                     background: #e1f6ff;
+                    transition: 0.2s;
+                    .img_btn{
+                        filter: invert(1);
+                    }
                   }
                 }
               }

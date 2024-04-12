@@ -21,9 +21,9 @@ const {href, withArrow} = Astro.props
     text-decoration: none;
     padding: 16px 32px;
     font-weight: 700;
-	color: #E1F6FF;
+	color: #fff;
 	border-radius: 8px;
-	border: 2px solid #E1F6FF;
+	border: 2px solid #fff;
 	background: rgba(19, 21, 21, 0.30);
 	backdrop-filter: blur(10px);
 	cursor: pointer;
@@ -31,7 +31,11 @@ const {href, withArrow} = Astro.props
 	&:hover{
 	    transition: 0.2s;
 	    color: #131515;
-	    background: #E1F6FF;
+	    background: #fff;
+		transition: 0.2s;
+		.img_btn{
+			filter: invert(1);
+		}
 	} 
 	.img_btn{
 		width: 25px;
