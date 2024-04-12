@@ -1,0 +1,42 @@
+---
+import {getModules} from '../../functions'
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import TextImgInline from '../../components/modules/TextImgInline.astro';
+import Contact from '../../components/modules/Contact.astro';
+
+
+export function getStaticPaths() {
+  const { modules } = getModules();
+  return Object.values(modules).map(({slug}, index) => {
+    return {
+      params: { slug: slug },
+    };
+  });
+}
+
+const { modules } = getModules();
+const { slug } = Astro.params;
+const module = modules[slug];
+
+const {title, sections, background, HeroContent, previewTitle, previewSubTitle, previewImage} = module
+
+
+---
+
+
+<BaseLayout>
+  <Hero
+    title={title}
+    text={HeroContent}
+    imgUrl={`/${background}`}
+  />
+
+  <main>
+
+    {sections.map(({section}, index) => <TextImgInline title={section.title} imgUrl={`/${section.image}`} texts={[section.content]} reverse={index % 2 === 1 ? true : false}/>)}
+
+    <Contact/>
+  </main>
+
+</BaseLayout>

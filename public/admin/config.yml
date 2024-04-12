@@ -139,10 +139,33 @@ collections:
     delete: true
     identifier_field: "name"
     fields:
-      - label: "Slug"
+      - {
+          name: "discoveryDate",
+          widget: "datetime",
+          format: "DD MMM YYYY",
+          date_format: "DD MMM YYYY",
+          time_format: "HH:mm",
+          label: "Date de la découverte",
+        }
+      - label: "url"
         name: "slug"
         widget: "string"
         default: "{{slug}}"
+        required: true
+
+      - label: "Titre de la preview"
+        name: "previewTitle"
+        widget: "string"
+        required: true
+
+      - label: "Sous titre de la preview"
+        name: "previewSubTitle"
+        widget: "string"
+        required: false
+
+      - label: "Image de la preview"
+        name: "previewImage"
+        widget: "image"
         required: true
 
       - label: "Titre de la page"
