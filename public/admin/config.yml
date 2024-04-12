@@ -151,6 +151,9 @@ collections:
         widget: "string"
         default: "{{slug}}"
         required: true
+      - label: "PDF"
+        name: "pdf"
+        widget: "file"
 
       - label: "Titre de la preview"
         name: "previewTitle"
