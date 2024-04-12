@@ -1,0 +1,67 @@
+{
+  "url": "coulisses",
+  "title": "LEs coulisses",
+  "background": "assets/content/coulissehero.webp",
+  "firstSectionTitle": "LE PROJET AU GLOBAL",
+  "firstSectionContent": "Cet atelier d’éducation aux pratiques artistiques bénéficie de l’aide de partenaires <br>\n\n(Région Nouvelle Aquitaine, Département Gironde, Département Landes, DRAC, ALCA, Passeurs d’Images, CCCHL, ACL de Sabres, Cinémagin’Action).\n\nCe projet, mit sous l’angle de la biologie spéculative a pour objectif de sensibiliser à la situation des espèces animales existantes, à leurs problématiques et leur avenir. C’est une création graphique poétique, confrontant des techniques d’illustrations traditionnelles aux outils algorithmiques. <br>\n\nChaque session est en 3 phases : la recherche, la création, la valorisation, pour partir à la découverte de la biodiversité de demain…",
+  "sections": [
+    {
+      "section": {
+        "title": "LA RECHERCHE",
+        "content": "Chaque explorateur se documente et étudie un animal en lien avec son environnement. Il partage ses découvertes en équipe, échange et débat des évolutions possibles de son espèce. Un espace où art, science et imagination s’entremêlent pour enrichir la vision des participants sur notre planète.",
+        "image": "assets/content/coulisses1.webp"
+      }
+    },
+    {
+      "section": {
+        "title": "LA CRÉATION",
+        "content": "La mise en image des animaux du futur repose sur un principe d’itérations, combinant techniques traditionnelles et outils d’Intelligence Artificielle. Il y a un dialogue entre spontanéité et innovation, questionnant le rapport de l’humain à la machine dans une démarche créative.",
+        "image": "assets/content/paper.webp"
+      }
+    },
+    {
+      "section": {
+        "title": "LA FINALISATION",
+        "content": "Pour mettre en lumière le procédé de création, prenons comme exemple la première espèce du futur recensée dans ce projet :  « la Poulosaure ». \n\n<br><br>\n\nLe processus de création de cet animal est hybride et itératif, il a donc été conçu étapes par étapes notamment avec ces croquis comme ébauche.\n\n<br><br>\n\nVoici la fusion et la retouche des croquis grâce a l’IA. Les nombreuses itérations amènent à ce résultat. Cette version est actuellement la version finale de la poulosaure.",
+        "image": "assets/content/drawingchicken.png"
+      }
+    },
+    {
+      "section": {
+        "title": "L’exposition",
+        "content": "Pour clôturer chaque expédition, nous exposons les créations dans le lieu d’accueil, avant qu’elles ne commencent leurs itinérance dans d’autres lieux propices aux alentours.",
+        "image": "assets/content/kidsimg.webp"
+      }
+    },
+    {
+      "section": {
+        "title": "UN MOMENT CONVIVIAL",
+        "content": "C’est une occasion pour les jeunes comme les plus âgés de présenter leurs créations afin de partager \n\nles savoirs, et surtout de passer un moment convival.",
+        "image": "assets/content/atelier_photo3.webp"
+      }
+    },
+    {
+      "section": {
+        "title": "LE DÉBAT",
+        "content": "Ces moments de célébration sont aussi des occasions précieuses pour animer des débats autour des illustrations et de notre biodiversité.",
+        "image": "assets/content/atelier_photo4.webp"
+      }
+    },
+    {
+      "section": {
+        "title": "LA CARTE POSTALE",
+        "content": "Ensuite, les explorateurs repartent avec leur animal sous la forme d’une carte postale, révélant au verso la fiche d’identité de l’espèce qu’ils ont découvert.",
+        "image": "assets/content/atelier_photo6.png"
+      }
+    },
+    {
+      "section": {
+        "title": "OÙ RETROUVER  <br> LES ESPÈCES ?",
+        "content": "Enfin, chaque espèce est répertoriée dans le bestiaire digital, qui va grandir au fil des années et des interventions. Cet espace est accessible à travers l’exposition et les cartes postales grâce à un QR code qui restera inchangé pendant toute la vie du projet.<br>\n\nCela permettra aux nouveaux explorateurs comme aux plus anciens de suivre la suite de l’aventure.",
+        "image": "assets/content/atelier_photo7.png",
+        "btnText": "Découvrir le bestiaire",
+        "btnLink": "/bestiaire"
+      }
+    }
+  ]
+}
