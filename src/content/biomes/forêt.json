@@ -1,4 +1,11 @@
 {
+  "climat": "Frais",
+  "heroDescription": "Son environnement est luxuriant et mystérieux, caractérisé par une abondance de verdure et une diversité biologique étonnante.",
+  "color": "#75D964",
+  "speciesNumber": "Moyenne",
+  "biomesImage": "assets/content/heroforest.jpg",
   "name": "Forêt",
-  "color": "#75D964"
+  "temperatureMax": "35",
+  "description": "Dans la forêt, règne un environnement majestueux son territoire est dense, sauvage, imprévisible. Entre les arbres centenaires et les sous-bois mystérieux, l'atmosphère est chargée d'une énergie primitive. Elle possède un sérieux équilibre écologique.",
+  "temperatureMin": "-10"
 }
