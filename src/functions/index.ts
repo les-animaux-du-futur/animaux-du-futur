@@ -67,6 +67,8 @@ export function getModules() {
 
 
   const sortedModules = Object.values(modules)
+  //@ts-ignore
+  sortedModules.sort((a, b) => a.index - b.index);
 
 
   // // Sorting the array by date

@@ -183,6 +183,11 @@ collections:
         name: "background"
         widget: "image"
         required: true
+      -
+        label: "Index"
+        name: "index"
+        widget: "number"
+        required: true
 
       - label: "Sections"
         name: "sections"
