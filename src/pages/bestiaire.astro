@@ -93,6 +93,8 @@ const { biomes } = getBiomes();
         );
         const biomeColor = biome ? biome.color : "black";
         const biomeName = biome ? biome.name : "";
+        const biomeSlug = biome ? biome.url : "";
+        console.log(biomeName)
         function formatSpeciesId(id) {
           if (id.length === 1) {
             return `00${id}`;
@@ -114,11 +116,9 @@ const { biomes } = getBiomes();
                 #${formatSpeciesId(specie.id)}
               </p>
             </div>
-            <div class="biome" style="background-color: ${biomeColor};">
-              <a href="/biomes/${parseInt(i)}">
-                ${biomeName}
-              </a>
-            </div>
+          </a>
+          <a href="/biomes/${biomeSlug}" class="biome" style="background-color: ${biomeColor};">
+            ${biomeName}
           </a>
         </div>
 			`;
@@ -257,22 +257,20 @@ const { biomes } = getBiomes();
             margin: 0;
           }
         }
-        .biome {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: fit-content;
-          padding: 0.3rem 0.8rem;
-          border-radius: 1.125rem;
-          a {
-            color: black;
-            font-size: 0.875rem;
-            margin: 0;
-          }
-        }
         h4 {
           margin: 0;
         }
+      }
+      .biome {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        padding: 0.3rem 0.8rem;
+        border-radius: 1.125rem;
+        color: black;
+        font-size: 0.875rem;
+        margin: 0;
       }
     }
   }
