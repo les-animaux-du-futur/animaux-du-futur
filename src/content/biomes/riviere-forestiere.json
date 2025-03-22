@@ -1,0 +1,12 @@
+{
+  "climat": "Tempéré",
+  "heroDescription": "Description",
+  "color": "#2bcab4",
+  "speciesNumber": "oui",
+  "biomesImage": "assets/content/fondpe1.png",
+  "name": "Rivière Forestière",
+  "url": "river-forest",
+  "temperatureMax": "30",
+  "description": "Description",
+  "temperatureMin": "-5"
+}
