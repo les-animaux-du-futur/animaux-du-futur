@@ -6,8 +6,8 @@
   "explorator": "Noa",
   "name": "Fluteau Flottant",
   "diet": "herbivore",
-  "type": "animal",
-  "id": "#014",
+  "type": "plant",
+  "id": "1",
   "life": "3 ans",
   "discoveryDate": "14 Mar 2025",
   "speciesImage": "assets/content/fluteau-1.jpg"
