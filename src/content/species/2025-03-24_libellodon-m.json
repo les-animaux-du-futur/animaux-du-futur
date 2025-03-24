@@ -1,0 +1,15 @@
+{
+  "biome": "Rivière Forestière",
+  "expedition": "3",
+  "EvolutionDescription": "Plus grand et plus robuste qu'une libellule actuelle, il génère avec ses ailes des sons complexes pour attirer les femelles et affirmer son territoire. Il a acquis une incroyable agilité dans les airs et peut avoisiner les 100 km/h.",
+  "height": "80 cm",
+  "explorator": "Elia/Kim/Léo",
+  "name": "LIBELLODON (M)",
+  "diet": "herbivore",
+  "weight": "1 Kg",
+  "type": "animal",
+  "id": "21",
+  "life": "1 an",
+  "discoveryDate": "14 Mar 2025",
+  "speciesImage": "assets/content/explo-03-libellodon-m.jpg"
+}
