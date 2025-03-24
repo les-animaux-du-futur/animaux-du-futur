@@ -1,0 +1,15 @@
+{
+  "biome": "Rivière Forestière",
+  "expedition": "3",
+  "EvolutionDescription": "Elle a évolué pour s’adapter aux crues fréquentes. Grâce à ses mains préhensiles, elle peut construire des radeaux flottants avec des branches et des plantes aquatiques, offrant ainsi un abri sûr à toute sa famille.",
+  "height": "1,25 M",
+  "explorator": "Julya/Maël/Anthony/Simon",
+  "name": "Loutre Architecte",
+  "diet": "herbivore",
+  "weight": "14 Kg",
+  "type": "animal",
+  "id": "14",
+  "life": "8 ans",
+  "discoveryDate": "14 Mar 2025",
+  "speciesImage": "assets/content/explo-03-loutre-architecte.jpg"
+}
