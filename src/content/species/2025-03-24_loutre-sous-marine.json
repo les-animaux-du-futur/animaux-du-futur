@@ -1,0 +1,15 @@
+{
+  "biome": "Rivière Forestière",
+  "expedition": "3",
+  "EvolutionDescription": "Capable de naviguer entre les rivières et les océans avec une agilité accrue.\n\nGrâce à sa nageoire caudale et sa peau partiellement lisse, cette loutre est devenue parfaitement hydrodynamique.",
+  "height": "86 CM",
+  "explorator": "Emma/Louna/Lenny",
+  "name": "LOUTRE SOUS-MARINE",
+  "diet": "omnivore",
+  "weight": "6 Kg",
+  "type": "animal",
+  "id": "15",
+  "life": "5 ans",
+  "discoveryDate": "14 Mar 2025",
+  "speciesImage": "assets/content/explo-03-loutre-sous-marine.jpg"
+}
