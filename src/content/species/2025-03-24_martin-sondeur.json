@@ -1,7 +1,9 @@
 {
   "biome": "Rivière Forestière",
+  "expedition": "3",
   "EvolutionDescription": "Le martin sondeur a évolué pour s’adapter à la rareté des poissons dans les rivières. Son long bec recourbé lui permet désormais de sonder la vase et dénicher différents mollusques aquatiques.",
   "height": "50 cm",
+  "explorator": "Mélanie/Eléa/Lucas",
   "name": "MARTIN SONDEUR",
   "diet": "carnivore",
   "weight": "60 g",
