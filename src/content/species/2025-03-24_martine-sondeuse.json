@@ -1,0 +1,15 @@
+{
+  "biome": "Rivière Forestière",
+  "expedition": "3",
+  "EvolutionDescription": "Elle construit des nids suspendus aux branches, les protégeant des crues. \n\nSes plumes aux teintes camouflées lui permettent de veiller discrètement sur les œufs, tandis que son long bec est idéal pour chasser les insectes et diverses larves.",
+  "height": "50 cm",
+  "explorator": "Sarah/Gabrielle/Enrique",
+  "name": "MARTINe SONDEUSE",
+  "diet": "carnivore",
+  "weight": "60 g",
+  "type": "animal",
+  "id": "17",
+  "life": "20 ans",
+  "discoveryDate": "14 Mar 2025",
+  "speciesImage": "assets/content/explo-03-martine-sondeuse.jpg"
+}
