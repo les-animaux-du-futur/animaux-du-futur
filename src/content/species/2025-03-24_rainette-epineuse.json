@@ -1,0 +1,15 @@
+{
+  "biome": "Rivière Forestière",
+  "expedition": "3",
+  "EvolutionDescription": "Avec une peau aux teintes camouflées, elle se fond dans son environnement. Elle porte désormais ses œufs dans une poche ventrale, une adaptation aux crues fréquentes qui protège ses petits des prédateurs.",
+  "height": "25 cm",
+  "explorator": "Pauline/Manon/Margaux",
+  "name": "RAINETTE EPINEUSE",
+  "diet": "herbivore",
+  "weight": "1,5 Kg",
+  "type": "animal",
+  "id": "18",
+  "life": "22 ans",
+  "discoveryDate": "14 Mar 2025",
+  "speciesImage": "assets/content/explo-03-rainette-epineuse-f.jpg"
+}
