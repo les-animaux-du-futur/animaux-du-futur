@@ -4,12 +4,12 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 import data from "../content/pages/home.json";
-import TextImgInline from "../components/modules/TextImgInline.astro";
+
 
 
 
 import Hero from "../components/Hero.astro";
-import { getModules } from "../functions";
+
 
 
 const {
@@ -24,15 +24,10 @@ const {
   HeroContent
 } = data;
 
-const {sortedModules} = getModules()
 
 
-interface Module {
-  slug: string
-  previewImage: string
-  previewTitle: string
-  previewSubTitle: string
-}
+
+
 
 
 ---
@@ -54,26 +49,7 @@ interface Module {
         <h2>{SecondSectionTitle}</h2>
         <p set:html={SecondSectionContent} />
       </div>
-      <!--premier module -->
-      <div class="modules">
-
-        <!--troisième module -->
-        {sortedModules.map((module: Module) => (
-
-          <div class="div_module">
-            <a href={`/modules/${module.slug}`}>
-              <button>
-                <img
-                  src={`/${module.previewImage}`}
-                  alt="grand explorateur"
-                />
-                <div class="text_module">
-                  <h2 set:html={module.previewTitle}/>
-                  <h3 set:html={module.previewSubTitle}/>
-                </div>
-              </button>
-            </a>
-          </div>
+      
         ))}
       </div>
     </div>
@@ -277,8 +253,7 @@ interface Module {
             width: 496px;
           }
         }
-        .modules {
-          padding-top: 64px;
+
         }
       }
     }
