@@ -1,0 +1,15 @@
+{
+  "biome": "Rivière Forestière",
+  "expedition": "3",
+  "EvolutionDescription": "Grâce à ses teintes camouflées et son vol discret, elle échappe aux prédateurs. Son ovipositeur allongé et puissant lui permet de déposer ses œufs dans des lieux inaccessibles tout en lui servant de défense en cas de besoin.",
+  "height": "70 cm",
+  "explorator": "Christopher/Alexia/Méline",
+  "name": "LIBELLODON (F)",
+  "diet": "herbivore",
+  "weight": "1 Kg",
+  "type": "animal",
+  "id": "20",
+  "life": "2 ans",
+  "discoveryDate": "14 Mar 2025",
+  "speciesImage": "assets/content/explo-03-libellodon-f.jpg"
+}
