@@ -1,0 +1,11 @@
+{
+  "biome": "Rivière Forestière",
+  "height": "50 CM",
+  "name": "test",
+  "diet": "omnivore",
+  "weight": "6 Kg",
+  "type": "animal",
+  "id": "25",
+  "discoveryDate": "29 Mar 2025",
+  "speciesImage": "assets/content/drawingchicken.png"
+}
