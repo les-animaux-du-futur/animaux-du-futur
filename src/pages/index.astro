@@ -6,11 +6,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import data from "../content/pages/home.json";
 import TextImgInline from "../components/modules/TextImgInline.astro";
 
-
-
 import Hero from "../components/Hero.astro";
 import { getModules } from "../functions";
-
 
 const {
   background,
@@ -21,32 +18,36 @@ const {
   firstSectionImg,
   heroBtns,
   title,
-  HeroContent
+  HeroContent,
 } = data;
 
-const {sortedModules} = getModules()
-
+const { sortedModules } = getModules();
 
 interface Module {
-  slug: string
-  previewImage: string
-  previewTitle: string
-  previewSubTitle: string
+  slug: string;
+  previewImage: string;
+  previewTitle: string;
+  previewSubTitle: string;
 }
-
-
 ---
 
-<BaseLayout title="Les Animaux du Futur" description="Découvrez un projet collaboratif et évolutif sur les espèces animales actuelles et futures.">
+<BaseLayout
+  title="Les Animaux du Futur"
+  description="Découvrez un projet collaboratif et évolutif sur les espèces animales actuelles et futures."
+>
   <Hero
-  title={title}
-  text={HeroContent}
-  imgUrl={/${background}}
-  mobileImgUrl="/assets/images/MobileHomeHero.webp"
-  btns={heroBtns}
+    title={title}
+    text={HeroContent}
+    imgUrl={`/${background}`}
+    mobileImgUrl="/assets/images/MobileHomeHero.webp"
+    btns={heroBtns}
   />
   <!--Body de la page -->
-  <TextImgInline texts={[firstSectionContent]} title={firstSectionTitle} imgUrl={firstSectionImg}/>
+  <TextImgInline
+    texts={[firstSectionContent]}
+    title={firstSectionTitle}
+    imgUrl={firstSectionImg}
+  />
 
   <section class="footer container">
     <div>
@@ -56,207 +57,115 @@ interface Module {
       </div>
       <!--premier module -->
       <div class="modules">
-
         <!--troisième module -->
-        {sortedModules.map((module: Module) => (
-
-          <div class="div_module">
-            <a href={/modules/${module.slug}}>
-              <button>
-                <img
-                  src={/${module.previewImage}}
-                  alt="grand explorateur"
-                />
-                <div class="text_module">
-                  <h2 set:html={module.previewTitle}/>
-                  <h3 set:html={module.previewSubTitle}/>
-                </div>
-              </button>
-            </a>
-          </div>
-        ))}
+        {
+          sortedModules.map((module: Module) => (
+            <div class="div_module">
+              <a href={`/modules/${module.slug}`}>
+                <button>
+                  <img
+                    src={`/${module.previewImage}`}
+                    alt="grand explorateur"
+                  />
+                  <div class="text_module">
+                    <h2 set:html={module.previewTitle} />
+                    <h3 set:html={module.previewSubTitle} />
+                  </div>
+                </button>
+              </a>
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>
 </BaseLayout>
 
-  <style lang="scss" define:vars={{ background }}>
-    html {
-      body {
-        .header {
-          position: relative;
-          .imgContainer {
-            position: absolute;
-            z-index: -1;
-            height: 100%;
+<style lang="scss" define:vars={{ background }}>
+  html {
+    body {
+      .header {
+        position: relative;
+        .imgContainer {
+          position: absolute;
+          z-index: -1;
+          height: 100%;
+          width: 100%;
+          img {
+            object-fit: cover;
             width: 100%;
-            img {
-              object-fit: cover;
-              width: 100%;
-              height: 100%;
+            height: 100%;
+          }
+        }
+        height: 656px;
+        background-image: url(var(--background)); /* Chemin vers votre image */
+        background-size: cover; /* Couvrir toute la zone de l'élément */
+        background-position: center; /* Centrer l'image horizontalement et verticalement */
+        background-repeat: no-repeat; /* Empêcher la répétition de l'image */
+        .container {
+          .text_header {
+            padding-top: 180px;
+            max-width: 24rem;
+            text-transform: uppercase;
+            h1 {
+              margin: 0px;
+            }
+            p {
+              margin: 4px;
             }
           }
-          height: 656px;
-          background-image: url(var(
-            --background
-          )); /* Chemin vers votre image */
-          background-size: cover; /* Couvrir toute la zone de l'élément */
-          background-position: center; /* Centrer l'image horizontalement et verticalement */
-          background-repeat: no-repeat; /* Empêcher la répétition de l'image */
-          .container {
-            .text_header {
-              padding-top: 180px;
-              max-width: 24rem;
-              text-transform: uppercase;
-              h1 {
-                margin: 0px;
-              }
-              p {
-                margin: 4px;
-              }
-            }
-            .container_button_header {
-              margin-top: 28px;
-              .button_trailer {
-                width: 100%;
-                height: 63.8px;
-                padding-bottom: 16px;
-                a {
-                  button {
-                    width: 210px;
-                    height: 58px;
-                    border: 0;
-                    border-radius: 8px;
-                    font-weight: 700;
-                    color: #131515;
-                    background: #3ae7ab;
-                    transition: 0.2s;
-                    cursor: pointer;
-                    span {
-                      margin-left: 16px;
-                    }
-                    &:hover {
-                      transition: 0.2s;
-                      filter: brightness(50%);
-                    }
-                  }
-                }
-              }
-            }
-            .button_decouvrir {
-				      cursor: pointer;
+          .container_button_header {
+            margin-top: 28px;
+            .button_trailer {
+              width: 100%;
+              height: 63.8px;
+              padding-bottom: 16px;
               a {
                 button {
-                  width: 230px;
+                  width: 210px;
                   height: 58px;
-                  font-weight: 700;
-                  color: #fff;
+                  border: 0;
                   border-radius: 8px;
-                  border: 2px solid #fff;
-                  background: rgba(19, 21, 21, 0.3);
-                  backdrop-filter: blur(10px);
+                  font-weight: 700;
+                  color: #131515;
+                  background: #3ae7ab;
                   transition: 0.2s;
+                  cursor: pointer;
                   span {
                     margin-left: 16px;
                   }
                   &:hover {
                     transition: 0.2s;
-                    color: #131515;
-                    background: #e1f6ff;
-                    transition: 0.2s;
-                    .img_btn{
-                        filter: invert(1);
-                    }
+                    filter: brightness(50%);
                   }
                 }
               }
             }
           }
-        }
-      }
-      .body {
-        padding: 50px 30px;
-        max-width: 800px;
-        margin: 0 auto;
-        @media (min-width: 1000px) {
-          max-width: 800px;
-        }
-        @media (min-width: 1200px) {
-          max-width: 1000px;
-        }
-        @media (min-width: 1460px) {
-          max-width: 1200px;
-        }
-        .img_body {
-          padding-top: 32px;
-          img {
-            width: 100%;
-          }
-        }
-      }
-      .footer {
-
-
-        .modules {
-          width: 100%;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 20px;
-          .div_module {
-            position: relative;
-            width: 305px;
-            height: 403px;
-            transition: 0.5s;
-
-            button {
-              border: none;
-              background: transparent;
-              cursor: pointer;
-              width: 100%;
-              height: 100%;
-              display: flex;
-              align-items: flex-end;
-              justify-content: center;
-              img {
-                width: 100%;
-                display: flex;
-                position: absolute;
-                z-index: 1;
-                inset: 0;
-                clip-path: polygon(0% 10%, 13% 0%, 100% 0%, 100% 100%, 0% 100%);
+          .button_decouvrir {
+            cursor: pointer;
+            a {
+              button {
+                width: 230px;
+                height: 58px;
+                font-weight: 700;
+                color: #fff;
+                border-radius: 8px;
+                border: 2px solid #fff;
+                background: rgba(19, 21, 21, 0.3);
+                backdrop-filter: blur(10px);
                 transition: 0.2s;
-                filter: brightness(50%);
+                span {
+                  margin-left: 16px;
+                }
                 &:hover {
                   transition: 0.2s;
-                  filter: brightness(100%);
-
-                }
-              }
-              .text_module {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                h2{
-                  text-align: left;
-                }
-                width: 100%;
-                height: 100%;
-                transition: 0.2s;
-                margin-bottom: 64px;
-                h2 {
-                  display: flex;
-                  position: relative;
-                  z-index: 3;
-                  margin: 0;
-                }
-                h3 {
-                  display: flex;
-                  position: relative;
-                  z-index: 3;
-                  margin: 0;
-                  justify-content: flex-end;
+                  color: #131515;
+                  background: #e1f6ff;
+                  transition: 0.2s;
+                  .img_btn {
+                    filter: invert(1);
+                  }
                 }
               }
             }
@@ -264,22 +173,104 @@ interface Module {
         }
       }
     }
-    @media screen and (min-width: 768px) {
-      html {
-        .body {
-          display: flex;
-          flex-direction: row;
-          gap: 20px;
-          align-items: center;
-          justify-content: center;
-          padding-top: 128px;
-          .text_body {
-            width: 496px;
-          }
-        }
-        .modules {
-          padding-top: 64px;
+    .body {
+      padding: 50px 30px;
+      max-width: 800px;
+      margin: 0 auto;
+      @media (min-width: 1000px) {
+        max-width: 800px;
+      }
+      @media (min-width: 1200px) {
+        max-width: 1000px;
+      }
+      @media (min-width: 1460px) {
+        max-width: 1200px;
+      }
+      .img_body {
+        padding-top: 32px;
+        img {
+          width: 100%;
         }
       }
-    }
-  </style>
+    }
+    .footer {
+      .modules {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        .div_module {
+          position: relative;
+          width: 305px;
+          height: 403px;
+          transition: 0.5s;
+
+          button {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            img {
+              width: 100%;
+              display: flex;
+              position: absolute;
+              z-index: 1;
+              inset: 0;
+              clip-path: polygon(0% 10%, 13% 0%, 100% 0%, 100% 100%, 0% 100%);
+              transition: 0.2s;
+              filter: brightness(50%);
+              &:hover {
+                transition: 0.2s;
+                filter: brightness(100%);
+              }
+            }
+            .text_module {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+              h2 {
+                text-align: left;
+              }
+              width: 100%;
+              height: 100%;
+              transition: 0.2s;
+              margin-bottom: 64px;
+              h2 {
+                display: flex;
+                position: relative;
+                z-index: 3;
+                margin: 0;
+              }
+              h3 {
+                display: flex;
+                position: relative;
+                z-index: 3;
+                margin: 0;
+                justify-content: flex-end;
+              }
+            }
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 768px) {
+      .body {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        padding-top: 128px;
+        .text_body {
+          width: 496px;
+        }
+      }
+    }
+  }
+</style>

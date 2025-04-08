@@ -10,8 +10,16 @@ const { species } = getSpecies();
 const { biomes } = getBiomes();
 ---
 
-<BaseLayout mobileImgUrl="/assets/images/MobileBestiaireHero.webp" title="Les Animaux du Futur | Bestiaire" description="Bienvenue sur la page Bestiaire, retrouvez tout les animaux crées depuis la première expédition...">
-  <Hero title="Le Bestiaire" imgUrl="/assets/images/bestiaireHero.webp" text="Suivez les traces de celles et ceux qui sondent les mondes à venir."/>
+<BaseLayout
+  mobileImgUrl="/assets/images/MobileBestiaireHero.webp"
+  title="Les Animaux du Futur | Bestiaire"
+  description="Bienvenue sur la page Bestiaire, retrouvez tout les animaux crées depuis la première expédition..."
+>
+  <Hero
+    title="Le Bestiaire"
+    imgUrl="/assets/images/bestiaireHero.webp"
+    text="Suivez les traces de celles et ceux qui sondent les mondes à venir."
+  />
   <section class="container content">
     <div class="header-content">
       <div class="research">
@@ -22,8 +30,20 @@ const { biomes } = getBiomes();
           <select name="filter" id="filter">
             <option value="">Filtrer</option>
           </select>
-          <svg class="arrow-filter" xmlns="http://www.w3.org/2000/svg" width="17" height="7" viewBox="0 0 17 7" fill="none">
-            <path d="M15.8428 1L8.84773 6L1.85268 1" stroke="#DEF3FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <svg
+            class="arrow-filter"
+            xmlns="http://www.w3.org/2000/svg"
+            width="17"
+            height="7"
+            viewBox="0 0 17 7"
+            fill="none"
+          >
+            <path
+              d="M15.8428 1L8.84773 6L1.85268 1"
+              stroke="#DEF3FF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
           </svg>
         </div>
         <div class="content-filter">
@@ -32,8 +52,20 @@ const { biomes } = getBiomes();
             <option value="id">Identifiant</option>
             <option value="biome">Biome</option>
           </select>
-          <svg class="arrow-filter" xmlns="http://www.w3.org/2000/svg" width="17" height="7" viewBox="0 0 17 7" fill="none">
-            <path d="M15.8428 1L8.84773 6L1.85268 1" stroke="#DEF3FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <svg
+            class="arrow-filter"
+            xmlns="http://www.w3.org/2000/svg"
+            width="17"
+            height="7"
+            viewBox="0 0 17 7"
+            fill="none"
+          >
+            <path
+              d="M15.8428 1L8.84773 6L1.85268 1"
+              stroke="#DEF3FF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
           </svg>
         </div>
         <div class="content-filter none">
@@ -41,8 +73,20 @@ const { biomes } = getBiomes();
             <option value="asc">Ascendant</option>
             <option value="desc">Descendant</option>
           </select>
-          <svg class="arrow-filter" xmlns="http://www.w3.org/2000/svg" width="17" height="7" viewBox="0 0 17 7" fill="none">
-            <path d="M15.8428 1L8.84773 6L1.85268 1" stroke="#DEF3FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <svg
+            class="arrow-filter"
+            xmlns="http://www.w3.org/2000/svg"
+            width="17"
+            height="7"
+            viewBox="0 0 17 7"
+            fill="none"
+          >
+            <path
+              d="M15.8428 1L8.84773 6L1.85268 1"
+              stroke="#DEF3FF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
           </svg>
         </div>
       </div>
@@ -89,12 +133,12 @@ const { biomes } = getBiomes();
     dataContainer.innerHTML = sortedSpecies
       .map((specie, i) => {
         const biome = biomes.find(
-          (biome) => biome.name.toLowerCase() === specie.biome.toLowerCase(),
+          (biome) => biome.name.toLowerCase() === specie.biome.toLowerCase()
         );
         const biomeColor = biome ? biome.color : "black";
         const biomeName = biome ? biome.name : "";
         const biomeSlug = biome ? biome.url : "";
-        console.log(biomeName)
+        console.log(biomeName);
         function formatSpeciesId(id) {
           if (id.length === 1) {
             return `00${id}`;
@@ -106,7 +150,7 @@ const { biomes } = getBiomes();
         }
         return `
         <div>
-          <a href="/species/${parseInt(specie.id) - 1}" class="animal">
+          <a href="/species/${parseInt(specie.id)}" class="animal">
             <img src="/${specie.speciesImage}" alt="image species"/>
             <div class="title">
               <h4>
@@ -156,7 +200,7 @@ const { biomes } = getBiomes();
         position: initial;
       }
       @media screen and (max-width: 400px) {
-        width: 100%
+        width: 100%;
       }
       .research {
         position: relative;
@@ -209,7 +253,7 @@ const { biomes } = getBiomes();
             border: 1px solid white;
             background: rgba(0, 0, 0, 0.75);
             backdrop-filter: blur(2px);
-            color: #DEF3FF;
+            color: #def3ff;
             border: none;
             outline: none;
             display: inline-block;
