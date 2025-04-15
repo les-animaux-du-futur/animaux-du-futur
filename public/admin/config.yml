@@ -22,16 +22,24 @@ collections:
     fields:
       - { name: "name", label: "Nom", widget: "string" }
       - { label: "Url", name: "url", widget: "string" }
+      - { name: "biomesImage", widget: "image", label: "Image du biome" }
       - {
-          name: "biomesImage",
-          widget: "image",
-          label: "Image du biome",
+          name: "heroDescription",
+          label: "Description du hero",
+          widget: "string",
         }
-      - { name: "heroDescription", label: "Description du hero", widget: "string" }
       - { name: "description", label: "Description complète", widget: "string" }
       - { name: "climat", label: "Climat", widget: "string" }
-      - { name: "temperatureMin", label: "Température minimale", widget: "string" }
-      - { name: "temperatureMax", label: "Température maximale", widget: "string" }
+      - {
+          name: "temperatureMin",
+          label: "Température minimale",
+          widget: "string",
+        }
+      - {
+          name: "temperatureMax",
+          label: "Température maximale",
+          widget: "string",
+        }
       - { name: "speciesNumber", label: "Présence animale", widget: "string" }
       - { name: "color", label: "Color", widget: "color" }
 
@@ -105,10 +113,13 @@ collections:
           label: "Régime alimentaire",
           widget: "select",
           default: "Carnivore",
+          required: false,
           options:
             [
               { label: "Carnivore", value: "carnivore" },
               { label: "Omnivore", value: "omnivore" },
+              { label: "Insectivore", value: "insectivore" },
+              { label: "Piscivore", value: "piscivore" },
               { label: "Herbivore", value: "herbivore" },
             ],
         }
@@ -182,13 +193,11 @@ collections:
         widget: "markdown"
         required: false
 
-      -
-        label: "hero Background"
+      - label: "hero Background"
         name: "background"
         widget: "image"
         required: true
-      -
-        label: "Index"
+      - label: "Index"
         name: "index"
         widget: "number"
         required: true
@@ -196,13 +205,27 @@ collections:
       - label: "Sections"
         name: "sections"
         widget: "list"
-        summary: '{{fields.Section.title}}'
+        summary: "{{fields.Section.title}}"
         required: false
-        fields: [{ label: Section,
-                  name: section,
-                  widget: object,
-                  fields:  [{label: Titre, name: title, widget: string},{label: Content, name: content, widget: markdown}, {label: "Image", name: "image", widget: "image", required: false,}]}]
-
+        fields:
+          [
+            {
+              label: Section,
+              name: section,
+              widget: object,
+              fields:
+                [
+                  { label: Titre, name: title, widget: string },
+                  { label: Content, name: content, widget: markdown },
+                  {
+                    label: "Image",
+                    name: "image",
+                    widget: "image",
+                    required: false,
+                  },
+                ],
+            },
+          ]
 
   - name: "Pages" # Utilisé dans les routes, par exemple, /admin/collections/blog
     label: "Pages" # Utilisé dans l'UI
@@ -230,12 +253,21 @@ collections:
               label: "Bouttons",
               name: "heroBtns",
               widget: "list",
-              summary: '{{fields.Btn.text}}',
+              summary: "{{fields.Btn.text}}",
               required: false,
-              fields: [{ label: Boutton,
-                        name: Btn,
-                        widget: object,
-                        fields:  [{label: Text, name: text, widget: string},{label: Lien, name: link, widget: string}]}]
+              fields:
+                [
+                  {
+                    label: Boutton,
+                    name: Btn,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Text, name: text, widget: string },
+                        { label: Lien, name: link, widget: string },
+                      ],
+                  },
+                ],
             }
           - {
               label: "hero Background",
@@ -293,12 +325,21 @@ collections:
           - label: "Bouttons"
             name: "heroBtns"
             widget: "list"
-            summary: '{{fields.Btn.text}}'
+            summary: "{{fields.Btn.text}}"
             required: false
-            fields: [{ label: Boutton,
-                      name: Btn,
-                      widget: object,
-                      fields:  [{label: Text, name: text, widget: string},{label: Lien, name: link, widget: string}]}]
+            fields:
+              [
+                {
+                  label: Boutton,
+                  name: Btn,
+                  widget: object,
+                  fields:
+                    [
+                      { label: Text, name: text, widget: string },
+                      { label: Lien, name: link, widget: string },
+                    ],
+                },
+              ]
 
           - label: "hero Background"
             name: "background"
@@ -316,9 +357,36 @@ collections:
           - label: "Sections"
             name: "sections"
             widget: "list"
-            summary: '{{fields.Section.title}}'
+            summary: "{{fields.Section.title}}"
             required: false
-            fields: [{ label: Section,
-                      name: section,
-                      widget: object,
-                      fields:  [{label: Titre, name: title, widget: string},{label: Content, name: content, widget: markdown}, {label: "Image", name: "image", widget: "image", required: false}, {label: "BoutonText", name: "btnText", widget: "string", required: false,}, {label: "Lien du bouton", name: "btnLink", widget: "string", required: false,}]}]
+            fields:
+              [
+                {
+                  label: Section,
+                  name: section,
+                  widget: object,
+                  fields:
+                    [
+                      { label: Titre, name: title, widget: string },
+                      { label: Content, name: content, widget: markdown },
+                      {
+                        label: "Image",
+                        name: "image",
+                        widget: "image",
+                        required: false,
+                      },
+                      {
+                        label: "BoutonText",
+                        name: "btnText",
+                        widget: "string",
+                        required: false,
+                      },
+                      {
+                        label: "Lien du bouton",
+                        name: "btnLink",
+                        widget: "string",
+                        required: false,
+                      },
+                    ],
+                },
+              ]
