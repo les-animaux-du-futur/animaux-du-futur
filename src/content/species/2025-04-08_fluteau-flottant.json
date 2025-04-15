@@ -5,7 +5,7 @@
   "height": "50 CM",
   "explorator": "Noa",
   "name": "FLUTEAU FLOTTANT",
-  "diet": "herbivore",
+  "diet": null,
   "type": "plant",
   "id": "101",
   "life": "3",
