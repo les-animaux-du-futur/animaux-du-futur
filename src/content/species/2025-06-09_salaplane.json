@@ -1,0 +1,15 @@
+{
+  "biome": "Rivière Forestière",
+  "expedition": "3B",
+  "EvolutionDescription": "Soumise aux crues répétées, cette salamandre a quitté le sol. Ses pattes adhésives lui permettent de grimper aux arbres, où elle chasse et se réfugie. Elle a rejoint le clan des amphibiens des cimes ,et grâce à ses membranes latérales, plane de branche en branche.",
+  "height": "30 cm",
+  "explorator": "Luca/Faustine/Théo/Coline/Sara/Myla/Hugo/Gaston/Edgar/Jules/Marcus/Paul/Timaël/Logan",
+  "name": "SALAPLANE",
+  "diet": "insectivore",
+  "weight": "120g",
+  "type": "animal",
+  "id": "23",
+  "life": "25 ans",
+  "discoveryDate": "09 Jun 2025",
+  "speciesImage": "assets/content/salaplane.jpg"
+}
