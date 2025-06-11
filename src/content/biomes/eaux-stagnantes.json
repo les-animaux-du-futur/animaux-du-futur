@@ -1,0 +1,12 @@
+{
+  "climat": "Humide",
+  "heroDescription": "Des étendues d'eau douce ou salée fermées où l'eau ne circule pas ou très peu.",
+  "color": "#87a044",
+  "speciesNumber": "Moyenne",
+  "biomesImage": "assets/content/heroforest.webp",
+  "name": "Eaux Stagnantes",
+  "url": "stillwaters",
+  "temperatureMax": "40°C",
+  "description": "Voici le biome des eaux stagnantes, un milieu où l’on retrouve des espèces animales et végétales adaptées à des conditions particulières, comme une faible oxygénation de l’eau et une accumulation de matière organique. La végétation y est abondante, principalement composée de plantes aquatiques capables de survivre dans un environnement humide et souvent pauvre en nutriments.",
+  "temperatureMin": "-5°C"
+}
