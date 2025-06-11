@@ -1,0 +1,14 @@
+{
+  "biome": "Rivière Forestière",
+  "expedition": "3B",
+  "EvolutionDescription": "Évolution du populage des marais, il étend désormais ses racines jusqu’aux nappes phréatiques captives, pour puiser l’eau en période de sécheresse. Ses fleurs s’ouvrent lorsque les températures sont propices. Elles dévoilent alors un nectar bleuté, dont la composition reste inconnue.",
+  "height": "70cm",
+  "explorator": "Cloé/Léna/Rafael/Nora/Maélie/Adèle/Lou/Julianna/Owen/Maëlyne/Rose\t",
+  "name": "NAPPULAGE",
+  "diet": "Carnivore",
+  "type": "plant",
+  "id": "103",
+  "life": "25 ans",
+  "discoveryDate": "09 Jun 2025",
+  "speciesImage": "assets/content/nappulage.jpg"
+}

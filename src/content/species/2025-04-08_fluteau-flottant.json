@@ -5,10 +5,10 @@
   "height": "50 CM",
   "explorator": "Noa",
   "name": "FLUTEAU FLOTTANT",
-  "diet": "herbivore",
+  "diet": null,
   "type": "plant",
   "id": "101",
-  "life": "3",
+  "life": "3 ans",
   "discoveryDate": "14 Mar 2025",
   "speciesImage": "assets/content/explo-03-fluteau-flottant.jpg"
 }
