@@ -24,8 +24,11 @@ const life = specie.life;
 const weight = specie.weight;
 const image = specie.speciesImage;
 const diet = specie.diet;
+const type = specie.type;
 const expedition = specie.expedition;
 const explorator = specie.explorator;
+
+const isPlant = type === "plant";
 
 const biome = biomes.filter((biome) => biome.name === biomeName);
 const { color } = biome[0];
@@ -85,18 +88,22 @@ function formatSpeciesId(id) {
                 <h4>{biomeName}</h4>
               </div>
             </div>
-            <div class="block-infos poids">
-              <div class="block-img">
-                <img
-                  src="/assets/images/Icon-animal-poids.svg"
-                  alt="icone animal poids"
-                />
-              </div>
-              <div class="title-infos">
-                <h4>Poids:</h4>
-                <h4>{weight}</h4>
-              </div>
-            </div>
+            {
+              !isPlant && (
+                <div class="block-infos poids">
+                  <div class="block-img">
+                    <img
+                      src="/assets/images/Icon-animal-poids.svg"
+                      alt="icone animal poids"
+                    />
+                  </div>
+                  <div class="title-infos">
+                    <h4>Poids:</h4>
+                    <h4>{weight}</h4>
+                  </div>
+                </div>
+              )
+            }
             <div class="block-infos taille">
               <div class="block-img">
                 <img
@@ -111,18 +118,22 @@ function formatSpeciesId(id) {
             </div>
           </div>
           <div class="right-side">
-            <div class="block-infos régime">
-              <div class="block-img">
-                <img
-                  src="/assets/images/Icon-animal-regime.png"
-                  alt="icone animal regime"
-                />
-              </div>
-              <div class="title-infos">
-                <h4>Régime:</h4>
-                <h4>{diet}</h4>
-              </div>
-            </div>
+            {
+              !isPlant && (
+                <div class="block-infos régime">
+                  <div class="block-img">
+                    <img
+                      src="/assets/images/Icon-animal-regime.png"
+                      alt="icone animal regime"
+                    />
+                  </div>
+                  <div class="title-infos">
+                    <h4>Régime:</h4>
+                    <h4>{diet}</h4>
+                  </div>
+                </div>
+              )
+            }
             <div class="block-infos longévité">
               <div class="block-img">
                 <img
@@ -145,7 +156,7 @@ function formatSpeciesId(id) {
 <style lang="scss" define:vars={{ color }}>
   @keyframes bounce {
     50% {
-      transform: translateY(-15px);
+      transform: translate(-50%, -15px);
     }
   }
   * {
@@ -201,13 +212,13 @@ function formatSpeciesId(id) {
     .img_arrow {
       position: absolute;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(-50%, 0%);
       bottom: 1.2rem;
       @media (max-width: 599px) {
         display: none;
       }
       animation: bounce 1600ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      transform: translateY(0px);
+
       width: 50px;
       height: 50px;
       background-color: transparent;
@@ -284,6 +295,7 @@ function formatSpeciesId(id) {
             }
           }
           .right-side {
+            justify-content: flex-start;
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
